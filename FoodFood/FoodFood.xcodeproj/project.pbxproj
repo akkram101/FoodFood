@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A95A92A52BAE900DCAB37 /* AppDelegate+Services.swift */; };
+		5A6A95AE2A52BAEA00DCAB37 /* Global in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A95AA2A52BAE900DCAB37 /* Global */; };
+		5A6A95AF2A52BAEA00DCAB37 /* Utilities in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A95AB2A52BAEA00DCAB37 /* Utilities */; };
+		5A6A95B02A52BAEA00DCAB37 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A95AC2A52BAEA00DCAB37 /* Base */; };
 		5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */; };
 		5A9F28222A4AB4D500E478F3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F28212A4AB4D500E478F3 /* MainViewController.swift */; };
 		5A9F28272A4AB4D800E478F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F28262A4AB4D800E478F3 /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		3E9C77996E69785745FFC851 /* Pods-FoodFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFood.debug.xcconfig"; path = "Target Support Files/Pods-FoodFood/Pods-FoodFood.debug.xcconfig"; sourceTree = "<group>"; };
+		5A6A95A92A52BAE900DCAB37 /* AppDelegate+Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AppDelegate+Services.swift"; path = "../../../../save/AppDelegate+Services.swift"; sourceTree = "<group>"; };
+		5A6A95AA2A52BAE900DCAB37 /* Global */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Global; path = ../../../../save/Global; sourceTree = "<group>"; };
+		5A6A95AB2A52BAEA00DCAB37 /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Utilities; path = ../../../../save/Utilities; sourceTree = "<group>"; };
+		5A6A95AC2A52BAEA00DCAB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../../../save/Base; sourceTree = "<group>"; };
 		5A9F281A2A4AB4D500E478F3 /* FoodFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9F28212A4AB4D500E478F3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +85,10 @@
 			isa = PBXGroup;
 			children = (
 				5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */,
+				5A6A95A92A52BAE900DCAB37 /* AppDelegate+Services.swift */,
+				5A6A95AC2A52BAEA00DCAB37 /* Base */,
+				5A6A95AA2A52BAE900DCAB37 /* Global */,
+				5A6A95AB2A52BAEA00DCAB37 /* Utilities */,
 				5A9F28212A4AB4D500E478F3 /* MainViewController.swift */,
 				5A9F28262A4AB4D800E478F3 /* Assets.xcassets */,
 				5A9F28282A4AB4D800E478F3 /* LaunchScreen.storyboard */,
@@ -146,7 +158,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A9F282A2A4AB4D800E478F3 /* LaunchScreen.storyboard in Resources */,
+				5A6A95AF2A52BAEA00DCAB37 /* Utilities in Resources */,
+				5A6A95AE2A52BAEA00DCAB37 /* Global in Resources */,
 				5A9F28272A4AB4D800E478F3 /* Assets.xcassets in Resources */,
+				5A6A95B02A52BAEA00DCAB37 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */,
 				5A9F28222A4AB4D500E478F3 /* MainViewController.swift in Sources */,
 				5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */,
 			);
