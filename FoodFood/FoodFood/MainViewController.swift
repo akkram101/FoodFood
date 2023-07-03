@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         print("new repo test")
-        self.view.backgroundColor = .red
+        self.view.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
 
