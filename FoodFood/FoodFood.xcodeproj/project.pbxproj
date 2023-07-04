@@ -8,27 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A95A92A52BAE900DCAB37 /* AppDelegate+Services.swift */; };
-		5A6A95AE2A52BAEA00DCAB37 /* Global in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A95AA2A52BAE900DCAB37 /* Global */; };
-		5A6A95AF2A52BAEA00DCAB37 /* Utilities in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A95AB2A52BAEA00DCAB37 /* Utilities */; };
-		5A6A95B02A52BAEA00DCAB37 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A95AC2A52BAEA00DCAB37 /* Base */; };
 		5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */; };
-		5A9F28222A4AB4D500E478F3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F28212A4AB4D500E478F3 /* MainViewController.swift */; };
 		5A9F28272A4AB4D800E478F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F28262A4AB4D800E478F3 /* Assets.xcassets */; };
+		5AA251992A53B6EB000090C5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251982A53B6EB000090C5 /* BaseViewController.swift */; };
+		5AA251A52A53B72C000090C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519B2A53B72C000090C5 /* MainViewController.swift */; };
+		5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519D2A53B72C000090C5 /* GlobalFunc.swift */; };
+		5AA251A72A53B72C000090C5 /* GlobalImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519E2A53B72C000090C5 /* GlobalImports.swift */; };
+		5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519F2A53B72C000090C5 /* UIFont+Utility.swift */; };
+		5AA251A92A53B72C000090C5 /* ABLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251A02A53B72C000090C5 /* ABLength.swift */; };
+		5AA251AA2A53B72C000090C5 /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251A22A53B72C000090C5 /* String+Utility.swift */; };
+		5AA251AB2A53B72C000090C5 /* UINavigationController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251A32A53B72C000090C5 /* UINavigationController+Utility.swift */; };
+		5AA251AC2A53B72C000090C5 /* DayNightMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251A42A53B72C000090C5 /* DayNightMode.swift */; };
 		B1EF5D8826A88E9F149513AE /* Pods_FoodFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAB9E05D389781F782C1427 /* Pods_FoodFood.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E9C77996E69785745FFC851 /* Pods-FoodFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFood.debug.xcconfig"; path = "Target Support Files/Pods-FoodFood/Pods-FoodFood.debug.xcconfig"; sourceTree = "<group>"; };
 		5A6A95A92A52BAE900DCAB37 /* AppDelegate+Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AppDelegate+Services.swift"; path = "../../../../save/AppDelegate+Services.swift"; sourceTree = "<group>"; };
-		5A6A95AA2A52BAE900DCAB37 /* Global */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Global; path = ../../../../save/Global; sourceTree = "<group>"; };
-		5A6A95AB2A52BAEA00DCAB37 /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Utilities; path = ../../../../save/Utilities; sourceTree = "<group>"; };
-		5A6A95AC2A52BAEA00DCAB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../../../save/Base; sourceTree = "<group>"; };
 		5A9F281A2A4AB4D500E478F3 /* FoodFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A9F28212A4AB4D500E478F3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5A9F28262A4AB4D800E478F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A9F28292A4AB4D800E478F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A9F282B2A4AB4D800E478F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AA251982A53B6EB000090C5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5AA2519B2A53B72C000090C5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5AA2519D2A53B72C000090C5 /* GlobalFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunc.swift; sourceTree = "<group>"; };
+		5AA2519E2A53B72C000090C5 /* GlobalImports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalImports.swift; sourceTree = "<group>"; };
+		5AA2519F2A53B72C000090C5 /* UIFont+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Utility.swift"; sourceTree = "<group>"; };
+		5AA251A02A53B72C000090C5 /* ABLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABLength.swift; sourceTree = "<group>"; };
+		5AA251A22A53B72C000090C5 /* String+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
+		5AA251A32A53B72C000090C5 /* UINavigationController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Utility.swift"; sourceTree = "<group>"; };
+		5AA251A42A53B72C000090C5 /* DayNightMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayNightMode.swift; sourceTree = "<group>"; };
 		9A5B1F00D2C7972B3441007E /* Pods-FoodFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFood.release.xcconfig"; path = "Target Support Files/Pods-FoodFood/Pods-FoodFood.release.xcconfig"; sourceTree = "<group>"; };
 		CBAB9E05D389781F782C1427 /* Pods_FoodFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,17 +93,54 @@
 		5A9F281C2A4AB4D500E478F3 /* FoodFood */ = {
 			isa = PBXGroup;
 			children = (
+				5AA2519C2A53B72C000090C5 /* Global */,
+				5AA2519A2A53B72C000090C5 /* Screens */,
+				5AA251A12A53B72C000090C5 /* Utilities */,
+				5AA251972A53B6EB000090C5 /* Base */,
 				5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */,
 				5A6A95A92A52BAE900DCAB37 /* AppDelegate+Services.swift */,
-				5A6A95AC2A52BAEA00DCAB37 /* Base */,
-				5A6A95AA2A52BAE900DCAB37 /* Global */,
-				5A6A95AB2A52BAEA00DCAB37 /* Utilities */,
-				5A9F28212A4AB4D500E478F3 /* MainViewController.swift */,
 				5A9F28262A4AB4D800E478F3 /* Assets.xcassets */,
 				5A9F28282A4AB4D800E478F3 /* LaunchScreen.storyboard */,
 				5A9F282B2A4AB4D800E478F3 /* Info.plist */,
 			);
 			path = FoodFood;
+			sourceTree = "<group>";
+		};
+		5AA251972A53B6EB000090C5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5AA251982A53B6EB000090C5 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5AA2519A2A53B72C000090C5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5AA2519B2A53B72C000090C5 /* MainViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5AA2519C2A53B72C000090C5 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				5AA2519D2A53B72C000090C5 /* GlobalFunc.swift */,
+				5AA2519E2A53B72C000090C5 /* GlobalImports.swift */,
+				5AA2519F2A53B72C000090C5 /* UIFont+Utility.swift */,
+				5AA251A02A53B72C000090C5 /* ABLength.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		5AA251A12A53B72C000090C5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5AA251A22A53B72C000090C5 /* String+Utility.swift */,
+				5AA251A32A53B72C000090C5 /* UINavigationController+Utility.swift */,
+				5AA251A42A53B72C000090C5 /* DayNightMode.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,10 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A6A95AF2A52BAEA00DCAB37 /* Utilities in Resources */,
-				5A6A95AE2A52BAEA00DCAB37 /* Global in Resources */,
 				5A9F28272A4AB4D800E478F3 /* Assets.xcassets in Resources */,
-				5A6A95B02A52BAEA00DCAB37 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,8 +257,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */,
-				5A9F28222A4AB4D500E478F3 /* MainViewController.swift in Sources */,
+				5AA251AA2A53B72C000090C5 /* String+Utility.swift in Sources */,
+				5AA251992A53B6EB000090C5 /* BaseViewController.swift in Sources */,
+				5AA251A92A53B72C000090C5 /* ABLength.swift in Sources */,
+				5AA251AB2A53B72C000090C5 /* UINavigationController+Utility.swift in Sources */,
+				5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */,
 				5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */,
+				5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */,
+				5AA251A72A53B72C000090C5 /* GlobalImports.swift in Sources */,
+				5AA251AC2A53B72C000090C5 /* DayNightMode.swift in Sources */,
+				5AA251A52A53B72C000090C5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
