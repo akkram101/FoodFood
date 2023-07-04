@@ -19,6 +19,9 @@
 		5AA251AA2A53B72C000090C5 /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251A22A53B72C000090C5 /* String+Utility.swift */; };
 		5AA251AB2A53B72C000090C5 /* UINavigationController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251A32A53B72C000090C5 /* UINavigationController+Utility.swift */; };
 		5AA251AC2A53B72C000090C5 /* DayNightMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251A42A53B72C000090C5 /* DayNightMode.swift */; };
+		5AA251AF2A53BDD1000090C5 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251AE2A53BDD1000090C5 /* LogInViewController.swift */; };
+		5AA251B12A53BE5D000090C5 /* UIImageView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251B02A53BE5D000090C5 /* UIImageView+Utility.swift */; };
+		5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251B42A53C3BE000090C5 /* AppManager.swift */; };
 		B1EF5D8826A88E9F149513AE /* Pods_FoodFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAB9E05D389781F782C1427 /* Pods_FoodFood.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		5AA251A22A53B72C000090C5 /* String+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
 		5AA251A32A53B72C000090C5 /* UINavigationController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Utility.swift"; sourceTree = "<group>"; };
 		5AA251A42A53B72C000090C5 /* DayNightMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayNightMode.swift; sourceTree = "<group>"; };
+		5AA251AE2A53BDD1000090C5 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		5AA251B02A53BE5D000090C5 /* UIImageView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utility.swift"; sourceTree = "<group>"; };
+		5AA251B42A53C3BE000090C5 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		9A5B1F00D2C7972B3441007E /* Pods-FoodFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFood.release.xcconfig"; path = "Target Support Files/Pods-FoodFood/Pods-FoodFood.release.xcconfig"; sourceTree = "<group>"; };
 		CBAB9E05D389781F782C1427 /* Pods_FoodFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +99,7 @@
 		5A9F281C2A4AB4D500E478F3 /* FoodFood */ = {
 			isa = PBXGroup;
 			children = (
+				5AA251B32A53C3B3000090C5 /* Manager */,
 				5AA2519C2A53B72C000090C5 /* Global */,
 				5AA2519A2A53B72C000090C5 /* Screens */,
 				5AA251A12A53B72C000090C5 /* Utilities */,
@@ -117,6 +124,7 @@
 		5AA2519A2A53B72C000090C5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5AA251AD2A53BD9E000090C5 /* LogIn */,
 				5AA2519B2A53B72C000090C5 /* MainViewController.swift */,
 			);
 			path = Screens;
@@ -127,7 +135,6 @@
 			children = (
 				5AA2519D2A53B72C000090C5 /* GlobalFunc.swift */,
 				5AA2519E2A53B72C000090C5 /* GlobalImports.swift */,
-				5AA2519F2A53B72C000090C5 /* UIFont+Utility.swift */,
 				5AA251A02A53B72C000090C5 /* ABLength.swift */,
 			);
 			path = Global;
@@ -136,11 +143,37 @@
 		5AA251A12A53B72C000090C5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				5AA251B22A53BE66000090C5 /* UI */,
 				5AA251A22A53B72C000090C5 /* String+Utility.swift */,
-				5AA251A32A53B72C000090C5 /* UINavigationController+Utility.swift */,
 				5AA251A42A53B72C000090C5 /* DayNightMode.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5AA251AD2A53BD9E000090C5 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				5AA251AE2A53BDD1000090C5 /* LogInViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		5AA251B22A53BE66000090C5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5AA2519F2A53B72C000090C5 /* UIFont+Utility.swift */,
+				5AA251A32A53B72C000090C5 /* UINavigationController+Utility.swift */,
+				5AA251B02A53BE5D000090C5 /* UIImageView+Utility.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5AA251B32A53C3B3000090C5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5AA251B42A53C3BE000090C5 /* AppManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +297,11 @@
 				5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */,
 				5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */,
 				5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */,
+				5AA251AF2A53BDD1000090C5 /* LogInViewController.swift in Sources */,
+				5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */,
 				5AA251A72A53B72C000090C5 /* GlobalImports.swift in Sources */,
 				5AA251AC2A53B72C000090C5 /* DayNightMode.swift in Sources */,
+				5AA251B12A53BE5D000090C5 /* UIImageView+Utility.swift in Sources */,
 				5AA251A52A53B72C000090C5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
