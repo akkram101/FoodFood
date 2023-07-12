@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A95A92A52BAE900DCAB37 /* AppDelegate+Services.swift */; };
+		5A96BA832A5E35FA00BEE3D9 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A96BA822A5E35FA00BEE3D9 /* UserManager.swift */; };
+		5A9A6E882A5E400E00E61CA5 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E872A5E400E00E61CA5 /* LoginManager.swift */; };
+		5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */; };
+		5A9A6E8C2A5E44E800E61CA5 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E8B2A5E44E800E61CA5 /* BaseTextField.swift */; };
 		5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */; };
 		5A9F28272A4AB4D800E478F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F28262A4AB4D800E478F3 /* Assets.xcassets */; };
 		5AA251992A53B6EB000090C5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251982A53B6EB000090C5 /* BaseViewController.swift */; };
@@ -28,6 +32,10 @@
 /* Begin PBXFileReference section */
 		3E9C77996E69785745FFC851 /* Pods-FoodFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFood.debug.xcconfig"; path = "Target Support Files/Pods-FoodFood/Pods-FoodFood.debug.xcconfig"; sourceTree = "<group>"; };
 		5A6A95A92A52BAE900DCAB37 /* AppDelegate+Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AppDelegate+Services.swift"; path = "../../../../save/AppDelegate+Services.swift"; sourceTree = "<group>"; };
+		5A96BA822A5E35FA00BEE3D9 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		5A9A6E872A5E400E00E61CA5 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpManager.swift; sourceTree = "<group>"; };
+		5A9A6E8B2A5E44E800E61CA5 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		5A9F281A2A4AB4D500E478F3 /* FoodFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9F28262A4AB4D800E478F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,7 +107,7 @@
 		5A9F281C2A4AB4D500E478F3 /* FoodFood */ = {
 			isa = PBXGroup;
 			children = (
-				5AA251B32A53C3B3000090C5 /* Manager */,
+				5AA251B32A53C3B3000090C5 /* Managers */,
 				5AA2519C2A53B72C000090C5 /* Global */,
 				5AA2519A2A53B72C000090C5 /* Screens */,
 				5AA251A12A53B72C000090C5 /* Utilities */,
@@ -117,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				5AA251982A53B6EB000090C5 /* BaseViewController.swift */,
+				5A9A6E8B2A5E44E800E61CA5 /* BaseTextField.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -168,12 +177,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		5AA251B32A53C3B3000090C5 /* Manager */ = {
+		5AA251B32A53C3B3000090C5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				5AA251B42A53C3BE000090C5 /* AppManager.swift */,
+				5A96BA822A5E35FA00BEE3D9 /* UserManager.swift */,
+				5A9A6E872A5E400E00E61CA5 /* LoginManager.swift */,
+				5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */,
 			);
-			path = Manager;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,14 +302,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */,
+				5A9A6E882A5E400E00E61CA5 /* LoginManager.swift in Sources */,
 				5AA251AA2A53B72C000090C5 /* String+Utility.swift in Sources */,
 				5AA251992A53B6EB000090C5 /* BaseViewController.swift in Sources */,
+				5A96BA832A5E35FA00BEE3D9 /* UserManager.swift in Sources */,
 				5AA251A92A53B72C000090C5 /* ABLength.swift in Sources */,
 				5AA251AB2A53B72C000090C5 /* UINavigationController+Utility.swift in Sources */,
 				5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */,
+				5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */,
 				5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */,
 				5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */,
 				5AA251AF2A53BDD1000090C5 /* LogInViewController.swift in Sources */,
+				5A9A6E8C2A5E44E800E61CA5 /* BaseTextField.swift in Sources */,
 				5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */,
 				5AA251A72A53B72C000090C5 /* GlobalImports.swift in Sources */,
 				5AA251AC2A53B72C000090C5 /* DayNightMode.swift in Sources */,

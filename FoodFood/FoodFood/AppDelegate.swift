@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         configureRootVC()
         startNetworkMonitor()
+        IQKeyboardManager.shared().isEnabled = true
+        
         
         return true
     }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-func KSLength(_ len: CGFloat) -> CGFloat {
+func adapt(_ len: CGFloat) -> CGFloat {
     return floor(len) * ABLength.scale
 }
 

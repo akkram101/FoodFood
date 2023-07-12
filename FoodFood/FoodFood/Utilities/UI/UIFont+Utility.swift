@@ -15,11 +15,11 @@ extension UIFont {
     }
     
     class func medium(size: CGFloat) -> UIFont {
-        return UIFont.init(name: "BentonSans-Medium", size: size) ?? UIFont.systemFont(ofSize: size)
+        return UIFont.init(name: "BentonSans-Medium", size: size) ?? UIFont.systemFont(ofSize: size, weight: .medium)
     }
     
     class func bold(size: CGFloat) -> UIFont {
-        return UIFont.init(name: "BentonSans-Bold", size: size) ?? UIFont.systemFont(ofSize: size)
+        return UIFont.init(name: "BentonSans-Bold", size: size) ?? UIFont.systemFont(ofSize: size, weight: .bold)
     }
     
     class func scaleRegular (size: CGFloat) -> UIFont {
@@ -27,11 +27,11 @@ extension UIFont {
     }
     
     class func scaleMedium(size: CGFloat) -> UIFont {
-        return UIFont.init(name: "BentonSans-Medium", size: size * ABLength.scale) ?? UIFont.systemFont(ofSize: size * ABLength.scale)
+        return UIFont.init(name: "BentonSans-Medium", size: size * ABLength.scale) ?? UIFont.systemFont(ofSize: size * ABLength.scale, weight: .medium)
     }
     
     class func scaleBold(size: CGFloat) -> UIFont {
-        return UIFont.init(name: "BentonSans-Bold", size: size * ABLength.scale) ?? UIFont.systemFont(ofSize: size * ABLength.scale)
+        return UIFont.init(name: "BentonSans-Bold", size: size * ABLength.scale) ?? UIFont.systemFont(ofSize: size * ABLength.scale, weight: .bold)
     }
     
 }
