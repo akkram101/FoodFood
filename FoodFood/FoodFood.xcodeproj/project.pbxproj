@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A58249E2A5E617A008C8068 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58249D2A5E6179008C8068 /* LoginVM.swift */; };
+		5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5824A22A5E7690008C8068 /* SignUpViewController.swift */; };
+		5A5824A52A5E76A1008C8068 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5824A42A5E76A1008C8068 /* SignUpVM.swift */; };
 		5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A95A92A52BAE900DCAB37 /* AppDelegate+Services.swift */; };
+		5A89308D2A60DABC00BB5AB3 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89308C2A60DABC00BB5AB3 /* AppConfiguration.swift */; };
 		5A96BA832A5E35FA00BEE3D9 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A96BA822A5E35FA00BEE3D9 /* UserManager.swift */; };
 		5A9A6E882A5E400E00E61CA5 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E872A5E400E00E61CA5 /* LoginManager.swift */; };
 		5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */; };
@@ -31,7 +35,11 @@
 
 /* Begin PBXFileReference section */
 		3E9C77996E69785745FFC851 /* Pods-FoodFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFood.debug.xcconfig"; path = "Target Support Files/Pods-FoodFood/Pods-FoodFood.debug.xcconfig"; sourceTree = "<group>"; };
+		5A58249D2A5E6179008C8068 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		5A5824A22A5E7690008C8068 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5A5824A42A5E76A1008C8068 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
 		5A6A95A92A52BAE900DCAB37 /* AppDelegate+Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AppDelegate+Services.swift"; path = "../../../../save/AppDelegate+Services.swift"; sourceTree = "<group>"; };
+		5A89308C2A60DABC00BB5AB3 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		5A96BA822A5E35FA00BEE3D9 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		5A9A6E872A5E400E00E61CA5 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpManager.swift; sourceTree = "<group>"; };
@@ -86,6 +94,47 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5A58249B2A5E615B008C8068 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5AA251AE2A53BDD1000090C5 /* LogInViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5A58249C2A5E616C008C8068 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A58249D2A5E6179008C8068 /* LoginVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5A58249F2A5E7665008C8068 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				5A5824A12A5E767C008C8068 /* ViewModel */,
+				5A5824A02A5E7678008C8068 /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		5A5824A02A5E7678008C8068 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A5824A22A5E7690008C8068 /* SignUpViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5A5824A12A5E767C008C8068 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A5824A42A5E76A1008C8068 /* SignUpVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5A9F28112A4AB4D400E478F3 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +166,7 @@
 				5A9F28262A4AB4D800E478F3 /* Assets.xcassets */,
 				5A9F28282A4AB4D800E478F3 /* LaunchScreen.storyboard */,
 				5A9F282B2A4AB4D800E478F3 /* Info.plist */,
+				5A89308C2A60DABC00BB5AB3 /* AppConfiguration.swift */,
 			);
 			path = FoodFood;
 			sourceTree = "<group>";
@@ -133,6 +183,7 @@
 		5AA2519A2A53B72C000090C5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5A58249F2A5E7665008C8068 /* SignUp */,
 				5AA251AD2A53BD9E000090C5 /* LogIn */,
 				5AA2519B2A53B72C000090C5 /* MainViewController.swift */,
 			);
@@ -162,7 +213,8 @@
 		5AA251AD2A53BD9E000090C5 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
-				5AA251AE2A53BDD1000090C5 /* LogInViewController.swift */,
+				5A58249C2A5E616C008C8068 /* ViewModel */,
+				5A58249B2A5E615B008C8068 /* View */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -304,6 +356,7 @@
 				5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */,
 				5A9A6E882A5E400E00E61CA5 /* LoginManager.swift in Sources */,
 				5AA251AA2A53B72C000090C5 /* String+Utility.swift in Sources */,
+				5A58249E2A5E617A008C8068 /* LoginVM.swift in Sources */,
 				5AA251992A53B6EB000090C5 /* BaseViewController.swift in Sources */,
 				5A96BA832A5E35FA00BEE3D9 /* UserManager.swift in Sources */,
 				5AA251A92A53B72C000090C5 /* ABLength.swift in Sources */,
@@ -313,7 +366,10 @@
 				5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */,
 				5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */,
 				5AA251AF2A53BDD1000090C5 /* LogInViewController.swift in Sources */,
+				5A5824A52A5E76A1008C8068 /* SignUpVM.swift in Sources */,
 				5A9A6E8C2A5E44E800E61CA5 /* BaseTextField.swift in Sources */,
+				5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */,
+				5A89308D2A60DABC00BB5AB3 /* AppConfiguration.swift in Sources */,
 				5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */,
 				5AA251A72A53B72C000090C5 /* GlobalImports.swift in Sources */,
 				5AA251AC2A53B72C000090C5 /* DayNightMode.swift in Sources */,

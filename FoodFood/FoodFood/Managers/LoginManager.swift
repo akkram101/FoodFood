@@ -7,26 +7,26 @@
 
 import Foundation
 
-class LoginManager {
+class SessionManager {
     
-    typealias LoginClosure = () -> Void
+    typealias LoginClosure = (_ isSuccess: Bool) -> Void
     
-    class func loginUserWith(username: String,
+    class func loginUserWith(email: String,
                              password: String,
                              completion: @escaping (LoginClosure)) {
-        completion()
+        completion(true)
     }
     
     class func loginWithApple(completion: @escaping (LoginClosure)) {
-        completion()
+        completion(true)
     }
     
     class func loginWithFacebook(completion: @escaping (LoginClosure)) {
-        completion()
+        completion(true)
     }
     
     class func loginWithGoogle(completion: @escaping (LoginClosure)) {
-        completion()
+        completion(true)
     }
     
     class func logoutUser() {

@@ -9,6 +9,8 @@ import UIKit
 
 class LogInViewController: BaseViewController {
     
+    let viewModel = LoginVM()
+    
     @objc private func faceBookBtnAction(_ btn: UIButton) {
         print("login with facebook")
     }
@@ -22,7 +24,16 @@ class LogInViewController: BaseViewController {
     }
     
     @objc private func loginButtonAction(_ btn: UIButton) {
-        print("login")
+        guard let email = emailTextF.text,
+              let password = passwordTextF.text else { return }
+        
+        viewModel.login(withEmail: email, password: password) {[weak self] isSuceess in
+            guard let self = self else { return }
+            
+            if isSuceess {
+                self.navigationController?.pushViewController(SignUpViewController(), animated: true)
+            }
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,8 +119,8 @@ class LogInViewController: BaseViewController {
     
     
     private lazy var emailTextF : BaseTextField = {
-        let textF = BaseTextField(type: .email, placeholder: "Email")
-        textF.changeAction = { isAdd in
+        let textF = BaseTextField(type: .email, placeholder: "Email", leftImage: "signup_email")
+        textF.changeAction = { (newText, isAdd) in
             print("XD")
         }
             
@@ -117,7 +128,14 @@ class LogInViewController: BaseViewController {
     }()
     
     private lazy var passwordTextF : BaseTextField = {
-        let textF = BaseTextField(type: .password, placeholder: "Password")
+        let textF = BaseTextField(type: .password, placeholder: "Password", leftImage: "signup_password", rightImage: "signup_eye") {[weak self] isSelected in
+            guard let self = self else { return }
+            if isSelected {
+                self.passwordTextF.isSecureTextEntry = false
+            } else {
+                self.passwordTextF.isSecureTextEntry = true
+            }
+        }
         textF.endEditingAction = {
             print("end editiong")
         }
@@ -196,7 +214,7 @@ class LogInViewController: BaseViewController {
          btn.backgroundColor  = .systemGreen
         
          btn.clipsToBounds = true
-         btn.layer.cornerRadius = adapt(10)
+         btn.layer.cornerRadius = adapt(15)
          
          btn.addTarget(self, action: #selector(loginButtonAction(_:)), for: .touchUpInside)
         
@@ -207,7 +225,4 @@ class LogInViewController: BaseViewController {
         let imgV = UIImageView.init(imageName: "Logo")
         return imgV
     }()
-    
-    
-
 }
