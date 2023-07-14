@@ -10,7 +10,7 @@ import Foundation
 class HomeFoodViewModel {
     
     var topHomeAd: [HomeTopAdModel] = []
-    var homeTableCellHeights: [CGFloat] = [180,180,180, 180]
+    var homeTableCellHeights: [CGFloat] = [180,200,180, 180]
     
     typealias RequestHomeTopAdClosure = (_ ads: [HomeTopAdModel]) -> Void
     

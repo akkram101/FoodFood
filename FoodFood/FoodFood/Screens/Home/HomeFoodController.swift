@@ -65,6 +65,7 @@ class HomeFoodController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(HomeTopAdsCell.self, forCellReuseIdentifier: HomeTopAdsCell.reuseIdentifier)
+        tableView.register(NearRestoCollectionCell.self, forCellReuseIdentifier: NearRestoCollectionCell.reuseIdentifier)
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         
@@ -117,15 +118,28 @@ extension HomeFoodController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: HomeTopAdsCell.reuseIdentifier, for: indexPath) as? HomeTopAdsCell {
-            
-            cell.configureWithModels(viewModel.topHomeAd)
-            
-            return cell
+        
+        if indexPath.row == 0 {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: HomeTopAdsCell.reuseIdentifier, for: indexPath) as? HomeTopAdsCell {
+                
+                cell.configureWithModels(viewModel.topHomeAd)
+                
+                return cell
+            }
+        } else if indexPath.row == 1 {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NearRestoCollectionCell.reuseIdentifier, for: indexPath) as? NearRestoCollectionCell {
+                
+                return cell
+            }
+        } else {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: HomeTopAdsCell.reuseIdentifier, for: indexPath) as? HomeTopAdsCell {
+                
+                cell.configureWithModels(viewModel.topHomeAd)
+                
+                return cell
+            }
         }
         
         return UITableViewCell()
     }
-    
-    
 }

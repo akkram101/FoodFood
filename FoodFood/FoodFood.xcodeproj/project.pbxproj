@@ -39,7 +39,9 @@
 		5AA251B12A53BE5D000090C5 /* UIImageView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251B02A53BE5D000090C5 /* UIImageView+Utility.swift */; };
 		5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251B42A53C3BE000090C5 /* AppManager.swift */; };
 		5AF713262A613BF100EFBE3D /* HomeTopAdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */; };
-		5AF713282A6140B700EFBE3D /* ItemsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF713272A6140B700EFBE3D /* ItemsCollectionCell.swift */; };
+		5AF713282A6140B700EFBE3D /* NearRestoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF713272A6140B700EFBE3D /* NearRestoCollectionCell.swift */; };
+		5AF7132A2A61452200EFBE3D /* NearRestoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF713292A61452200EFBE3D /* NearRestoCell.swift */; };
+		5AF7132C2A61460D00EFBE3D /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7132B2A61460D00EFBE3D /* RestaurantModel.swift */; };
 		B1EF5D8826A88E9F149513AE /* Pods_FoodFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAB9E05D389781F782C1427 /* Pods_FoodFood.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +82,9 @@
 		5AA251B02A53BE5D000090C5 /* UIImageView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utility.swift"; sourceTree = "<group>"; };
 		5AA251B42A53C3BE000090C5 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopAdsCell.swift; sourceTree = "<group>"; };
-		5AF713272A6140B700EFBE3D /* ItemsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionCell.swift; sourceTree = "<group>"; };
+		5AF713272A6140B700EFBE3D /* NearRestoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearRestoCollectionCell.swift; sourceTree = "<group>"; };
+		5AF713292A61452200EFBE3D /* NearRestoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearRestoCell.swift; sourceTree = "<group>"; };
+		5AF7132B2A61460D00EFBE3D /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		9A5B1F00D2C7972B3441007E /* Pods-FoodFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFood.release.xcconfig"; path = "Target Support Files/Pods-FoodFood/Pods-FoodFood.release.xcconfig"; sourceTree = "<group>"; };
 		CBAB9E05D389781F782C1427 /* Pods_FoodFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,7 +144,8 @@
 				5A0E94502A6105A600C6F1EC /* SearchView.swift */,
 				5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */,
 				5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */,
-				5AF713272A6140B700EFBE3D /* ItemsCollectionCell.swift */,
+				5AF713272A6140B700EFBE3D /* NearRestoCollectionCell.swift */,
+				5AF713292A61452200EFBE3D /* NearRestoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				5A0E945A2A6130B900C6F1EC /* HomeTopAdModel.swift */,
+				5AF7132B2A61460D00EFBE3D /* RestaurantModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -435,12 +441,14 @@
 				5A96BA832A5E35FA00BEE3D9 /* UserManager.swift in Sources */,
 				5AA251A92A53B72C000090C5 /* ABLength.swift in Sources */,
 				5AA251AB2A53B72C000090C5 /* UINavigationController+Utility.swift in Sources */,
+				5AF7132A2A61452200EFBE3D /* NearRestoCell.swift in Sources */,
 				5A0E945D2A6131CC00C6F1EC /* AdsPagerView.swift in Sources */,
 				5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */,
-				5AF713282A6140B700EFBE3D /* ItemsCollectionCell.swift in Sources */,
+				5AF713282A6140B700EFBE3D /* NearRestoCollectionCell.swift in Sources */,
 				5A0E944E2A60F7D900C6F1EC /* MainTabbarViewController.swift in Sources */,
 				5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */,
 				5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */,
+				5AF7132C2A61460D00EFBE3D /* RestaurantModel.swift in Sources */,
 				5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */,
 				5AA251AF2A53BDD1000090C5 /* LogInViewController.swift in Sources */,
 				5A5824A52A5E76A1008C8068 /* SignUpVM.swift in Sources */,
