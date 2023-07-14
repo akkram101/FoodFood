@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FoodMainController.swift
 //  FoodFood
 //
 //  Created by Akkram Bederi on 6/27/23.
@@ -7,20 +7,11 @@
 
 import UIKit
 
-class MainViewController: BaseViewController {
-    
-    private func checkLoginAndPresentAuthentication() {
-        SessionManager.isLogin = false
-        if SessionManager.isLogin == false {
-            let vc = SignUpViewController()
-            self.navigationController?.pushViewController(vc, animated: false)
-        }
-    }
+class FoodMainController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        checkLoginAndPresentAuthentication()
        
         view.addSubview(AppLabel)
     }

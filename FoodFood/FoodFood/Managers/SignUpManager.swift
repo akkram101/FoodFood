@@ -9,24 +9,25 @@ import Foundation
 
 class SignUpManager {
     
-    typealias SignUpClosure = () -> Void
+    typealias SignUpClosure = (_ isSuccess: Bool) -> Void
     
     class func signUpUserWith(email: String,
                               password: String,
                               phoneNum: String,
                               completion: @escaping (SignUpClosure)) {
-        completion()
+        //API
+        completion(true)
     }
     
     class func signUpWithApple( completion: @escaping (SignUpClosure)) {
-        completion()
+        completion(true)
     }
     
     class func signUpWithFacebook( completion: @escaping (SignUpClosure)) {
-        completion()
+        completion(true)
     }
     
     class func signUpWithGoogle( completion: @escaping (SignUpClosure)) {
-        completion()
+        completion(true)
     }
 }

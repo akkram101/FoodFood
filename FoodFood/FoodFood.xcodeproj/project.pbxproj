@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A0E944A2A60E4D200C6F1EC /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94492A60E4D200C6F1EC /* CustomNavBar.swift */; };
+		5A0E944E2A60F7D900C6F1EC /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E944D2A60F7D900C6F1EC /* MainTabbarViewController.swift */; };
 		5A58249E2A5E617A008C8068 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58249D2A5E6179008C8068 /* LoginVM.swift */; };
 		5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5824A22A5E7690008C8068 /* SignUpViewController.swift */; };
 		5A5824A52A5E76A1008C8068 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5824A42A5E76A1008C8068 /* SignUpVM.swift */; };
@@ -20,7 +21,7 @@
 		5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */; };
 		5A9F28272A4AB4D800E478F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F28262A4AB4D800E478F3 /* Assets.xcassets */; };
 		5AA251992A53B6EB000090C5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251982A53B6EB000090C5 /* BaseViewController.swift */; };
-		5AA251A52A53B72C000090C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519B2A53B72C000090C5 /* MainViewController.swift */; };
+		5AA251A52A53B72C000090C5 /* FoodMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519B2A53B72C000090C5 /* FoodMainController.swift */; };
 		5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519D2A53B72C000090C5 /* GlobalFunc.swift */; };
 		5AA251A72A53B72C000090C5 /* GlobalImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519E2A53B72C000090C5 /* GlobalImports.swift */; };
 		5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519F2A53B72C000090C5 /* UIFont+Utility.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		3E9C77996E69785745FFC851 /* Pods-FoodFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFood.debug.xcconfig"; path = "Target Support Files/Pods-FoodFood/Pods-FoodFood.debug.xcconfig"; sourceTree = "<group>"; };
 		5A0E94492A60E4D200C6F1EC /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		5A0E944D2A60F7D900C6F1EC /* MainTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarViewController.swift; sourceTree = "<group>"; };
 		5A58249D2A5E6179008C8068 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		5A5824A22A5E7690008C8068 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A5824A42A5E76A1008C8068 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
@@ -52,7 +54,7 @@
 		5A9F28292A4AB4D800E478F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A9F282B2A4AB4D800E478F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AA251982A53B6EB000090C5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		5AA2519B2A53B72C000090C5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5AA2519B2A53B72C000090C5 /* FoodMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMainController.swift; sourceTree = "<group>"; };
 		5AA2519D2A53B72C000090C5 /* GlobalFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunc.swift; sourceTree = "<group>"; };
 		5AA2519E2A53B72C000090C5 /* GlobalImports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalImports.swift; sourceTree = "<group>"; };
 		5AA2519F2A53B72C000090C5 /* UIFont+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Utility.swift"; sourceTree = "<group>"; };
@@ -94,6 +96,22 @@
 				9A5B1F00D2C7972B3441007E /* Pods-FoodFood.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5A0E944B2A60F76700C6F1EC /* MainTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E944D2A60F7D900C6F1EC /* MainTabbarViewController.swift */,
+			);
+			path = MainTabbar;
+			sourceTree = "<group>";
+		};
+		5A0E944C2A60F79900C6F1EC /* FoodScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5AA2519B2A53B72C000090C5 /* FoodMainController.swift */,
+			);
+			path = FoodScreen;
 			sourceTree = "<group>";
 		};
 		5A58249B2A5E615B008C8068 /* View */ = {
@@ -186,9 +204,10 @@
 		5AA2519A2A53B72C000090C5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5A0E944B2A60F76700C6F1EC /* MainTabbar */,
+				5A0E944C2A60F79900C6F1EC /* FoodScreen */,
 				5A58249F2A5E7665008C8068 /* SignUp */,
 				5AA251AD2A53BD9E000090C5 /* LogIn */,
-				5AA2519B2A53B72C000090C5 /* MainViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -365,6 +384,7 @@
 				5AA251A92A53B72C000090C5 /* ABLength.swift in Sources */,
 				5AA251AB2A53B72C000090C5 /* UINavigationController+Utility.swift in Sources */,
 				5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */,
+				5A0E944E2A60F7D900C6F1EC /* MainTabbarViewController.swift in Sources */,
 				5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */,
 				5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */,
 				5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */,
@@ -378,7 +398,7 @@
 				5A0E944A2A60E4D200C6F1EC /* CustomNavBar.swift in Sources */,
 				5AA251AC2A53B72C000090C5 /* DayNightMode.swift in Sources */,
 				5AA251B12A53BE5D000090C5 /* UIImageView+Utility.swift in Sources */,
-				5AA251A52A53B72C000090C5 /* MainViewController.swift in Sources */,
+				5AA251A52A53B72C000090C5 /* FoodMainController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
