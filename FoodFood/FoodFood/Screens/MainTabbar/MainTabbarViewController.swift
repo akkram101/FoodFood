@@ -15,10 +15,10 @@ class MainTabbarViewController: BaseViewController {
         let vc2 = UIViewController()
         vc2.view.backgroundColor = .systemBlue
         
-        let vc3 = HomeFoodController()
+        let vc3 = UIViewController()
         vc3.view.backgroundColor = .systemPink
         
-        let vc4 = HomeFoodController()
+        let vc4 = UIViewController()
         vc4.view.backgroundColor = .systemGray
         
         let nav1 = createNavWith(vc: vc1, title: "Home", image: "tabbar_home")
@@ -60,6 +60,7 @@ class MainTabbarViewController: BaseViewController {
     
     private lazy var mainTabBar: UITabBarController = {
         let tabbarVC = UITabBarController.init()
+        tabbarVC.tabBar.backgroundColor = .white
         
         return tabbarVC
     }()

@@ -92,6 +92,8 @@ class SearchView: UIView {
         searchF.autocapitalizationType = .none
         searchF.spellCheckingType = .no
         searchF.tintColor = UIColor.init(hex: "F9A84D")
+        searchF.placeholder = "What do you want to order?"
+        searchF.textColor = UIColor.init(hex: "F9A84D")
         
         let leftImgView = UIImageView(frame: CGRect(x: 0, y: 0, width: adapt(20), height: adapt(20)))
         leftImgView.image = KImage("icon_search")

@@ -44,13 +44,32 @@ class HomeFoodController: BaseViewController {
             make.right.equalTo(notificationBell).offset(adapt(-10))
             make.height.equalTo(SearchView.searchHeight)
         }
+        
+        view.addSubview(homeTableView)
+        homeTableView.snp.makeConstraints { make in
+            make.top.equalTo(searchView.snp.bottom).offset(adapt(20))
+            make.left.right.equalToSuperview()
+            make.height.equalTo(adapt(500))
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        requestData()
         setupUI()
     }
+    
+    
+    private lazy var homeTableView: UITableView = {
+       let tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(HomeTopAdsCell.self, forCellReuseIdentifier: HomeTopAdsCell.reuseIdentifier)
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        
+        return tableView
+    }()
 
 
     private lazy var findFoodLabel: UILabel = {
@@ -81,3 +100,32 @@ class HomeFoodController: BaseViewController {
     }()
 }
 
+extension HomeFoodController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard indexPath.row < viewModel.homeTableCellHeights.count else { return 0 }
+        
+        let rowHeight = viewModel.homeTableCellHeights[indexPath.row]
+        return adapt(rowHeight)
+    }
+    
+}
+
+extension HomeFoodController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: HomeTopAdsCell.reuseIdentifier, for: indexPath) as? HomeTopAdsCell {
+            
+            cell.configureWithModels(viewModel.topHomeAd)
+            
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+    
+    
+}

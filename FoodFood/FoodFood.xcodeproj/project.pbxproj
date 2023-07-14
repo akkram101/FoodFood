@@ -38,6 +38,8 @@
 		5AA251AF2A53BDD1000090C5 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251AE2A53BDD1000090C5 /* LogInViewController.swift */; };
 		5AA251B12A53BE5D000090C5 /* UIImageView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251B02A53BE5D000090C5 /* UIImageView+Utility.swift */; };
 		5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251B42A53C3BE000090C5 /* AppManager.swift */; };
+		5AF713262A613BF100EFBE3D /* HomeTopAdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */; };
+		5AF713282A6140B700EFBE3D /* ItemsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF713272A6140B700EFBE3D /* ItemsCollectionCell.swift */; };
 		B1EF5D8826A88E9F149513AE /* Pods_FoodFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAB9E05D389781F782C1427 /* Pods_FoodFood.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		5AA251AE2A53BDD1000090C5 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5AA251B02A53BE5D000090C5 /* UIImageView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utility.swift"; sourceTree = "<group>"; };
 		5AA251B42A53C3BE000090C5 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopAdsCell.swift; sourceTree = "<group>"; };
+		5AF713272A6140B700EFBE3D /* ItemsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionCell.swift; sourceTree = "<group>"; };
 		9A5B1F00D2C7972B3441007E /* Pods-FoodFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFood.release.xcconfig"; path = "Target Support Files/Pods-FoodFood/Pods-FoodFood.release.xcconfig"; sourceTree = "<group>"; };
 		CBAB9E05D389781F782C1427 /* Pods_FoodFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,6 +139,8 @@
 			children = (
 				5A0E94502A6105A600C6F1EC /* SearchView.swift */,
 				5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */,
+				5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */,
+				5AF713272A6140B700EFBE3D /* ItemsCollectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF713262A613BF100EFBE3D /* HomeTopAdsCell.swift in Sources */,
 				5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */,
 				5A9A6E882A5E400E00E61CA5 /* SessionManager.swift in Sources */,
 				5A0E94532A611BFE00C6F1EC /* UIColor+Utility.swift in Sources */,
@@ -430,6 +437,7 @@
 				5AA251AB2A53B72C000090C5 /* UINavigationController+Utility.swift in Sources */,
 				5A0E945D2A6131CC00C6F1EC /* AdsPagerView.swift in Sources */,
 				5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */,
+				5AF713282A6140B700EFBE3D /* ItemsCollectionCell.swift in Sources */,
 				5A0E944E2A60F7D900C6F1EC /* MainTabbarViewController.swift in Sources */,
 				5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */,
 				5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */,
