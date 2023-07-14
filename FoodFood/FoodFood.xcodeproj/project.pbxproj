@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		5A0E944A2A60E4D200C6F1EC /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94492A60E4D200C6F1EC /* CustomNavBar.swift */; };
 		5A0E944E2A60F7D900C6F1EC /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E944D2A60F7D900C6F1EC /* MainTabbarViewController.swift */; };
+		5A0E94512A6105A600C6F1EC /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94502A6105A600C6F1EC /* SearchView.swift */; };
+		5A0E94532A611BFE00C6F1EC /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94522A611BFE00C6F1EC /* UIColor+Utility.swift */; };
+		5A0E94552A61259700C6F1EC /* HomeFoodController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94542A61259700C6F1EC /* HomeFoodController+Search.swift */; };
+		5A0E94582A612E7600C6F1EC /* HomeFoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94572A612E7600C6F1EC /* HomeFoodViewModel.swift */; };
+		5A0E945B2A6130B900C6F1EC /* HomeTopAdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E945A2A6130B900C6F1EC /* HomeTopAdModel.swift */; };
+		5A0E945D2A6131CC00C6F1EC /* AdsPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */; };
 		5A58249E2A5E617A008C8068 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58249D2A5E6179008C8068 /* LoginVM.swift */; };
 		5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5824A22A5E7690008C8068 /* SignUpViewController.swift */; };
 		5A5824A52A5E76A1008C8068 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5824A42A5E76A1008C8068 /* SignUpVM.swift */; };
@@ -21,7 +27,7 @@
 		5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */; };
 		5A9F28272A4AB4D800E478F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F28262A4AB4D800E478F3 /* Assets.xcassets */; };
 		5AA251992A53B6EB000090C5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251982A53B6EB000090C5 /* BaseViewController.swift */; };
-		5AA251A52A53B72C000090C5 /* FoodMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519B2A53B72C000090C5 /* FoodMainController.swift */; };
+		5AA251A52A53B72C000090C5 /* HomeFoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519B2A53B72C000090C5 /* HomeFoodController.swift */; };
 		5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519D2A53B72C000090C5 /* GlobalFunc.swift */; };
 		5AA251A72A53B72C000090C5 /* GlobalImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519E2A53B72C000090C5 /* GlobalImports.swift */; };
 		5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519F2A53B72C000090C5 /* UIFont+Utility.swift */; };
@@ -39,6 +45,12 @@
 		3E9C77996E69785745FFC851 /* Pods-FoodFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFood.debug.xcconfig"; path = "Target Support Files/Pods-FoodFood/Pods-FoodFood.debug.xcconfig"; sourceTree = "<group>"; };
 		5A0E94492A60E4D200C6F1EC /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		5A0E944D2A60F7D900C6F1EC /* MainTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarViewController.swift; sourceTree = "<group>"; };
+		5A0E94502A6105A600C6F1EC /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		5A0E94522A611BFE00C6F1EC /* UIColor+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
+		5A0E94542A61259700C6F1EC /* HomeFoodController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeFoodController+Search.swift"; sourceTree = "<group>"; };
+		5A0E94572A612E7600C6F1EC /* HomeFoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFoodViewModel.swift; sourceTree = "<group>"; };
+		5A0E945A2A6130B900C6F1EC /* HomeTopAdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopAdModel.swift; sourceTree = "<group>"; };
+		5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsPagerView.swift; sourceTree = "<group>"; };
 		5A58249D2A5E6179008C8068 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		5A5824A22A5E7690008C8068 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A5824A42A5E76A1008C8068 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
@@ -54,7 +66,7 @@
 		5A9F28292A4AB4D800E478F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A9F282B2A4AB4D800E478F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AA251982A53B6EB000090C5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		5AA2519B2A53B72C000090C5 /* FoodMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMainController.swift; sourceTree = "<group>"; };
+		5AA2519B2A53B72C000090C5 /* HomeFoodController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFoodController.swift; sourceTree = "<group>"; };
 		5AA2519D2A53B72C000090C5 /* GlobalFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunc.swift; sourceTree = "<group>"; };
 		5AA2519E2A53B72C000090C5 /* GlobalImports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalImports.swift; sourceTree = "<group>"; };
 		5AA2519F2A53B72C000090C5 /* UIFont+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Utility.swift"; sourceTree = "<group>"; };
@@ -106,12 +118,41 @@
 			path = MainTabbar;
 			sourceTree = "<group>";
 		};
-		5A0E944C2A60F79900C6F1EC /* FoodScreen */ = {
+		5A0E944C2A60F79900C6F1EC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5AA2519B2A53B72C000090C5 /* FoodMainController.swift */,
+				5A0E94592A6130A900C6F1EC /* Model */,
+				5A0E94562A612E5600C6F1EC /* ViewModel */,
+				5A0E944F2A61056E00C6F1EC /* View */,
+				5AA2519B2A53B72C000090C5 /* HomeFoodController.swift */,
+				5A0E94542A61259700C6F1EC /* HomeFoodController+Search.swift */,
 			);
-			path = FoodScreen;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5A0E944F2A61056E00C6F1EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E94502A6105A600C6F1EC /* SearchView.swift */,
+				5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5A0E94562A612E5600C6F1EC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E94572A612E7600C6F1EC /* HomeFoodViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5A0E94592A6130A900C6F1EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E945A2A6130B900C6F1EC /* HomeTopAdModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5A58249B2A5E615B008C8068 /* View */ = {
@@ -205,7 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				5A0E944B2A60F76700C6F1EC /* MainTabbar */,
-				5A0E944C2A60F79900C6F1EC /* FoodScreen */,
+				5A0E944C2A60F79900C6F1EC /* Home */,
 				5A58249F2A5E7665008C8068 /* SignUp */,
 				5AA251AD2A53BD9E000090C5 /* LogIn */,
 			);
@@ -247,6 +288,7 @@
 				5AA2519F2A53B72C000090C5 /* UIFont+Utility.swift */,
 				5AA251A32A53B72C000090C5 /* UINavigationController+Utility.swift */,
 				5AA251B02A53BE5D000090C5 /* UIImageView+Utility.swift */,
+				5A0E94522A611BFE00C6F1EC /* UIColor+Utility.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -377,12 +419,16 @@
 			files = (
 				5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */,
 				5A9A6E882A5E400E00E61CA5 /* SessionManager.swift in Sources */,
+				5A0E94532A611BFE00C6F1EC /* UIColor+Utility.swift in Sources */,
+				5A0E94582A612E7600C6F1EC /* HomeFoodViewModel.swift in Sources */,
 				5AA251AA2A53B72C000090C5 /* String+Utility.swift in Sources */,
 				5A58249E2A5E617A008C8068 /* LoginVM.swift in Sources */,
 				5AA251992A53B6EB000090C5 /* BaseViewController.swift in Sources */,
+				5A0E94552A61259700C6F1EC /* HomeFoodController+Search.swift in Sources */,
 				5A96BA832A5E35FA00BEE3D9 /* UserManager.swift in Sources */,
 				5AA251A92A53B72C000090C5 /* ABLength.swift in Sources */,
 				5AA251AB2A53B72C000090C5 /* UINavigationController+Utility.swift in Sources */,
+				5A0E945D2A6131CC00C6F1EC /* AdsPagerView.swift in Sources */,
 				5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */,
 				5A0E944E2A60F7D900C6F1EC /* MainTabbarViewController.swift in Sources */,
 				5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */,
@@ -394,11 +440,13 @@
 				5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */,
 				5A89308D2A60DABC00BB5AB3 /* AppConfiguration.swift in Sources */,
 				5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */,
+				5A0E94512A6105A600C6F1EC /* SearchView.swift in Sources */,
+				5A0E945B2A6130B900C6F1EC /* HomeTopAdModel.swift in Sources */,
 				5AA251A72A53B72C000090C5 /* GlobalImports.swift in Sources */,
 				5A0E944A2A60E4D200C6F1EC /* CustomNavBar.swift in Sources */,
 				5AA251AC2A53B72C000090C5 /* DayNightMode.swift in Sources */,
 				5AA251B12A53BE5D000090C5 /* UIImageView+Utility.swift in Sources */,
-				5AA251A52A53B72C000090C5 /* FoodMainController.swift in Sources */,
+				5AA251A52A53B72C000090C5 /* HomeFoodController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

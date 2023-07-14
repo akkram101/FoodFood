@@ -85,6 +85,7 @@ class BaseTextField: UITextField {
         font = .scaleRegular(size: 12)
         tintColor = .gray
         autocorrectionType = .no
+        autocapitalizationType = .none
         spellCheckingType = .no
         backgroundColor = .white
         

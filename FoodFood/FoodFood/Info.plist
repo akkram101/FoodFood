@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Environment</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIImageName</key>

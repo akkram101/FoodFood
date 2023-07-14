@@ -10,12 +10,15 @@ import UIKit
 class MainTabbarViewController: BaseViewController {
     
     private func setupControllers() {
-        let vc1 = FoodMainController()
+        let vc1 = HomeFoodController()
+        
         let vc2 = UIViewController()
         vc2.view.backgroundColor = .systemBlue
-        let vc3 = FoodMainController()
+        
+        let vc3 = HomeFoodController()
         vc3.view.backgroundColor = .systemPink
-        let vc4 = FoodMainController()
+        
+        let vc4 = HomeFoodController()
         vc4.view.backgroundColor = .systemGray
         
         let nav1 = createNavWith(vc: vc1, title: "Home", image: "tabbar_home")
