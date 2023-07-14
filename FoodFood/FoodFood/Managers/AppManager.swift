@@ -10,6 +10,16 @@ import UIKit
 
 class AppManager {
     
+    class func rootViewController() -> UIViewController? {
+        
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+           let rootViewController = appDelegate.window?.rootViewController {
+            return rootViewController
+        }
+        
+        return nil
+    }
+    
     class func topViewController() -> UIViewController? {
         if let keyWindow = UIApplication.shared.keyWindow,
            var topViewController = keyWindow.rootViewController {

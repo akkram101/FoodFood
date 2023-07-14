@@ -9,7 +9,7 @@ import Foundation
 
 class SignUpVM {
     
-    typealias SignUpClosure = () -> Void
+    typealias SignUpClosure = (_ isSuccess: Bool) -> Void
     
     func checkUserNameValidity(username: String) -> Bool {
         return true
@@ -20,6 +20,8 @@ class SignUpVM {
     }
     
     func signUpUser(username: String, email: String, password: String, completion: @escaping SignUpClosure) {
-        completion()
+        
+        //API
+        SessionManager.loginUserWith(email: email, password: password, completion: completion)
     }
 }

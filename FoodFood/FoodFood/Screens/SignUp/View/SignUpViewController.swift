@@ -17,7 +17,16 @@ class SignUpViewController: BaseViewController {
               let email = emailTextF.text,
               let password = passwordTextF.text else { return }
         
-        print("Create acc")
+        viewModel.signUpUser(username: username, email: email, password: password) {[weak self] isSuccess in
+            guard let self = self else { return }
+            if isSuccess {
+                print("Created Account successfully")
+                
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                print("Failed to create account")
+            }
+        }
     }
     
     @objc private func rememberBtnAction(_ btn: UIButton) {
@@ -30,7 +39,10 @@ class SignUpViewController: BaseViewController {
     }
     
     @objc private func alreadyHaveAccBtnAction(_ btn: UIButton) {
-        navigationController?.pushViewController(LogInViewController(), animated: true)
+        let vc = LogInViewController()
+        vc.isShowCustomNav = true
+
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     override func viewDidLoad() {

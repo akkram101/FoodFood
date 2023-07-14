@@ -31,7 +31,9 @@ class LogInViewController: BaseViewController {
             guard let self = self else { return }
             
             if isSuceess {
-                self.navigationController?.pushViewController(SignUpViewController(), animated: true)
+                self.navigationController?.popToRootViewController(animated: true)
+            } else {
+                print("Filed login")
             }
         }
     }
