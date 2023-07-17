@@ -29,7 +29,7 @@ class SearchView: UIView {
         animateToMinWidth()
     }
     
-    static let animationDuration: CGFloat = 0.5
+    static let animationDuration: CGFloat = 0.3
     
     func animateToMaxWidth() {
         

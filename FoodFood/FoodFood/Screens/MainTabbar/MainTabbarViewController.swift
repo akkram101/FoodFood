@@ -18,7 +18,7 @@ class MainTabbarViewController: BaseViewController {
         let vc3 = UIViewController()
         vc3.view.backgroundColor = .systemPink
         
-        let vc4 = UIViewController()
+        let vc4 = HomeBaseViewController()
         vc4.view.backgroundColor = .systemGray
         
         let nav1 = createNavWith(vc: vc1, title: "Home", image: "tabbar_home")

@@ -14,7 +14,7 @@ class NearRestoCell: UICollectionViewCell {
     func configure(withModel model: RestaurantModel) {
         imageV.image = KImage(model.imageURL)
         titleLabel.text = model.title
-        distancetLabel.text = "\(model.distance) km"
+        distancetLabel.text = "\(model.distance) mins"
     }
     
     private func setupUI() {

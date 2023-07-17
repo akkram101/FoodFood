@@ -26,6 +26,10 @@
 		5A9A6E8C2A5E44E800E61CA5 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E8B2A5E44E800E61CA5 /* BaseTextField.swift */; };
 		5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */; };
 		5A9F28272A4AB4D800E478F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F28262A4AB4D800E478F3 /* Assets.xcassets */; };
+		5A9FCFEC2A64CF7B00F03DD8 /* HomeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9FCFEB2A64CF7B00F03DD8 /* HomeBaseViewController.swift */; };
+		5A9FCFEE2A64EC7A00F03DD8 /* PopularItemsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9FCFED2A64EC7A00F03DD8 /* PopularItemsCollectionCell.swift */; };
+		5A9FCFF22A64EEF600F03DD8 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9FCFF12A64EEF600F03DD8 /* FoodModel.swift */; };
+		5A9FCFF62A64F24500F03DD8 /* PopularMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9FCFF52A64F24500F03DD8 /* PopularMenuCell.swift */; };
 		5AA251992A53B6EB000090C5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251982A53B6EB000090C5 /* BaseViewController.swift */; };
 		5AA251A52A53B72C000090C5 /* HomeFoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519B2A53B72C000090C5 /* HomeFoodController.swift */; };
 		5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2519D2A53B72C000090C5 /* GlobalFunc.swift */; };
@@ -69,6 +73,10 @@
 		5A9F28262A4AB4D800E478F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A9F28292A4AB4D800E478F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A9F282B2A4AB4D800E478F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A9FCFEB2A64CF7B00F03DD8 /* HomeBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBaseViewController.swift; sourceTree = "<group>"; };
+		5A9FCFED2A64EC7A00F03DD8 /* PopularItemsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularItemsCollectionCell.swift; sourceTree = "<group>"; };
+		5A9FCFF12A64EEF600F03DD8 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		5A9FCFF52A64F24500F03DD8 /* PopularMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMenuCell.swift; sourceTree = "<group>"; };
 		5AA251982A53B6EB000090C5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5AA2519B2A53B72C000090C5 /* HomeFoodController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFoodController.swift; sourceTree = "<group>"; };
 		5AA2519D2A53B72C000090C5 /* GlobalFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunc.swift; sourceTree = "<group>"; };
@@ -134,6 +142,7 @@
 				5A0E944F2A61056E00C6F1EC /* View */,
 				5AA2519B2A53B72C000090C5 /* HomeFoodController.swift */,
 				5A0E94542A61259700C6F1EC /* HomeFoodController+Search.swift */,
+				5A9FCFEB2A64CF7B00F03DD8 /* HomeBaseViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -141,11 +150,11 @@
 		5A0E944F2A61056E00C6F1EC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5A9FCFF42A64F22100F03DD8 /* PopularMenu */,
+				5A9FCFF32A64F20F00F03DD8 /* NearestRestaurant */,
 				5A0E94502A6105A600C6F1EC /* SearchView.swift */,
 				5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */,
 				5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */,
-				5AF713272A6140B700EFBE3D /* NearRestoCollectionCell.swift */,
-				5AF713292A61452200EFBE3D /* NearRestoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +172,7 @@
 			children = (
 				5A0E945A2A6130B900C6F1EC /* HomeTopAdModel.swift */,
 				5AF7132B2A61460D00EFBE3D /* RestaurantModel.swift */,
+				5A9FCFF12A64EEF600F03DD8 /* FoodModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +252,24 @@
 				5A89308C2A60DABC00BB5AB3 /* AppConfiguration.swift */,
 			);
 			path = FoodFood;
+			sourceTree = "<group>";
+		};
+		5A9FCFF32A64F20F00F03DD8 /* NearestRestaurant */ = {
+			isa = PBXGroup;
+			children = (
+				5AF713272A6140B700EFBE3D /* NearRestoCollectionCell.swift */,
+				5AF713292A61452200EFBE3D /* NearRestoCell.swift */,
+			);
+			path = NearestRestaurant;
+			sourceTree = "<group>";
+		};
+		5A9FCFF42A64F22100F03DD8 /* PopularMenu */ = {
+			isa = PBXGroup;
+			children = (
+				5A9FCFED2A64EC7A00F03DD8 /* PopularItemsCollectionCell.swift */,
+				5A9FCFF52A64F24500F03DD8 /* PopularMenuCell.swift */,
+			);
+			path = PopularMenu;
 			sourceTree = "<group>";
 		};
 		5AA251972A53B6EB000090C5 /* Base */ = {
@@ -433,6 +461,9 @@
 				5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */,
 				5A9A6E882A5E400E00E61CA5 /* SessionManager.swift in Sources */,
 				5A0E94532A611BFE00C6F1EC /* UIColor+Utility.swift in Sources */,
+				5A9FCFEE2A64EC7A00F03DD8 /* PopularItemsCollectionCell.swift in Sources */,
+				5A9FCFEC2A64CF7B00F03DD8 /* HomeBaseViewController.swift in Sources */,
+				5A9FCFF22A64EEF600F03DD8 /* FoodModel.swift in Sources */,
 				5A0E94582A612E7600C6F1EC /* HomeFoodViewModel.swift in Sources */,
 				5AA251AA2A53B72C000090C5 /* String+Utility.swift in Sources */,
 				5A58249E2A5E617A008C8068 /* LoginVM.swift in Sources */,
@@ -458,6 +489,7 @@
 				5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */,
 				5A0E94512A6105A600C6F1EC /* SearchView.swift in Sources */,
 				5A0E945B2A6130B900C6F1EC /* HomeTopAdModel.swift in Sources */,
+				5A9FCFF62A64F24500F03DD8 /* PopularMenuCell.swift in Sources */,
 				5AA251A72A53B72C000090C5 /* GlobalImports.swift in Sources */,
 				5A0E944A2A60E4D200C6F1EC /* CustomNavBar.swift in Sources */,
 				5AA251AC2A53B72C000090C5 /* DayNightMode.swift in Sources */,

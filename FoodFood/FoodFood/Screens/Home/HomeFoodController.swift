@@ -7,48 +7,37 @@
 
 import UIKit
 
-class HomeFoodController: BaseViewController {
+class HomeFoodController: HomeBaseViewController {
     
     var viewModel = HomeFoodViewModel()
     
-    @objc private func notiBtnAction(_ btn: UIButton) {
-        print("Notification clicked")
-    }
-    
     private func requestData() {
-        viewModel.requestTopHomeAd { ads in
+        viewModel.requestTopHomeAd {[weak self] (isSuccess, ads) in
+            guard let self = self else { return }
+            
             
         }
+        
+        viewModel.requestNearestRestaurants {[weak self] isSuccess, models in
+            guard let self = self else { return }
+        }
+        
+        viewModel.requestPopularMenu {[weak self] isSuccess, models in
+            guard let self = self else { return }
+            
+        }
+        
+        homeTableView.reloadData()
     }
     
     private func setupUI() {
-        view.backgroundColor = .white
-        
-        view.addSubview(findFoodLabel)
-        findFoodLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(adapt(50) + ABLength.kStatusBarHeight)
-            make.left.equalToSuperview().offset(adapt(20))
-        }
-        
-        view.addSubview(notificationBell)
-        notificationBell.snp.makeConstraints { make in
-            make.centerY.equalTo(findFoodLabel)
-            make.right.equalToSuperview().offset(adapt(-20))
-            make.width.height.equalTo(adapt(50))
-        }
-        
-        view.addSubview(searchView)
-        searchView.snp.makeConstraints { make in
-            make.top.equalTo(findFoodLabel.snp.bottom).offset(adapt(20))
-            make.left.equalTo(findFoodLabel)
-            make.right.equalTo(notificationBell).offset(adapt(-10))
-            make.height.equalTo(SearchView.searchHeight)
-        }
+        searchView.delegate = self
         
         view.addSubview(homeTableView)
         homeTableView.snp.makeConstraints { make in
             make.top.equalTo(searchView.snp.bottom).offset(adapt(20))
-            make.left.right.equalToSuperview()
+            make.left.equalToSuperview().offset(adapt(20))
+            make.right.equalToSuperview().offset(adapt(-20))
             make.height.equalTo(adapt(500))
         }
     }
@@ -66,38 +55,12 @@ class HomeFoodController: BaseViewController {
         tableView.dataSource = self
         tableView.register(HomeTopAdsCell.self, forCellReuseIdentifier: HomeTopAdsCell.reuseIdentifier)
         tableView.register(NearRestoCollectionCell.self, forCellReuseIdentifier: NearRestoCollectionCell.reuseIdentifier)
+        tableView.register(PopularItemsCollectionCell.self, forCellReuseIdentifier: PopularItemsCollectionCell.reuseIdentifier)
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
         
         return tableView
-    }()
-
-
-    private lazy var findFoodLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Find Your\nFavorite Food"
-        label.numberOfLines = 0
-        label.font = .scaleBold(size: 31)
-        label.center = self.view.center
-
-        return label
-    }()
-    
-    private lazy var notificationBell: UIButton = {
-        let btn = UIButton()
-        btn.backgroundColor = .white
-        btn.setImage(KImage("icon_notificationBell"), for: .normal)
-        btn.layer.cornerRadius = 10
-        btn.addTarget(self, action: #selector(notiBtnAction(_:)), for: .touchUpInside)
-        
-        return btn
-    }()
-    
-    private lazy var searchView: SearchView = {
-       let searchV = SearchView()
-        searchV.delegate = self
-        
-        return searchV
     }()
 }
 
@@ -105,6 +68,7 @@ extension HomeFoodController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard indexPath.row < viewModel.homeTableCellHeights.count else { return 0 }
+        if indexPath.row == 1 && viewModel.nearestRestaurants.count == 0 { return 0 }
         
         let rowHeight = viewModel.homeTableCellHeights[indexPath.row]
         return adapt(rowHeight)
@@ -127,10 +91,21 @@ extension HomeFoodController: UITableViewDataSource {
                 return cell
             }
         } else if indexPath.row == 1 {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NearRestoCollectionCell.reuseIdentifier, for: indexPath) as? NearRestoCollectionCell {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: NearRestoCollectionCell.reuseIdentifier, for: indexPath) as? NearRestoCollectionCell else {
+                return UITableViewCell()
                 
-                return cell
             }
+                cell.setupUI()
+                cell.restaurantModels = viewModel.nearestRestaurants
+                return cell
+        } else if indexPath.row == 2 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PopularItemsCollectionCell.reuseIdentifier, for: indexPath) as? PopularItemsCollectionCell, viewModel.nearestRestaurants.count > 0 else {
+                return UITableViewCell()
+                
+            }
+                cell.setupUI()
+                cell.foodModels = viewModel.popularMenu
+                return cell
         } else {
             if let cell = tableView.dequeueReusableCell(withIdentifier: HomeTopAdsCell.reuseIdentifier, for: indexPath) as? HomeTopAdsCell {
                 
