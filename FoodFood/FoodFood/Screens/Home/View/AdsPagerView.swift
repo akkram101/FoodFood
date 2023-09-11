@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import FSPagerView
 
+//TODO: - Refactor TYCycle
 class AdsPagerView: UIView {
     
     var adModels = [HomeTopAdModel]()

@@ -29,8 +29,8 @@ class HomeFoodViewModel {
         
         //API
         
-        homeTableCellHeights[0] = 180
-        homeTableCellHeights[3] = 180
+        homeTableCellHeights[0] = 140
+        homeTableCellHeights[3] = 140
         
         let requestedData = [HomeTopAdModel(), HomeTopAdModel(), HomeTopAdModel()]
         topHomeAd = requestedData
@@ -46,7 +46,7 @@ class HomeFoodViewModel {
         if success {
             let requestedData = [RestaurantModel(), RestaurantModel(), RestaurantModel(), RestaurantModel(), RestaurantModel(), RestaurantModel(), RestaurantModel(), RestaurantModel()]
             nearestRestaurants = requestedData
-            homeTableCellHeights[1] = 180
+            homeTableCellHeights[1] = 140
             completion(true,requestedData)
         } else {
             homeTableCellHeights[1] = 0
@@ -64,7 +64,7 @@ class HomeFoodViewModel {
             let requestedData = [FoodModel(), FoodModel(), FoodModel(), FoodModel(), FoodModel()] // Only 5 will display in Home
             popularMenu = requestedData
             
-            homeTableCellHeights[2] = 500
+            homeTableCellHeights[2] = 460
             completion(true,requestedData)
         } else {
             homeTableCellHeights[2] = 0

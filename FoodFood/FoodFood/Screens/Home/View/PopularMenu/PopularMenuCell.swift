@@ -21,7 +21,7 @@ class PopularMenuCell: UITableViewCell {
     private func setupUI() {
         clipsToBounds = true
         layer.cornerRadius = adapt(20)
-        backgroundColor = .white
+        backgroundColor = .clear
         
         addSubview(imageV)
         imageV.snp.makeConstraints { make in

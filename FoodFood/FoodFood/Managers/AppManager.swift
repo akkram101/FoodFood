@@ -10,10 +10,10 @@ import UIKit
 
 class AppManager {
     
-    class func rootViewController() -> UIViewController? {
+    class func rootViewController() -> UINavigationController? {
         
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-           let rootViewController = appDelegate.window?.rootViewController {
+           let rootViewController = appDelegate.window?.rootViewController as? UINavigationController {
             return rootViewController
         }
         

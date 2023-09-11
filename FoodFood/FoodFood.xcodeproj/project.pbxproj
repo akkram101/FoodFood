@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		5A0E944A2A60E4D200C6F1EC /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94492A60E4D200C6F1EC /* CustomNavBar.swift */; };
 		5A0E944E2A60F7D900C6F1EC /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E944D2A60F7D900C6F1EC /* MainTabbarViewController.swift */; };
-		5A0E94512A6105A600C6F1EC /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94502A6105A600C6F1EC /* SearchView.swift */; };
 		5A0E94532A611BFE00C6F1EC /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94522A611BFE00C6F1EC /* UIColor+Utility.swift */; };
-		5A0E94552A61259700C6F1EC /* HomeFoodController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94542A61259700C6F1EC /* HomeFoodController+Search.swift */; };
 		5A0E94582A612E7600C6F1EC /* HomeFoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94572A612E7600C6F1EC /* HomeFoodViewModel.swift */; };
 		5A0E945B2A6130B900C6F1EC /* HomeTopAdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E945A2A6130B900C6F1EC /* HomeTopAdModel.swift */; };
 		5A0E945D2A6131CC00C6F1EC /* AdsPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */; };
+		5A3F99262AAEB671006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99252AAEB671006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDataSource.swift */; };
+		5A3F99282AAEB69D006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99272AAEB69D006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDelegate.swift */; };
+		5A3F992A2AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99292AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift */; };
+		5A3F992C2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F992B2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift */; };
+		5A3F992E2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F992D2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift */; };
 		5A58249E2A5E617A008C8068 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58249D2A5E6179008C8068 /* LoginVM.swift */; };
 		5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5824A22A5E7690008C8068 /* SignUpViewController.swift */; };
 		5A5824A52A5E76A1008C8068 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5824A42A5E76A1008C8068 /* SignUpVM.swift */; };
@@ -53,12 +56,15 @@
 		3E9C77996E69785745FFC851 /* Pods-FoodFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFood.debug.xcconfig"; path = "Target Support Files/Pods-FoodFood/Pods-FoodFood.debug.xcconfig"; sourceTree = "<group>"; };
 		5A0E94492A60E4D200C6F1EC /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		5A0E944D2A60F7D900C6F1EC /* MainTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarViewController.swift; sourceTree = "<group>"; };
-		5A0E94502A6105A600C6F1EC /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		5A0E94522A611BFE00C6F1EC /* UIColor+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
-		5A0E94542A61259700C6F1EC /* HomeFoodController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeFoodController+Search.swift"; sourceTree = "<group>"; };
 		5A0E94572A612E7600C6F1EC /* HomeFoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFoodViewModel.swift; sourceTree = "<group>"; };
 		5A0E945A2A6130B900C6F1EC /* HomeTopAdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopAdModel.swift; sourceTree = "<group>"; };
 		5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsPagerView.swift; sourceTree = "<group>"; };
+		5A3F99252AAEB671006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularItemsCollectionCell+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		5A3F99272AAEB69D006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularItemsCollectionCell+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		5A3F99292AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeFoodController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		5A3F992B2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeFoodController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		5A3F992D2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderVIewController.swift; sourceTree = "<group>"; };
 		5A58249D2A5E6179008C8068 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		5A5824A22A5E7690008C8068 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A5824A42A5E76A1008C8068 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
@@ -129,7 +135,9 @@
 		5A0E944B2A60F76700C6F1EC /* MainTabbar */ = {
 			isa = PBXGroup;
 			children = (
+				5A3F992F2AAED92E006BE4D3 /* New Group */,
 				5A0E944D2A60F7D900C6F1EC /* MainTabbarViewController.swift */,
+				5A3F992D2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift */,
 			);
 			path = MainTabbar;
 			sourceTree = "<group>";
@@ -141,7 +149,8 @@
 				5A0E94562A612E5600C6F1EC /* ViewModel */,
 				5A0E944F2A61056E00C6F1EC /* View */,
 				5AA2519B2A53B72C000090C5 /* HomeFoodController.swift */,
-				5A0E94542A61259700C6F1EC /* HomeFoodController+Search.swift */,
+				5A3F992B2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift */,
+				5A3F99292AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift */,
 				5A9FCFEB2A64CF7B00F03DD8 /* HomeBaseViewController.swift */,
 			);
 			path = Home;
@@ -152,7 +161,6 @@
 			children = (
 				5A9FCFF42A64F22100F03DD8 /* PopularMenu */,
 				5A9FCFF32A64F20F00F03DD8 /* NearestRestaurant */,
-				5A0E94502A6105A600C6F1EC /* SearchView.swift */,
 				5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */,
 				5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */,
 			);
@@ -175,6 +183,13 @@
 				5A9FCFF12A64EEF600F03DD8 /* FoodModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5A3F992F2AAED92E006BE4D3 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		5A58249B2A5E615B008C8068 /* View */ = {
@@ -266,8 +281,10 @@
 		5A9FCFF42A64F22100F03DD8 /* PopularMenu */ = {
 			isa = PBXGroup;
 			children = (
-				5A9FCFED2A64EC7A00F03DD8 /* PopularItemsCollectionCell.swift */,
 				5A9FCFF52A64F24500F03DD8 /* PopularMenuCell.swift */,
+				5A9FCFED2A64EC7A00F03DD8 /* PopularItemsCollectionCell.swift */,
+				5A3F99252AAEB671006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDataSource.swift */,
+				5A3F99272AAEB69D006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDelegate.swift */,
 			);
 			path = PopularMenu;
 			sourceTree = "<group>";
@@ -459,6 +476,7 @@
 			files = (
 				5AF713262A613BF100EFBE3D /* HomeTopAdsCell.swift in Sources */,
 				5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */,
+				5A3F992E2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift in Sources */,
 				5A9A6E882A5E400E00E61CA5 /* SessionManager.swift in Sources */,
 				5A0E94532A611BFE00C6F1EC /* UIColor+Utility.swift in Sources */,
 				5A9FCFEE2A64EC7A00F03DD8 /* PopularItemsCollectionCell.swift in Sources */,
@@ -468,7 +486,6 @@
 				5AA251AA2A53B72C000090C5 /* String+Utility.swift in Sources */,
 				5A58249E2A5E617A008C8068 /* LoginVM.swift in Sources */,
 				5AA251992A53B6EB000090C5 /* BaseViewController.swift in Sources */,
-				5A0E94552A61259700C6F1EC /* HomeFoodController+Search.swift in Sources */,
 				5A96BA832A5E35FA00BEE3D9 /* UserManager.swift in Sources */,
 				5AA251A92A53B72C000090C5 /* ABLength.swift in Sources */,
 				5AA251AB2A53B72C000090C5 /* UINavigationController+Utility.swift in Sources */,
@@ -478,16 +495,19 @@
 				5AF713282A6140B700EFBE3D /* NearRestoCollectionCell.swift in Sources */,
 				5A0E944E2A60F7D900C6F1EC /* MainTabbarViewController.swift in Sources */,
 				5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */,
+				5A3F992C2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift in Sources */,
 				5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */,
 				5AF7132C2A61460D00EFBE3D /* RestaurantModel.swift in Sources */,
 				5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */,
+				5A3F99282AAEB69D006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDelegate.swift in Sources */,
 				5AA251AF2A53BDD1000090C5 /* LogInViewController.swift in Sources */,
 				5A5824A52A5E76A1008C8068 /* SignUpVM.swift in Sources */,
 				5A9A6E8C2A5E44E800E61CA5 /* BaseTextField.swift in Sources */,
 				5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */,
 				5A89308D2A60DABC00BB5AB3 /* AppConfiguration.swift in Sources */,
+				5A3F99262AAEB671006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDataSource.swift in Sources */,
 				5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */,
-				5A0E94512A6105A600C6F1EC /* SearchView.swift in Sources */,
+				5A3F992A2AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift in Sources */,
 				5A0E945B2A6130B900C6F1EC /* HomeTopAdModel.swift in Sources */,
 				5A9FCFF62A64F24500F03DD8 /* PopularMenuCell.swift in Sources */,
 				5AA251A72A53B72C000090C5 /* GlobalImports.swift in Sources */,

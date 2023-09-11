@@ -55,7 +55,7 @@ class CustomNavBar: UIView {
     lazy var navTitleLabel: UILabel = {
        let label = UILabel()
         label.textAlignment = .center
-        label.font = .scaleMedium(size: 12)
+        label.font = .scaleMedium(size: 14)
         
         return label
     }()

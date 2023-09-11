@@ -11,15 +11,9 @@ class MainTabbarViewController: BaseViewController {
     
     private func setupControllers() {
         let vc1 = HomeFoodController()
-        
-        let vc2 = UIViewController()
-        vc2.view.backgroundColor = .systemBlue
-        
-        let vc3 = UIViewController()
-        vc3.view.backgroundColor = .systemPink
-        
-        let vc4 = HomeBaseViewController()
-        vc4.view.backgroundColor = .systemGray
+        let vc2 = PlaceHolderViewController()
+        let vc3 = PlaceHolderViewController()
+        let vc4 = PlaceHolderViewController()
         
         let nav1 = createNavWith(vc: vc1, title: "Home", image: "tabbar_home")
         let nav2 = createNavWith(vc: vc2, title: nil, image: "tabbar_profile")

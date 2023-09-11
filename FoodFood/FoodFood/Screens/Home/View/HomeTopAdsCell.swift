@@ -20,6 +20,7 @@ class HomeTopAdsCell: UITableViewCell {
         clipsToBounds = true
         layer.cornerRadius = adapt(20)
         selectionStyle = .none
+        backgroundColor = .clear
         
         contentView.addSubview(pagerView)
         pagerView.snp.makeConstraints { make in

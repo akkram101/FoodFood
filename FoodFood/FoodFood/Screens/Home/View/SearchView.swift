@@ -21,48 +21,12 @@ class SearchView: UIView {
         self.delegate?.searchView(self, didClickFilterBtn: btn)
     }
     
-    private func addKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    @objc private func keyboardWillHide() {
-        animateToMinWidth()
-    }
-    
-    static let animationDuration: CGFloat = 0.3
-    
-    func animateToMaxWidth() {
-        
-        UIView.animate(withDuration: Self.animationDuration) {
-            self.searchField.frame.size.width = Self.maxSearchWidth
-//            self.searchField.snp.updateConstraints { make in
-//                make.width.equalTo(Self.maxSearchWidth)
-//            }
-            self.filterBtn.alpha = 0
-        }
-    }
-    
-    func animateToMinWidth() {
-        
-        UIView.animate(withDuration: Self.animationDuration) {
-            self.searchField.frame.size.width = Self.minSearchWidth
-//            self.searchField.snp.updateConstraints { make in
-//                make.width.equalTo(Self.maxSearchWidth)
-//            }
-            self.filterBtn.alpha = 1
-        }
-    }
-    
     static let minSearchWidth: CGFloat = adapt(267)
     static let maxSearchWidth: CGFloat = adapt(325)
     static let searchHeight: CGFloat = adapt(50)
     
     private func setupUI() {
         addSubview(searchField)
-//        searchField.snp.makeConstraints { make in
-//            make.top.bottom.left.equalToSuperview()
-//            make.width.equalTo(Self.minSearchWidth)
-//        }
         
         searchField.frame = CGRect(x: 0, y: 0, width: Self.minSearchWidth, height: Self.searchHeight)
         addSubview(filterBtn)
@@ -70,7 +34,6 @@ class SearchView: UIView {
             make.top.bottom.equalToSuperview()
             make.right.equalToSuperview()
             make.width.equalTo(adapt(50))
-            
         }
     }
 

@@ -11,7 +11,11 @@ import UIKit
 class HomeBaseViewController: BaseViewController {
     
     @objc private func notiBtnAction(_ btn: UIButton) {
-        print("Notification clicked")
+        let vc = PlaceHolderViewController()
+        vc.isShowCustomNav = true
+        vc.title = "Notifications"
+        
+        AppManager.rootViewController()?.pushViewController(vc, animated: true)
     }
     
     private func setupUI() {
@@ -29,14 +33,6 @@ class HomeBaseViewController: BaseViewController {
             make.right.equalToSuperview().offset(adapt(-20))
             make.width.height.equalTo(adapt(50))
         }
-        
-        view.addSubview(searchView)
-        searchView.snp.makeConstraints { make in
-            make.top.equalTo(findFoodLabel.snp.bottom).offset(adapt(20))
-            make.left.equalTo(findFoodLabel)
-            make.right.equalTo(notificationBell).offset(adapt(-10))
-            make.height.equalTo(SearchView.searchHeight)
-        }
     }
     
     override func viewDidLoad() {
@@ -44,17 +40,18 @@ class HomeBaseViewController: BaseViewController {
         setupUI()
     }
     
-    private lazy var findFoodLabel: UILabel = {
+    lazy var findFoodLabel: UILabel = {
         let label = UILabel()
         label.text = "Find Your\nFavorite Food"
         label.numberOfLines = 0
         label.font = .scaleBold(size: 31)
         label.center = self.view.center
+        label.textColor = .black
 
         return label
     }()
     
-    private lazy var notificationBell: UIButton = {
+    lazy var notificationBell: UIButton = {
         let btn = UIButton()
         btn.backgroundColor = .white
         btn.setImage(KImage("icon_notificationBell"), for: .normal)
@@ -62,11 +59,5 @@ class HomeBaseViewController: BaseViewController {
         btn.addTarget(self, action: #selector(notiBtnAction(_:)), for: .touchUpInside)
         
         return btn
-    }()
-    
-    lazy var searchView: SearchView = {
-       let searchV = SearchView()
-        
-        return searchV
     }()
 }

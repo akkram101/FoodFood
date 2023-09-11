@@ -22,23 +22,12 @@ class NearRestoCollectionCell: UITableViewCell {
     
     func setupUI() {
         selectionStyle = .none
-        
-        contentView.addSubview(itemsLabel)
-        itemsLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(adapt(10))
-            make.left.equalToSuperview().offset(adapt(10))
-        }
-        
-        contentView.addSubview(viewMoreBtn)
-        viewMoreBtn.snp.makeConstraints { make in
-            make.centerY.equalTo(itemsLabel)
-            make.right.equalToSuperview().offset(adapt(-10))
-        }
-        
+        backgroundColor = .clear
+
         contentView.addSubview(itemsCollectionView)
         itemsCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(itemsLabel.snp.bottom)
-            make.left.equalTo(itemsLabel)
+            make.top.equalToSuperview()
+            make.top.equalToSuperview().offset(adapt(10))
             make.height.equalTo(adapt(170))
             make.width.equalToSuperview()
         }
@@ -74,26 +63,9 @@ class NearRestoCollectionCell: UITableViewCell {
         collectV.delegate = self
         collectV.dataSource = self
         collectV.showsHorizontalScrollIndicator = false
+        collectV.backgroundColor = .clear
         
         return collectV
-    }()
-    
-    private lazy var itemsLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Nearest Restaurant"
-        label.font = .scaleBold(size: 13)
-        
-        return label
-    }()
-    
-    private lazy var viewMoreBtn: UIButton = {
-        let btn = UIButton()
-        btn.setTitle("View More", for: .normal)
-        btn.setTitleColor(UIColor.init(hex: "FF7C32"), for: .normal)
-        btn.titleLabel?.font = .scaleRegular(size: 12)
-        btn.addTarget(self, action: #selector(viewMoreBtnAction(_:)), for: .touchUpInside)
-        
-        return btn
     }()
 }
 
