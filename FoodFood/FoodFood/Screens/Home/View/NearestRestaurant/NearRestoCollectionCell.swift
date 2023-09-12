@@ -9,7 +9,11 @@ import UIKit
 
 class NearRestoCollectionCell: UITableViewCell {
     
-    var restaurantModels: [RestaurantModel] = []
+    var restaurantModels: [RestaurantModel] = [] {
+        didSet {
+            itemsCollectionView.reloadData()
+        }
+    }
     
     static let reuseIdentifier = "NearRestoCellReuseIdentifier"
     
@@ -35,7 +39,7 @@ class NearRestoCollectionCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
+        setupUI()
     }
     
     required init?(coder: NSCoder) {

@@ -9,12 +9,12 @@ import UIKit
 
 class HomeFoodController: HomeBaseViewController {
     
-    var viewModel = HomeFoodViewModel()
+    let viewModel = HomeFoodViewModel()
     
     @objc private func filterBtnAction(_ btn: UIButton) {
-        let vc = PlaceHolderViewController()
+        let vc = FilterSearchVC()
         vc.isShowCustomNav = true
-        vc.title = "Search"
+        vc.delegate = self
         
         AppManager.rootViewController()?.pushViewController(vc, animated: true)
     }
@@ -43,11 +43,13 @@ class HomeFoodController: HomeBaseViewController {
         }
         
         homeTableView.reloadData()
+        
+        //scroll to TOP when search
+        if viewModel.filter != nil {
+            let indexPath = IndexPath(row: 0, section: 0)
+            homeTableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        }
     }
-    
-    static let minSearchWidth: CGFloat = adapt(267)
-    static let maxSearchWidth: CGFloat = adapt(325)
-    static let searchHeight: CGFloat = adapt(50)
     
     private func setupUI() {
         view.addSubview(searchField)
@@ -55,7 +57,7 @@ class HomeFoodController: HomeBaseViewController {
             make.top.equalTo(findFoodLabel.snp.bottom).offset(adapt(20))
             make.left.equalTo(findFoodLabel)
             make.height.equalTo(adapt(50))
-            make.width.equalTo(adapt(267))
+            make.width.equalTo(adapt(SearchFoodField.minSearchWidth))
         }
         
         view.addSubview(filterBtn)
@@ -67,7 +69,7 @@ class HomeFoodController: HomeBaseViewController {
     
         view.addSubview(homeTableView)
         homeTableView.snp.makeConstraints { make in
-            make.top.equalTo(searchField.snp.bottom)
+            make.top.equalTo(searchField.snp.bottom).offset(adapt(16))
             make.left.equalToSuperview().offset(adapt(20))
             make.right.equalToSuperview().offset(adapt(-20))
             make.height.equalTo(adapt(500))
@@ -112,14 +114,19 @@ class HomeFoodController: HomeBaseViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        requestData()
+    }
     
-    private lazy var homeTableView: UITableView = {
-       let tableView = UITableView()
+    
+    lazy var homeTableView: UITableView = {
+        let tableView = UITableView.init(frame: .zero, style: .grouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(HomeTopAdsCell.self, forCellReuseIdentifier: HomeTopAdsCell.reuseIdentifier)
         tableView.register(NearRestoCollectionCell.self, forCellReuseIdentifier: NearRestoCollectionCell.reuseIdentifier)
         tableView.register(PopularItemsCollectionCell.self, forCellReuseIdentifier: PopularItemsCollectionCell.reuseIdentifier)
+        tableView.register(FiltersCollection.self, forCellReuseIdentifier: FiltersCollection.reuseIdentiier)
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
@@ -127,31 +134,8 @@ class HomeFoodController: HomeBaseViewController {
         return tableView
     }()
     
-    lazy var searchField: UITextField = {
-        let searchF = UITextField.init()
-        searchF.backgroundColor = UIColor.init(hex: "F9A84D", alpha: 0.3)
-        searchF.layer.cornerRadius = 20
-        searchF.font = .scaleRegular(size: 13)
-        searchF.autocorrectionType = .no
-        searchF.autocapitalizationType = .none
-        searchF.spellCheckingType = .no
-        searchF.tintColor = UIColor.init(hex: "F9A84D")
-        searchF.placeholder = "What do you want to order?"
-        searchF.textColor = UIColor.init(hex: "F9A84D")
-        
-        let leftImgView = UIImageView(frame: CGRect(x: 0, y: 0, width: adapt(20), height: adapt(20)))
-        leftImgView.image = KImage("icon_search")
-        leftImgView.contentMode = .scaleAspectFit
-        
-        let spacing: CGFloat = adapt(10)
-        let leftViewContainer = UIView(frame: CGRect(x: 0, y: 0, width: leftImgView.frame.width + 2 * spacing, height: leftImgView.frame.height))
-        leftViewContainer.addSubview(leftImgView)
-        leftImgView.frame.origin.x = spacing
-        
-        searchF.leftView = leftViewContainer
-        searchF.leftViewMode = .always
-        
-        
+    lazy var searchField: SearchFoodField = {
+        let searchF = SearchFoodField()
         return searchF
     }()
     

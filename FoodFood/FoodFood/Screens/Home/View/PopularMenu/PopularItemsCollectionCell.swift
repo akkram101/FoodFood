@@ -9,9 +9,14 @@ import UIKit
 
 class PopularItemsCollectionCell: UITableViewCell {
     
-    var foodModels: [FoodModel] = []
+    var foodModels: [FoodModel] = [] {
+        didSet {
+            itemsTableView.reloadData()
+        }
+    }
     
     static let reuseIdentifier = "PopularMenuReuseIdentifier"
+    static let rowHeight: CGFloat = 87
     
     func setupUI() {
         backgroundColor = .clear
@@ -27,7 +32,7 @@ class PopularItemsCollectionCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
+        setupUI()
     }
     
     required init?(coder: NSCoder) {

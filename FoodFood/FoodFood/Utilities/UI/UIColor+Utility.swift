@@ -10,6 +10,11 @@ import UIKit
 
 extension UIColor {
     
+    struct Orange {
+        static var mainColor: UIColor { return UIColor(hex: "#e85b00")}
+        static var subColor: UIColor { return UIColor(hex: "#fff8e6")}
+    }
+    
     convenience init(hex: String, alpha: CGFloat = 1.0) {
             var hexValue = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
             if hexValue.hasPrefix("#") {

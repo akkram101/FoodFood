@@ -18,6 +18,16 @@
 		5A3F992A2AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99292AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift */; };
 		5A3F992C2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F992B2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift */; };
 		5A3F992E2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F992D2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift */; };
+		5A3F99342AAEDDAC006BE4D3 /* FilterSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99332AAEDDAC006BE4D3 /* FilterSearchVC.swift */; };
+		5A3F99362AAEDE4E006BE4D3 /* SearchFoodField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99352AAEDE4E006BE4D3 /* SearchFoodField.swift */; };
+		5A3F993A2AAEE16F006BE4D3 /* FiltersCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99392AAEE16F006BE4D3 /* FiltersCollection.swift */; };
+		5A3F993D2AAEE1CE006BE4D3 /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F993C2AAEE1CE006BE4D3 /* FilterModel.swift */; };
+		5A3F993F2AAEE7B8006BE4D3 /* FiltersCollection+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F993E2AAEE7B8006BE4D3 /* FiltersCollection+UICollectionViewDelegate.swift */; };
+		5A3F99412AAEE7C9006BE4D3 /* FiltersCollection+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99402AAEE7C9006BE4D3 /* FiltersCollection+UICollectionViewDataSource.swift */; };
+		5A3F99432AAEEB0F006BE4D3 /* FilterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99422AAEEB0F006BE4D3 /* FilterCollectionCell.swift */; };
+		5A3F99452AAEF181006BE4D3 /* FilterSearchVC+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99442AAEF181006BE4D3 /* FilterSearchVC+UITableViewDataSource.swift */; };
+		5A3F99472AAEF195006BE4D3 /* FilterSearchVC+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99462AAEF195006BE4D3 /* FilterSearchVC+UITableViewDelegate.swift */; };
+		5A3F994A2AAEF238006BE4D3 /* FilterSearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99492AAEF238006BE4D3 /* FilterSearchVM.swift */; };
 		5A58249E2A5E617A008C8068 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58249D2A5E6179008C8068 /* LoginVM.swift */; };
 		5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5824A22A5E7690008C8068 /* SignUpViewController.swift */; };
 		5A5824A52A5E76A1008C8068 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5824A42A5E76A1008C8068 /* SignUpVM.swift */; };
@@ -45,6 +55,9 @@
 		5AA251AF2A53BDD1000090C5 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251AE2A53BDD1000090C5 /* LogInViewController.swift */; };
 		5AA251B12A53BE5D000090C5 /* UIImageView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251B02A53BE5D000090C5 /* UIImageView+Utility.swift */; };
 		5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251B42A53C3BE000090C5 /* AppManager.swift */; };
+		5AF4AF672AB0025800ABC5B9 /* FilterSearchVC+FilterSearchVMDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF662AB0025800ABC5B9 /* FilterSearchVC+FilterSearchVMDelegate.swift */; };
+		5AF4AF692AB0046300ABC5B9 /* HomeFoodController+FilterSearchViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF682AB0046300ABC5B9 /* HomeFoodController+FilterSearchViewControllerDelegate.swift */; };
+		5AF4AF6B2AB00A2200ABC5B9 /* FilterSearchVC+FiltersCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF6A2AB00A2200ABC5B9 /* FilterSearchVC+FiltersCollectionDelegate.swift */; };
 		5AF713262A613BF100EFBE3D /* HomeTopAdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */; };
 		5AF713282A6140B700EFBE3D /* NearRestoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF713272A6140B700EFBE3D /* NearRestoCollectionCell.swift */; };
 		5AF7132A2A61452200EFBE3D /* NearRestoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF713292A61452200EFBE3D /* NearRestoCell.swift */; };
@@ -65,6 +78,16 @@
 		5A3F99292AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeFoodController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		5A3F992B2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeFoodController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		5A3F992D2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderVIewController.swift; sourceTree = "<group>"; };
+		5A3F99332AAEDDAC006BE4D3 /* FilterSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSearchVC.swift; sourceTree = "<group>"; };
+		5A3F99352AAEDE4E006BE4D3 /* SearchFoodField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodField.swift; sourceTree = "<group>"; };
+		5A3F99392AAEE16F006BE4D3 /* FiltersCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCollection.swift; sourceTree = "<group>"; };
+		5A3F993C2AAEE1CE006BE4D3 /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
+		5A3F993E2AAEE7B8006BE4D3 /* FiltersCollection+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FiltersCollection+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		5A3F99402AAEE7C9006BE4D3 /* FiltersCollection+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FiltersCollection+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		5A3F99422AAEEB0F006BE4D3 /* FilterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionCell.swift; sourceTree = "<group>"; };
+		5A3F99442AAEF181006BE4D3 /* FilterSearchVC+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterSearchVC+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		5A3F99462AAEF195006BE4D3 /* FilterSearchVC+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterSearchVC+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		5A3F99492AAEF238006BE4D3 /* FilterSearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSearchVM.swift; sourceTree = "<group>"; };
 		5A58249D2A5E6179008C8068 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		5A5824A22A5E7690008C8068 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A5824A42A5E76A1008C8068 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
@@ -95,6 +118,9 @@
 		5AA251AE2A53BDD1000090C5 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5AA251B02A53BE5D000090C5 /* UIImageView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utility.swift"; sourceTree = "<group>"; };
 		5AA251B42A53C3BE000090C5 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		5AF4AF662AB0025800ABC5B9 /* FilterSearchVC+FilterSearchVMDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterSearchVC+FilterSearchVMDelegate.swift"; sourceTree = "<group>"; };
+		5AF4AF682AB0046300ABC5B9 /* HomeFoodController+FilterSearchViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeFoodController+FilterSearchViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		5AF4AF6A2AB00A2200ABC5B9 /* FilterSearchVC+FiltersCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterSearchVC+FiltersCollectionDelegate.swift"; sourceTree = "<group>"; };
 		5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopAdsCell.swift; sourceTree = "<group>"; };
 		5AF713272A6140B700EFBE3D /* NearRestoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearRestoCollectionCell.swift; sourceTree = "<group>"; };
 		5AF713292A61452200EFBE3D /* NearRestoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearRestoCell.swift; sourceTree = "<group>"; };
@@ -135,7 +161,7 @@
 		5A0E944B2A60F76700C6F1EC /* MainTabbar */ = {
 			isa = PBXGroup;
 			children = (
-				5A3F992F2AAED92E006BE4D3 /* New Group */,
+				5A3F992F2AAED92E006BE4D3 /* View */,
 				5A0E944D2A60F7D900C6F1EC /* MainTabbarViewController.swift */,
 				5A3F992D2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift */,
 			);
@@ -145,13 +171,10 @@
 		5A0E944C2A60F79900C6F1EC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5A3F99302AAEDCBC006BE4D3 /* ViewController */,
 				5A0E94592A6130A900C6F1EC /* Model */,
 				5A0E94562A612E5600C6F1EC /* ViewModel */,
 				5A0E944F2A61056E00C6F1EC /* View */,
-				5AA2519B2A53B72C000090C5 /* HomeFoodController.swift */,
-				5A3F992B2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift */,
-				5A3F99292AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift */,
-				5A9FCFEB2A64CF7B00F03DD8 /* HomeBaseViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -163,6 +186,7 @@
 				5A9FCFF32A64F20F00F03DD8 /* NearestRestaurant */,
 				5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */,
 				5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */,
+				5A3F99352AAEDE4E006BE4D3 /* SearchFoodField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,11 +209,73 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5A3F992F2AAED92E006BE4D3 /* New Group */ = {
+		5A3F992F2AAED92E006BE4D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "New Group";
+			path = View;
+			sourceTree = "<group>";
+		};
+		5A3F99302AAEDCBC006BE4D3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5AA2519B2A53B72C000090C5 /* HomeFoodController.swift */,
+				5A3F992B2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift */,
+				5A3F99292AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift */,
+				5A9FCFEB2A64CF7B00F03DD8 /* HomeBaseViewController.swift */,
+				5AF4AF682AB0046300ABC5B9 /* HomeFoodController+FilterSearchViewControllerDelegate.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5A3F99312AAEDCE7006BE4D3 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F99482AAEF222006BE4D3 /* ViewModel */,
+				5A3F993B2AAEE1B8006BE4D3 /* Model */,
+				5A3F99382AAEE139006BE4D3 /* View */,
+				5A3F99372AAEE0D9006BE4D3 /* ViewController */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		5A3F99372AAEE0D9006BE4D3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F99332AAEDDAC006BE4D3 /* FilterSearchVC.swift */,
+				5A3F99442AAEF181006BE4D3 /* FilterSearchVC+UITableViewDataSource.swift */,
+				5A3F99462AAEF195006BE4D3 /* FilterSearchVC+UITableViewDelegate.swift */,
+				5AF4AF662AB0025800ABC5B9 /* FilterSearchVC+FilterSearchVMDelegate.swift */,
+				5AF4AF6A2AB00A2200ABC5B9 /* FilterSearchVC+FiltersCollectionDelegate.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5A3F99382AAEE139006BE4D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F99392AAEE16F006BE4D3 /* FiltersCollection.swift */,
+				5A3F993E2AAEE7B8006BE4D3 /* FiltersCollection+UICollectionViewDelegate.swift */,
+				5A3F99402AAEE7C9006BE4D3 /* FiltersCollection+UICollectionViewDataSource.swift */,
+				5A3F99422AAEEB0F006BE4D3 /* FilterCollectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5A3F993B2AAEE1B8006BE4D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F993C2AAEE1CE006BE4D3 /* FilterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5A3F99482AAEF222006BE4D3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F99492AAEF238006BE4D3 /* FilterSearchVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5A58249B2A5E615B008C8068 /* View */ = {
@@ -304,6 +390,7 @@
 			children = (
 				5A0E944B2A60F76700C6F1EC /* MainTabbar */,
 				5A0E944C2A60F79900C6F1EC /* Home */,
+				5A3F99312AAEDCE7006BE4D3 /* Filter */,
 				5A58249F2A5E7665008C8068 /* SignUp */,
 				5AA251AD2A53BD9E000090C5 /* LogIn */,
 			);
@@ -478,6 +565,7 @@
 				5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */,
 				5A3F992E2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift in Sources */,
 				5A9A6E882A5E400E00E61CA5 /* SessionManager.swift in Sources */,
+				5AF4AF672AB0025800ABC5B9 /* FilterSearchVC+FilterSearchVMDelegate.swift in Sources */,
 				5A0E94532A611BFE00C6F1EC /* UIColor+Utility.swift in Sources */,
 				5A9FCFEE2A64EC7A00F03DD8 /* PopularItemsCollectionCell.swift in Sources */,
 				5A9FCFEC2A64CF7B00F03DD8 /* HomeBaseViewController.swift in Sources */,
@@ -490,18 +578,26 @@
 				5AA251A92A53B72C000090C5 /* ABLength.swift in Sources */,
 				5AA251AB2A53B72C000090C5 /* UINavigationController+Utility.swift in Sources */,
 				5AF7132A2A61452200EFBE3D /* NearRestoCell.swift in Sources */,
+				5A3F99342AAEDDAC006BE4D3 /* FilterSearchVC.swift in Sources */,
 				5A0E945D2A6131CC00C6F1EC /* AdsPagerView.swift in Sources */,
 				5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */,
 				5AF713282A6140B700EFBE3D /* NearRestoCollectionCell.swift in Sources */,
+				5A3F99412AAEE7C9006BE4D3 /* FiltersCollection+UICollectionViewDataSource.swift in Sources */,
 				5A0E944E2A60F7D900C6F1EC /* MainTabbarViewController.swift in Sources */,
+				5A3F99362AAEDE4E006BE4D3 /* SearchFoodField.swift in Sources */,
+				5A3F99432AAEEB0F006BE4D3 /* FilterCollectionCell.swift in Sources */,
 				5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */,
 				5A3F992C2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift in Sources */,
 				5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */,
 				5AF7132C2A61460D00EFBE3D /* RestaurantModel.swift in Sources */,
 				5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */,
+				5A3F994A2AAEF238006BE4D3 /* FilterSearchVM.swift in Sources */,
+				5A3F99472AAEF195006BE4D3 /* FilterSearchVC+UITableViewDelegate.swift in Sources */,
 				5A3F99282AAEB69D006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDelegate.swift in Sources */,
+				5AF4AF6B2AB00A2200ABC5B9 /* FilterSearchVC+FiltersCollectionDelegate.swift in Sources */,
 				5AA251AF2A53BDD1000090C5 /* LogInViewController.swift in Sources */,
 				5A5824A52A5E76A1008C8068 /* SignUpVM.swift in Sources */,
+				5A3F993D2AAEE1CE006BE4D3 /* FilterModel.swift in Sources */,
 				5A9A6E8C2A5E44E800E61CA5 /* BaseTextField.swift in Sources */,
 				5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */,
 				5A89308D2A60DABC00BB5AB3 /* AppConfiguration.swift in Sources */,
@@ -512,8 +608,12 @@
 				5A9FCFF62A64F24500F03DD8 /* PopularMenuCell.swift in Sources */,
 				5AA251A72A53B72C000090C5 /* GlobalImports.swift in Sources */,
 				5A0E944A2A60E4D200C6F1EC /* CustomNavBar.swift in Sources */,
+				5A3F993F2AAEE7B8006BE4D3 /* FiltersCollection+UICollectionViewDelegate.swift in Sources */,
+				5A3F99452AAEF181006BE4D3 /* FilterSearchVC+UITableViewDataSource.swift in Sources */,
 				5AA251AC2A53B72C000090C5 /* DayNightMode.swift in Sources */,
+				5A3F993A2AAEE16F006BE4D3 /* FiltersCollection.swift in Sources */,
 				5AA251B12A53BE5D000090C5 /* UIImageView+Utility.swift in Sources */,
+				5AF4AF692AB0046300ABC5B9 /* HomeFoodController+FilterSearchViewControllerDelegate.swift in Sources */,
 				5AA251A52A53B72C000090C5 /* HomeFoodController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,7 @@ import UIKit
 class NearRestoCell: UICollectionViewCell {
     
     static let reuseIdentifier = "NearRestoCellReuseIdentifier"
+    static let cellHeight: CGFloat = 140
     
     func configure(withModel model: RestaurantModel) {
         imageV.image = KImage(model.imageURL)

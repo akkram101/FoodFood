@@ -10,6 +10,7 @@ import UIKit
 class HomeTopAdsCell: UITableViewCell {
     
     static let reuseIdentifier = "HomeTopAdsCellReuseIdentifier"
+    static let cellHeight: CGFloat = 150
     
     func configureWithModels(_ models: [HomeTopAdModel]) {
         pagerView.adModels = models
@@ -26,8 +27,8 @@ class HomeTopAdsCell: UITableViewCell {
         pagerView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.centerX.equalToSuperview()
-            make.width.equalTo(adapt(325))
-            make.height.equalTo(adapt(150))
+            make.width.equalToSuperview()
+            make.height.equalTo(adapt(Self.cellHeight))
         }
     }
     

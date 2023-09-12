@@ -9,7 +9,9 @@ import Foundation
 import UIKit
 
 extension PopularItemsCollectionCell: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return adapt(87)
+        return Self.rowHeight
     }
+    
 }
