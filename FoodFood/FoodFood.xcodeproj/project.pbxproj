@@ -13,6 +13,8 @@
 		5A0E94582A612E7600C6F1EC /* HomeFoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94572A612E7600C6F1EC /* HomeFoodViewModel.swift */; };
 		5A0E945B2A6130B900C6F1EC /* HomeTopAdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E945A2A6130B900C6F1EC /* HomeTopAdModel.swift */; };
 		5A0E945D2A6131CC00C6F1EC /* AdsPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */; };
+		5A3647982AB057EB0056C2C7 /* ChatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3647972AB057EB0056C2C7 /* ChatDetailViewController.swift */; };
+		5A36479A2AB058300056C2C7 /* ChatDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3647992AB058300056C2C7 /* ChatDetailHeaderView.swift */; };
 		5A3F99262AAEB671006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99252AAEB671006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDataSource.swift */; };
 		5A3F99282AAEB69D006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99272AAEB69D006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDelegate.swift */; };
 		5A3F992A2AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99292AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift */; };
@@ -58,6 +60,10 @@
 		5AF4AF672AB0025800ABC5B9 /* FilterSearchVC+FilterSearchVMDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF662AB0025800ABC5B9 /* FilterSearchVC+FilterSearchVMDelegate.swift */; };
 		5AF4AF692AB0046300ABC5B9 /* HomeFoodController+FilterSearchViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF682AB0046300ABC5B9 /* HomeFoodController+FilterSearchViewControllerDelegate.swift */; };
 		5AF4AF6B2AB00A2200ABC5B9 /* FilterSearchVC+FiltersCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF6A2AB00A2200ABC5B9 /* FilterSearchVC+FiltersCollectionDelegate.swift */; };
+		5AF4AF6F2AB03CF700ABC5B9 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF6E2AB03CF700ABC5B9 /* ChatsViewController.swift */; };
+		5AF4AF712AB03EBB00ABC5B9 /* ChatsViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF702AB03EBB00ABC5B9 /* ChatsViewController+UITableViewDataSource.swift */; };
+		5AF4AF732AB0403100ABC5B9 /* ChatsViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF722AB0403100ABC5B9 /* ChatsViewController+UITableViewDelegate.swift */; };
+		5AF4AF762AB040A500ABC5B9 /* ChatPersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF752AB040A500ABC5B9 /* ChatPersonCell.swift */; };
 		5AF713262A613BF100EFBE3D /* HomeTopAdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */; };
 		5AF713282A6140B700EFBE3D /* NearRestoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF713272A6140B700EFBE3D /* NearRestoCollectionCell.swift */; };
 		5AF7132A2A61452200EFBE3D /* NearRestoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF713292A61452200EFBE3D /* NearRestoCell.swift */; };
@@ -73,6 +79,8 @@
 		5A0E94572A612E7600C6F1EC /* HomeFoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFoodViewModel.swift; sourceTree = "<group>"; };
 		5A0E945A2A6130B900C6F1EC /* HomeTopAdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopAdModel.swift; sourceTree = "<group>"; };
 		5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsPagerView.swift; sourceTree = "<group>"; };
+		5A3647972AB057EB0056C2C7 /* ChatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailViewController.swift; sourceTree = "<group>"; };
+		5A3647992AB058300056C2C7 /* ChatDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailHeaderView.swift; sourceTree = "<group>"; };
 		5A3F99252AAEB671006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularItemsCollectionCell+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		5A3F99272AAEB69D006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularItemsCollectionCell+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		5A3F99292AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeFoodController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
@@ -121,6 +129,10 @@
 		5AF4AF662AB0025800ABC5B9 /* FilterSearchVC+FilterSearchVMDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterSearchVC+FilterSearchVMDelegate.swift"; sourceTree = "<group>"; };
 		5AF4AF682AB0046300ABC5B9 /* HomeFoodController+FilterSearchViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeFoodController+FilterSearchViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		5AF4AF6A2AB00A2200ABC5B9 /* FilterSearchVC+FiltersCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterSearchVC+FiltersCollectionDelegate.swift"; sourceTree = "<group>"; };
+		5AF4AF6E2AB03CF700ABC5B9 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		5AF4AF702AB03EBB00ABC5B9 /* ChatsViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatsViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		5AF4AF722AB0403100ABC5B9 /* ChatsViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatsViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		5AF4AF752AB040A500ABC5B9 /* ChatPersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPersonCell.swift; sourceTree = "<group>"; };
 		5AF713252A613BF100EFBE3D /* HomeTopAdsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopAdsCell.swift; sourceTree = "<group>"; };
 		5AF713272A6140B700EFBE3D /* NearRestoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearRestoCollectionCell.swift; sourceTree = "<group>"; };
 		5AF713292A61452200EFBE3D /* NearRestoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearRestoCell.swift; sourceTree = "<group>"; };
@@ -388,6 +400,7 @@
 		5AA2519A2A53B72C000090C5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5AF4AF6C2AB03CAA00ABC5B9 /* Chat */,
 				5A0E944B2A60F76700C6F1EC /* MainTabbar */,
 				5A0E944C2A60F79900C6F1EC /* Home */,
 				5A3F99312AAEDCE7006BE4D3 /* Filter */,
@@ -446,6 +459,35 @@
 				5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		5AF4AF6C2AB03CAA00ABC5B9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				5AF4AF742AB0408500ABC5B9 /* VIew */,
+				5AF4AF6D2AB03CAF00ABC5B9 /* ViewController */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		5AF4AF6D2AB03CAF00ABC5B9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5AF4AF6E2AB03CF700ABC5B9 /* ChatsViewController.swift */,
+				5AF4AF702AB03EBB00ABC5B9 /* ChatsViewController+UITableViewDataSource.swift */,
+				5AF4AF722AB0403100ABC5B9 /* ChatsViewController+UITableViewDelegate.swift */,
+				5A3647972AB057EB0056C2C7 /* ChatDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5AF4AF742AB0408500ABC5B9 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				5AF4AF752AB040A500ABC5B9 /* ChatPersonCell.swift */,
+				5A3647992AB058300056C2C7 /* ChatDetailHeaderView.swift */,
+			);
+			path = VIew;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,6 +611,7 @@
 				5A0E94532A611BFE00C6F1EC /* UIColor+Utility.swift in Sources */,
 				5A9FCFEE2A64EC7A00F03DD8 /* PopularItemsCollectionCell.swift in Sources */,
 				5A9FCFEC2A64CF7B00F03DD8 /* HomeBaseViewController.swift in Sources */,
+				5AF4AF762AB040A500ABC5B9 /* ChatPersonCell.swift in Sources */,
 				5A9FCFF22A64EEF600F03DD8 /* FoodModel.swift in Sources */,
 				5A0E94582A612E7600C6F1EC /* HomeFoodViewModel.swift in Sources */,
 				5AA251AA2A53B72C000090C5 /* String+Utility.swift in Sources */,
@@ -576,9 +619,13 @@
 				5AA251992A53B6EB000090C5 /* BaseViewController.swift in Sources */,
 				5A96BA832A5E35FA00BEE3D9 /* UserManager.swift in Sources */,
 				5AA251A92A53B72C000090C5 /* ABLength.swift in Sources */,
+				5A36479A2AB058300056C2C7 /* ChatDetailHeaderView.swift in Sources */,
 				5AA251AB2A53B72C000090C5 /* UINavigationController+Utility.swift in Sources */,
 				5AF7132A2A61452200EFBE3D /* NearRestoCell.swift in Sources */,
+				5AF4AF6F2AB03CF700ABC5B9 /* ChatsViewController.swift in Sources */,
 				5A3F99342AAEDDAC006BE4D3 /* FilterSearchVC.swift in Sources */,
+				5AF4AF732AB0403100ABC5B9 /* ChatsViewController+UITableViewDelegate.swift in Sources */,
+				5AF4AF712AB03EBB00ABC5B9 /* ChatsViewController+UITableViewDataSource.swift in Sources */,
 				5A0E945D2A6131CC00C6F1EC /* AdsPagerView.swift in Sources */,
 				5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */,
 				5AF713282A6140B700EFBE3D /* NearRestoCollectionCell.swift in Sources */,
@@ -606,6 +653,7 @@
 				5A3F992A2AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift in Sources */,
 				5A0E945B2A6130B900C6F1EC /* HomeTopAdModel.swift in Sources */,
 				5A9FCFF62A64F24500F03DD8 /* PopularMenuCell.swift in Sources */,
+				5A3647982AB057EB0056C2C7 /* ChatDetailViewController.swift in Sources */,
 				5AA251A72A53B72C000090C5 /* GlobalImports.swift in Sources */,
 				5A0E944A2A60E4D200C6F1EC /* CustomNavBar.swift in Sources */,
 				5A3F993F2AAEE7B8006BE4D3 /* FiltersCollection+UICollectionViewDelegate.swift in Sources */,

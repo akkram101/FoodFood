@@ -13,12 +13,12 @@ class MainTabbarViewController: BaseViewController {
         let vc1 = HomeFoodController()
         let vc2 = PlaceHolderViewController()
         let vc3 = PlaceHolderViewController()
-        let vc4 = PlaceHolderViewController()
+        let vc4 = ChatsViewController()
         
         let nav1 = createNavWith(vc: vc1, title: "Home", image: "tabbar_home")
-        let nav2 = createNavWith(vc: vc2, title: nil, image: "tabbar_profile")
-        let nav3 = createNavWith(vc: vc3, title: nil, image: "tabbar_cart")
-        let nav4 = createNavWith(vc: vc4, title: nil, image: "tabbar_chat")
+        let nav2 = createNavWith(vc: vc2, title: "UwU", image: "tabbar_profile")
+        let nav3 = createNavWith(vc: vc3, title: "UwU", image: "tabbar_cart")
+        let nav4 = createNavWith(vc: vc4, title: "Chat", image: "tabbar_chat")
         
         mainTabBar.setViewControllers([nav1, nav2, nav3, nav4], animated: false)
     }
@@ -28,6 +28,16 @@ class MainTabbarViewController: BaseViewController {
         nav.tabBarItem.title = title ?? ""
         let image = UIImage.init(named: image)
         
+        let selectedAttributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.systemGreen
+        ]
+        
+        let unSelectedAttributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.systemGray
+        ]
+        
+        nav.tabBarItem.setTitleTextAttributes(selectedAttributes, for: .selected)
+        nav.tabBarItem.setTitleTextAttributes(unSelectedAttributes, for: .normal)
         nav.tabBarItem.image = image?.withRenderingMode(.alwaysOriginal)
         
         return nav

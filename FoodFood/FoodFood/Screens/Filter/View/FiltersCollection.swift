@@ -44,10 +44,11 @@ class FiltersCollection: UITableViewCell {
     }
     
     private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
+        let layout = LeftAlignedCollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = adapt(10)
         layout.minimumInteritemSpacing = adapt(10)
+
         
         let collectV = UICollectionView.init(frame: .zero, collectionViewLayout: layout)
         collectV.delegate = self
