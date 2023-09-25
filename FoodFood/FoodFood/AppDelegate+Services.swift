@@ -7,30 +7,49 @@
 
 import Foundation
 import UIKit
-import AFNetworking
+//import AFNetworking
 
 extension AppDelegate {
     func configureRootVC() {
         window = UIWindow.init(frame: UIScreen.main.bounds)
+        
+        if SessionManager.isLogin {
+            let vc = MainTabbarViewController()
+            window?.rootViewController = UINavigationController(rootViewController: vc)
+        } else {
+            let vc = SignUpViewController()
+            window?.rootViewController = UINavigationController(rootViewController: vc)
+        }
+        
+        //test
+    
         window?.makeKeyAndVisible()
-        window?.rootViewController = MainViewController()
+    }
+    
+    func additionaSetup() {
+        if #available(iOS 13.0, *) {
+            // Enforce light mode
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = .light
+            }
+        }
     }
     
     func startNetworkMonitor() {
-        let reachability = AFNetworkReachabilityManager.shared()
-                reachability.startMonitoring()
-
-        switch reachability.networkReachabilityStatus {
-        case .notReachable:
-            print("No internet connection")
-        case .unknown:
-            print("Unknown connection")
-        case .reachableViaWWAN:
-            print("Reached via Cellular data")
-        case .reachableViaWiFi:
-            print("Reached via wifi connection")
-        @unknown default:
-            print("What this state")
-        }
+//        let reachability = AFNetworkReachabilityManager.shared()
+//                reachability.startMonitoring()
+//
+//        switch reachability.networkReachabilityStatus {
+//        case .notReachable:
+//            print("No internet connection")
+//        case .unknown:
+//            print("Unknown connection")
+//        case .reachableViaWWAN:
+//            print("Reached via Cellular data")
+//        case .reachableViaWiFi:
+//            print("Reached via wifi connection")
+//        @unknown default:
+//            print("What this state")
+//        }
     }
 }
