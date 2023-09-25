@@ -22,6 +22,7 @@ class PopularMenuCell: UITableViewCell {
         clipsToBounds = true
         layer.cornerRadius = adapt(20)
         backgroundColor = .clear
+        selectionStyle = .none
         
         addSubview(imageV)
         imageV.snp.makeConstraints { make in

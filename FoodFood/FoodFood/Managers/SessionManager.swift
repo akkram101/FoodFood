@@ -49,7 +49,10 @@ class SessionManager {
     }
     
     class func logoutUser() {
-        
+        APIManager.simulateAPI() {
+            SessionManager.isLogin = false
+            AppManager.resetRootVCToHomeVC()
+        }
     }
     
     class func checkLoginAndPresentAuthentication() {
@@ -58,4 +61,6 @@ class SessionManager {
             AppManager.currentViewController()?.navigationController?.pushViewController(vc, animated: false)
         }
     }
+    
+    
 }

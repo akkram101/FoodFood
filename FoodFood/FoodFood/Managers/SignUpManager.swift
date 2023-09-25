@@ -15,9 +15,11 @@ class SignUpManager {
                               password: String,
                               phoneNum: String,
                               completion: @escaping (SignUpClosure)) {
-        //API
-        SessionManager.isLogin = true
-        completion(true)
+        APIManager.simulateAPI() {
+            //API
+            SessionManager.isLogin = true
+            completion(true)
+        }
     }
     
     class func signUpWithApple( completion: @escaping (SignUpClosure)) {

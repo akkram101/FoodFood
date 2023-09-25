@@ -51,7 +51,9 @@ class OnboardingCoordinator {
     }
     
     private func transitionToMainScreen() {
-        AppManager.resetRootVCToHomeVC()
+        APIManager.simulateAPI() {
+            AppManager.resetRootVCToHomeVC()
+        }
     }
 
 }

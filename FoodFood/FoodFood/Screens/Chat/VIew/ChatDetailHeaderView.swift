@@ -11,9 +11,7 @@ import SnapKit
 class ChatDetailHeaderView: UIView {
     
     @objc private func btnAction(_ btn: UIButton) {
-        print("btn clicked")
-        
-        
+        SessionManager.logoutUser()
     }
     
     private func setupUI() {

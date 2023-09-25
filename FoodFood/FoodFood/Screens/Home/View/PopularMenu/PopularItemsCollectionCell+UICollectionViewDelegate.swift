@@ -14,4 +14,14 @@ extension PopularItemsCollectionCell: UITableViewDelegate {
         return Self.rowHeight
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = BaseDetailVC()
+        detailVC.modalPresentationStyle = .overFullScreen
+        AppManager.rootViewController()?.present(detailVC, animated: true, completion: {
+            APIManager.shortSimulate {
+                print("XDXD")
+            }
+        })
+    }
+    
 }

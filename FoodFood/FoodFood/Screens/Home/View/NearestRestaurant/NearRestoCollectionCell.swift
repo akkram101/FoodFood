@@ -93,5 +93,15 @@ extension NearRestoCollectionCell: UICollectionViewDataSource {
 extension NearRestoCollectionCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Selected restaurant at index: \(indexPath.row)")
+        
+        let detailVC = BaseDetailVC()
+        detailVC.modalPresentationStyle = .overFullScreen
+        AppManager.rootViewController()?.present(detailVC, animated: true, completion: {
+            APIManager.shortSimulate {
+                print("XDXD")
+            }
+        })
     }
+    
+
 }

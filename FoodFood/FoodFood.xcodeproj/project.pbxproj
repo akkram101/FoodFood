@@ -40,6 +40,11 @@
 		5A9A6E8C2A5E44E800E61CA5 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E8B2A5E44E800E61CA5 /* BaseTextField.swift */; };
 		5A9EC24D2AC1321E0075756D /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9EC24C2AC1321E0075756D /* OnboardingCoordinator.swift */; };
 		5A9EC24F2AC15E8E0075756D /* AppDelegate+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9EC24E2AC15E8D0075756D /* AppDelegate+Services.swift */; };
+		5A9EC2522AC1725E0075756D /* FoodDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9EC2512AC1725E0075756D /* FoodDetailVC.swift */; };
+		5A9EC2562AC1729C0075756D /* FoodDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9EC2552AC1729C0075756D /* FoodDetailViewModel.swift */; };
+		5A9EC2592AC172E50075756D /* FoodDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9EC2582AC172E50075756D /* FoodDetailModel.swift */; };
+		5A9EC25B2AC173860075756D /* FoodRatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9EC25A2AC173850075756D /* FoodRatingModel.swift */; };
+		5A9EC25D2AC175300075756D /* BaseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9EC25C2AC175300075756D /* BaseDetailVC.swift */; };
 		5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */; };
 		5A9F28272A4AB4D800E478F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F28262A4AB4D800E478F3 /* Assets.xcassets */; };
 		5A9FCFEC2A64CF7B00F03DD8 /* HomeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9FCFEB2A64CF7B00F03DD8 /* HomeBaseViewController.swift */; };
@@ -109,6 +114,11 @@
 		5A9A6E8B2A5E44E800E61CA5 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		5A9EC24C2AC1321E0075756D /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		5A9EC24E2AC15E8D0075756D /* AppDelegate+Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Services.swift"; sourceTree = "<group>"; };
+		5A9EC2512AC1725E0075756D /* FoodDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailVC.swift; sourceTree = "<group>"; };
+		5A9EC2552AC1729C0075756D /* FoodDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewModel.swift; sourceTree = "<group>"; };
+		5A9EC2582AC172E50075756D /* FoodDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailModel.swift; sourceTree = "<group>"; };
+		5A9EC25A2AC173850075756D /* FoodRatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRatingModel.swift; sourceTree = "<group>"; };
+		5A9EC25C2AC175300075756D /* BaseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDetailVC.swift; sourceTree = "<group>"; };
 		5A9F281A2A4AB4D500E478F3 /* FoodFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9F28262A4AB4D800E478F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -337,6 +347,42 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		5A9EC2502AC1723C0075756D /* FoodDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5A9EC2572AC172D60075756D /* Model */,
+				5A9EC2542AC172790075756D /* ViewModel */,
+				5A9EC2532AC1726B0075756D /* ViewController */,
+			);
+			path = FoodDetail;
+			sourceTree = "<group>";
+		};
+		5A9EC2532AC1726B0075756D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A9EC2512AC1725E0075756D /* FoodDetailVC.swift */,
+				5A9EC25C2AC175300075756D /* BaseDetailVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5A9EC2542AC172790075756D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A9EC2552AC1729C0075756D /* FoodDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5A9EC2572AC172D60075756D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A9EC2582AC172E50075756D /* FoodDetailModel.swift */,
+				5A9EC25A2AC173850075756D /* FoodRatingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5A9F28112A4AB4D400E478F3 = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +452,7 @@
 		5AA2519A2A53B72C000090C5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5A9EC2502AC1723C0075756D /* FoodDetail */,
 				5ABA5D5B2AB19100000DEC06 /* Onboarding */,
 				5AF4AF6C2AB03CAA00ABC5B9 /* Chat */,
 				5A0E944B2A60F76700C6F1EC /* MainTabbar */,
@@ -654,10 +701,12 @@
 				5AA251A92A53B72C000090C5 /* ABLength.swift in Sources */,
 				5A36479A2AB058300056C2C7 /* ChatDetailHeaderView.swift in Sources */,
 				5AA251AB2A53B72C000090C5 /* UINavigationController+Utility.swift in Sources */,
+				5A9EC2592AC172E50075756D /* FoodDetailModel.swift in Sources */,
 				5AF7132A2A61452200EFBE3D /* NearRestoCell.swift in Sources */,
 				5AF4AF6F2AB03CF700ABC5B9 /* ChatsViewController.swift in Sources */,
 				5A3F99342AAEDDAC006BE4D3 /* FilterSearchVC.swift in Sources */,
 				5AF4AF732AB0403100ABC5B9 /* ChatsViewController+UITableViewDelegate.swift in Sources */,
+				5A9EC2562AC1729C0075756D /* FoodDetailViewModel.swift in Sources */,
 				5AF4AF712AB03EBB00ABC5B9 /* ChatsViewController+UITableViewDataSource.swift in Sources */,
 				5A0E945D2A6131CC00C6F1EC /* AdsPagerView.swift in Sources */,
 				5AA251A82A53B72C000090C5 /* UIFont+Utility.swift in Sources */,
@@ -669,6 +718,8 @@
 				5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */,
 				5A9EC24F2AC15E8E0075756D /* AppDelegate+Services.swift in Sources */,
 				5A3F992C2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift in Sources */,
+				5A9EC2522AC1725E0075756D /* FoodDetailVC.swift in Sources */,
+				5A9EC25D2AC175300075756D /* BaseDetailVC.swift in Sources */,
 				5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */,
 				5AF7132C2A61460D00EFBE3D /* RestaurantModel.swift in Sources */,
 				5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */,
@@ -683,6 +734,7 @@
 				5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */,
 				5A89308D2A60DABC00BB5AB3 /* AppConfiguration.swift in Sources */,
 				5A3F99262AAEB671006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDataSource.swift in Sources */,
+				5A9EC25B2AC173860075756D /* FoodRatingModel.swift in Sources */,
 				5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */,
 				5A9EC24D2AC1321E0075756D /* OnboardingCoordinator.swift in Sources */,
 				5ABA5D612AB19145000DEC06 /* OnboardingModel.swift in Sources */,

@@ -29,12 +29,24 @@ struct AppConfig {
 class APIManager {
     typealias SimulationClosure = (() -> Void)
     
-    class func simulateAPI(withCompletion completion: @escaping SimulationClosure) {
+    class func simulateAPI(_ completion: @escaping SimulationClosure) {
         if let viewController = AppManager.topViewController() {
             let hud = MBProgressHUD.showAdded(to: viewController.view, animated: true)
             hud.label.text = "Loading..."
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                MBProgressHUD.hide(for: viewController.view, animated: true)
+                completion()
+            })
+        }
+    }
+    
+    class func shortSimulate(_ completion: @escaping SimulationClosure) {
+        if let viewController = AppManager.topViewController() {
+            let hud = MBProgressHUD.showAdded(to: viewController.view, animated: true)
+            hud.label.text = "Loading..."
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
                 MBProgressHUD.hide(for: viewController.view, animated: true)
                 completion()
             })

@@ -47,7 +47,7 @@ class AppManager {
         return nil
     }
     
-    func tabBarController() -> UITabBarController? {
+    class func tabBarController() -> UITabBarController? {
         if let keyWindow = UIApplication.shared.keyWindow,
             let rootViewController = keyWindow.rootViewController {
             var currentViewController: UIViewController? = rootViewController
@@ -71,6 +71,19 @@ class AppManager {
         if let currentNavController = AppManager.rootViewController() {
             currentNavController.popToRootViewController(animated: true)
             let rootVC = UINavigationController(rootViewController: MainTabbarViewController())
+
+            if let keyWindow = UIApplication.shared.keyWindow {
+                keyWindow.rootViewController = rootVC
+                keyWindow.makeKeyAndVisible()
+            }
+        }
+    
+    }
+    
+    class func resetRootToSignUPVC() {
+        if let currentNavController = AppManager.rootViewController() {
+            currentNavController.popToRootViewController(animated: true)
+            let rootVC = UINavigationController(rootViewController: SignUpViewController())
 
             if let keyWindow = UIApplication.shared.keyWindow {
                 keyWindow.rootViewController = rootVC
