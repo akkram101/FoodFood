@@ -44,7 +44,6 @@ class MainTabbarViewController: BaseViewController {
     }
     
     private func checkLoginAndPresentAuthentication() {
-        SessionManager.isLogin = false
         if SessionManager.isLogin == false {
             let vc = SignUpViewController()
             self.navigationController?.pushViewController(vc, animated: false)
@@ -58,7 +57,6 @@ class MainTabbarViewController: BaseViewController {
         view.addSubview(mainTabBar.view)
         
         mainTabBar.didMove(toParent: self)
-        
         checkLoginAndPresentAuthentication()
     }
     

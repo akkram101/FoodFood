@@ -23,11 +23,7 @@ class SignUpVM {
         
         //API
         SignUpManager.signUpUserWith(email: email, password: password, phoneNum: password) { isSuccess in
-            if isSuccess {
-                SessionManager.loginUserWith(email: email, password: password, completion: completion)
-            } else {
-                completion(false)
-            }
+            completion(isSuccess)
         }
     }
 }

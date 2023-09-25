@@ -16,6 +16,7 @@ class SignUpManager {
                               phoneNum: String,
                               completion: @escaping (SignUpClosure)) {
         //API
+        SessionManager.isLogin = true
         completion(true)
     }
     

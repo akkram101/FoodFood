@@ -39,6 +39,7 @@
 		5A9A6E882A5E400E00E61CA5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E872A5E400E00E61CA5 /* SessionManager.swift */; };
 		5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */; };
 		5A9A6E8C2A5E44E800E61CA5 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E8B2A5E44E800E61CA5 /* BaseTextField.swift */; };
+		5A9EC24D2AC1321E0075756D /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9EC24C2AC1321E0075756D /* OnboardingCoordinator.swift */; };
 		5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */; };
 		5A9F28272A4AB4D800E478F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F28262A4AB4D800E478F3 /* Assets.xcassets */; };
 		5A9FCFEC2A64CF7B00F03DD8 /* HomeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9FCFEB2A64CF7B00F03DD8 /* HomeBaseViewController.swift */; };
@@ -57,6 +58,8 @@
 		5AA251AF2A53BDD1000090C5 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251AE2A53BDD1000090C5 /* LogInViewController.swift */; };
 		5AA251B12A53BE5D000090C5 /* UIImageView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251B02A53BE5D000090C5 /* UIImageView+Utility.swift */; };
 		5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA251B42A53C3BE000090C5 /* AppManager.swift */; };
+		5ABA5D5E2AB1912F000DEC06 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABA5D5D2AB1912F000DEC06 /* OnboardingViewController.swift */; };
+		5ABA5D612AB19145000DEC06 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABA5D602AB19145000DEC06 /* OnboardingModel.swift */; };
 		5AF4AF672AB0025800ABC5B9 /* FilterSearchVC+FilterSearchVMDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF662AB0025800ABC5B9 /* FilterSearchVC+FilterSearchVMDelegate.swift */; };
 		5AF4AF692AB0046300ABC5B9 /* HomeFoodController+FilterSearchViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF682AB0046300ABC5B9 /* HomeFoodController+FilterSearchViewControllerDelegate.swift */; };
 		5AF4AF6B2AB00A2200ABC5B9 /* FilterSearchVC+FiltersCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4AF6A2AB00A2200ABC5B9 /* FilterSearchVC+FiltersCollectionDelegate.swift */; };
@@ -105,6 +108,7 @@
 		5A9A6E872A5E400E00E61CA5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpManager.swift; sourceTree = "<group>"; };
 		5A9A6E8B2A5E44E800E61CA5 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		5A9EC24C2AC1321E0075756D /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		5A9F281A2A4AB4D500E478F3 /* FoodFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9F281D2A4AB4D500E478F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9F28262A4AB4D800E478F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 		5AA251AE2A53BDD1000090C5 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5AA251B02A53BE5D000090C5 /* UIImageView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utility.swift"; sourceTree = "<group>"; };
 		5AA251B42A53C3BE000090C5 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		5ABA5D5D2AB1912F000DEC06 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		5ABA5D602AB19145000DEC06 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		5AF4AF662AB0025800ABC5B9 /* FilterSearchVC+FilterSearchVMDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterSearchVC+FilterSearchVMDelegate.swift"; sourceTree = "<group>"; };
 		5AF4AF682AB0046300ABC5B9 /* HomeFoodController+FilterSearchViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeFoodController+FilterSearchViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		5AF4AF6A2AB00A2200ABC5B9 /* FilterSearchVC+FiltersCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterSearchVC+FiltersCollectionDelegate.swift"; sourceTree = "<group>"; };
@@ -400,6 +406,7 @@
 		5AA2519A2A53B72C000090C5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5ABA5D5B2AB19100000DEC06 /* Onboarding */,
 				5AF4AF6C2AB03CAA00ABC5B9 /* Chat */,
 				5A0E944B2A60F76700C6F1EC /* MainTabbar */,
 				5A0E944C2A60F79900C6F1EC /* Home */,
@@ -459,6 +466,32 @@
 				5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		5ABA5D5B2AB19100000DEC06 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				5ABA5D5F2AB19134000DEC06 /* Model */,
+				5ABA5D5C2AB19108000DEC06 /* ViewController */,
+				5A9EC24C2AC1321E0075756D /* OnboardingCoordinator.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		5ABA5D5C2AB19108000DEC06 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5ABA5D5D2AB1912F000DEC06 /* OnboardingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5ABA5D5F2AB19134000DEC06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5ABA5D602AB19145000DEC06 /* OnboardingModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5AF4AF6C2AB03CAA00ABC5B9 /* Chat */ = {
@@ -607,6 +640,7 @@
 				5A6A95AD2A52BAEA00DCAB37 /* AppDelegate+Services.swift in Sources */,
 				5A3F992E2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift in Sources */,
 				5A9A6E882A5E400E00E61CA5 /* SessionManager.swift in Sources */,
+				5ABA5D5E2AB1912F000DEC06 /* OnboardingViewController.swift in Sources */,
 				5AF4AF672AB0025800ABC5B9 /* FilterSearchVC+FilterSearchVMDelegate.swift in Sources */,
 				5A0E94532A611BFE00C6F1EC /* UIColor+Utility.swift in Sources */,
 				5A9FCFEE2A64EC7A00F03DD8 /* PopularItemsCollectionCell.swift in Sources */,
@@ -650,6 +684,8 @@
 				5A89308D2A60DABC00BB5AB3 /* AppConfiguration.swift in Sources */,
 				5A3F99262AAEB671006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDataSource.swift in Sources */,
 				5AA251B52A53C3BE000090C5 /* AppManager.swift in Sources */,
+				5A9EC24D2AC1321E0075756D /* OnboardingCoordinator.swift in Sources */,
+				5ABA5D612AB19145000DEC06 /* OnboardingModel.swift in Sources */,
 				5A3F992A2AAEB71B006BE4D3 /* HomeFoodController+UITableViewDelegate.swift in Sources */,
 				5A0E945B2A6130B900C6F1EC /* HomeTopAdModel.swift in Sources */,
 				5A9FCFF62A64F24500F03DD8 /* PopularMenuCell.swift in Sources */,

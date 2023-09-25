@@ -30,8 +30,10 @@ class SessionManager {
                              completion: @escaping (LoginClosure)) {
         
         //API
-        SessionManager.isLogin = true
-        completion(true)
+        APIManager.simulateAPI {
+            SessionManager.isLogin = true
+            completion(true)
+        }
     }
     
     class func loginWithApple(completion: @escaping (LoginClosure)) {

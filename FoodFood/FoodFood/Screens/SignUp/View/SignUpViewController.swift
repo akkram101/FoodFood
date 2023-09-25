@@ -22,11 +22,18 @@ class SignUpViewController: BaseViewController {
             if isSuccess {
                 print("Created Account successfully")
                 
-                self.navigationController?.popViewController(animated: true)
+                self.showOnboarding()
             } else {
                 print("Failed to create account")
             }
         }
+    }
+    
+    private lazy var onboardingCoordinator: OnboardingCoordinator = OnboardingCoordinator()
+    
+    private func showOnboarding() {
+        let onboardingSteps = OnboardingFactory.createSteps()
+        onboardingCoordinator.start(with: self.navigationController!, onboardingSteps: onboardingSteps)
     }
     
     @objc private func rememberBtnAction(_ btn: UIButton) {

@@ -66,4 +66,17 @@ class AppManager {
         
         return nil
     }
+    
+    class func resetRootVCToHomeVC() {
+        if let currentNavController = AppManager.rootViewController() {
+            currentNavController.popToRootViewController(animated: true)
+            let rootVC = UINavigationController(rootViewController: MainTabbarViewController())
+
+            if let keyWindow = UIApplication.shared.keyWindow {
+                keyWindow.rootViewController = rootVC
+                keyWindow.makeKeyAndVisible()
+            }
+        }
+    
+    }
 }

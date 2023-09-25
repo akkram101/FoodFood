@@ -53,18 +53,21 @@ class HomeFoodController: HomeBaseViewController {
     
     private func setupUI() {
         view.addSubview(searchField)
-        searchField.snp.makeConstraints { make in
-            make.top.equalTo(findFoodLabel.snp.bottom).offset(adapt(20))
-            make.left.equalTo(findFoodLabel)
-            make.height.equalTo(adapt(50))
-            make.width.equalTo(adapt(SearchFoodField.minSearchWidth))
-        }
         
         view.addSubview(filterBtn)
         filterBtn.snp.makeConstraints { make in
-            make.top.bottom.equalTo(searchField)
+            make.top.equalTo(findFoodLabel.snp.bottom).offset(adapt(20))
             make.right.equalTo(notificationBell).offset(adapt(-10))
             make.width.equalTo(adapt(50))
+            make.height.equalTo(adapt(50))
+        }
+    
+        
+        searchField.snp.makeConstraints { make in
+            make.top.bottom.equalTo(filterBtn)
+            make.left.equalTo(findFoodLabel)
+            make.right.equalTo(filterBtn.snp.left).offset(adapt(-16))
+            make.width.equalTo(adapt(SearchFoodField.minSearchWidth))
         }
     
         view.addSubview(homeTableView)

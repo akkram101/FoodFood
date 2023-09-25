@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MBProgressHUD
 
 
 
@@ -21,5 +22,22 @@ struct AppConfig {
         let isDev: Bool = AppConfig.environment == 0
         
         return isDev ? "Dev environment API" : "Prod environtment API"
+    }
+}
+
+
+class APIManager {
+    typealias SimulationClosure = (() -> Void)
+    
+    class func simulateAPI(withCompletion completion: @escaping SimulationClosure) {
+        if let viewController = AppManager.topViewController() {
+            let hud = MBProgressHUD.showAdded(to: viewController.view, animated: true)
+            hud.label.text = "Loading..."
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                MBProgressHUD.hide(for: viewController.view, animated: true)
+                completion()
+            })
+        }
     }
 }
