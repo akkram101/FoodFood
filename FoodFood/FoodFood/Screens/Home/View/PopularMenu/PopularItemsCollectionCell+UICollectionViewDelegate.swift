@@ -15,7 +15,10 @@ extension PopularItemsCollectionCell: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailVC = BaseDetailVC()
+        
+        let foodVM = FoodDetailViewModel(productID: "CheeseCake")
+        let detailVC = UINavigationController(rootViewController: FoodDetailVC(viewModel: foodVM))
+        
         detailVC.modalPresentationStyle = .overFullScreen
         AppManager.rootViewController()?.present(detailVC, animated: true, completion: {
             APIManager.shortSimulate {

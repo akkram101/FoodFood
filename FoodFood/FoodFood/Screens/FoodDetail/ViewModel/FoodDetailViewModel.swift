@@ -9,6 +9,12 @@ import UIKit
 
 class FoodDetailViewModel {
     
+    let productID: String
+    
+    init(productID: String) {
+        self.productID = productID
+    }
+    
     typealias RequestDetailsClosure = (_ isSuccess: Bool, _ detail: FoodDetailModel) -> Void
     typealias RequestReviewsClosure = (_ isSuccess: Bool, _ reviews: [FoodRatingModel]) -> Void
     

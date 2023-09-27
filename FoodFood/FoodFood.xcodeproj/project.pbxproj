@@ -34,6 +34,9 @@
 		5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5824A22A5E7690008C8068 /* SignUpViewController.swift */; };
 		5A5824A52A5E76A1008C8068 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5824A42A5E76A1008C8068 /* SignUpVM.swift */; };
 		5A89308D2A60DABC00BB5AB3 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89308C2A60DABC00BB5AB3 /* AppConfiguration.swift */; };
+		5A8E07B22AC2BB7800A20038 /* FoodDetailVC+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E07B12AC2BB7800A20038 /* FoodDetailVC+UITableViewDelegate.swift */; };
+		5A8E07B42AC2BB8600A20038 /* FoodDetailVC+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E07B32AC2BB8600A20038 /* FoodDetailVC+UITableViewDataSource.swift */; };
+		5A8E07B62AC2C9E900A20038 /* LaterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E07B52AC2C9E800A20038 /* LaterUser.swift */; };
 		5A96BA832A5E35FA00BEE3D9 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A96BA822A5E35FA00BEE3D9 /* UserManager.swift */; };
 		5A9A6E882A5E400E00E61CA5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E872A5E400E00E61CA5 /* SessionManager.swift */; };
 		5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */; };
@@ -108,6 +111,9 @@
 		5A5824A22A5E7690008C8068 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A5824A42A5E76A1008C8068 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
 		5A89308C2A60DABC00BB5AB3 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		5A8E07B12AC2BB7800A20038 /* FoodDetailVC+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodDetailVC+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		5A8E07B32AC2BB8600A20038 /* FoodDetailVC+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodDetailVC+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		5A8E07B52AC2C9E800A20038 /* LaterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaterUser.swift; sourceTree = "<group>"; };
 		5A96BA822A5E35FA00BEE3D9 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		5A9A6E872A5E400E00E61CA5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpManager.swift; sourceTree = "<group>"; };
@@ -361,6 +367,8 @@
 			isa = PBXGroup;
 			children = (
 				5A9EC2512AC1725E0075756D /* FoodDetailVC.swift */,
+				5A8E07B32AC2BB8600A20038 /* FoodDetailVC+UITableViewDataSource.swift */,
+				5A8E07B12AC2BB7800A20038 /* FoodDetailVC+UITableViewDelegate.swift */,
 				5A9EC25C2AC175300075756D /* BaseDetailVC.swift */,
 			);
 			path = ViewController;
@@ -470,6 +478,7 @@
 				5AA2519D2A53B72C000090C5 /* GlobalFunc.swift */,
 				5AA2519E2A53B72C000090C5 /* GlobalImports.swift */,
 				5AA251A02A53B72C000090C5 /* ABLength.swift */,
+				5A8E07B52AC2C9E800A20038 /* LaterUser.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -683,6 +692,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A8E07B22AC2BB7800A20038 /* FoodDetailVC+UITableViewDelegate.swift in Sources */,
 				5AF713262A613BF100EFBE3D /* HomeTopAdsCell.swift in Sources */,
 				5A3F992E2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift in Sources */,
 				5A9A6E882A5E400E00E61CA5 /* SessionManager.swift in Sources */,
@@ -732,6 +742,7 @@
 				5A3F993D2AAEE1CE006BE4D3 /* FilterModel.swift in Sources */,
 				5A9A6E8C2A5E44E800E61CA5 /* BaseTextField.swift in Sources */,
 				5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */,
+				5A8E07B62AC2C9E900A20038 /* LaterUser.swift in Sources */,
 				5A89308D2A60DABC00BB5AB3 /* AppConfiguration.swift in Sources */,
 				5A3F99262AAEB671006BE4D3 /* PopularItemsCollectionCell+UICollectionViewDataSource.swift in Sources */,
 				5A9EC25B2AC173860075756D /* FoodRatingModel.swift in Sources */,
@@ -748,6 +759,7 @@
 				5A3F99452AAEF181006BE4D3 /* FilterSearchVC+UITableViewDataSource.swift in Sources */,
 				5AA251AC2A53B72C000090C5 /* DayNightMode.swift in Sources */,
 				5A3F993A2AAEE16F006BE4D3 /* FiltersCollection.swift in Sources */,
+				5A8E07B42AC2BB8600A20038 /* FoodDetailVC+UITableViewDataSource.swift in Sources */,
 				5AA251B12A53BE5D000090C5 /* UIImageView+Utility.swift in Sources */,
 				5AF4AF692AB0046300ABC5B9 /* HomeFoodController+FilterSearchViewControllerDelegate.swift in Sources */,
 				5AA251A52A53B72C000090C5 /* HomeFoodController.swift in Sources */,
