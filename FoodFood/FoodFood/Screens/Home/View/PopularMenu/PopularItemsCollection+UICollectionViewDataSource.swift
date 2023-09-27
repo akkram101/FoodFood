@@ -1,5 +1,5 @@
 //
-//  PopularItemsCollectionCell+UICollectionViewDataSource.swift
+//  PopularItemsCollection+UICollectionViewDataSource.swift
 //  FoodFood
 //
 //  Created by Akkram Bederi on 9/11/23.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension PopularItemsCollectionCell: UITableViewDataSource {
+extension PopularItemsCollection: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodModels.count
     }

@@ -127,8 +127,8 @@ class HomeFoodController: HomeBaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(HomeTopAdsCell.self, forCellReuseIdentifier: HomeTopAdsCell.reuseIdentifier)
-        tableView.register(NearRestoCollectionCell.self, forCellReuseIdentifier: NearRestoCollectionCell.reuseIdentifier)
-        tableView.register(PopularItemsCollectionCell.self, forCellReuseIdentifier: PopularItemsCollectionCell.reuseIdentifier)
+        tableView.register(NearRestaurantCollection.self, forCellReuseIdentifier: NearRestaurantCollection.reuseIdentifier)
+        tableView.register(PopularItemsCollection.self, forCellReuseIdentifier: PopularItemsCollection.reuseIdentifier)
         tableView.register(FiltersCollection.self, forCellReuseIdentifier: FiltersCollection.reuseIdentiier)
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none

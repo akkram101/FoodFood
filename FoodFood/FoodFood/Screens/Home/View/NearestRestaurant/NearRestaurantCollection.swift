@@ -1,5 +1,5 @@
 //
-//  NearRestoCollectionCell.swift
+//  NearRestaurantCollection.swift
 //  FoodFood
 //
 //  Created by Akkram Bederi on 7/14/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NearRestoCollectionCell: UITableViewCell {
+class NearRestaurantCollection: UITableViewCell {
     
     var restaurantModels: [RestaurantModel] = [] {
         didSet {
@@ -73,7 +73,7 @@ class NearRestoCollectionCell: UITableViewCell {
     }()
 }
 
-extension NearRestoCollectionCell: UICollectionViewDataSource {
+extension NearRestaurantCollection: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return restaurantModels.count
     }
@@ -90,11 +90,11 @@ extension NearRestoCollectionCell: UICollectionViewDataSource {
     }
 }
 
-extension NearRestoCollectionCell: UICollectionViewDelegate {
+extension NearRestaurantCollection: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Selected restaurant at index: \(indexPath.row)")
         
-        let detailVC = BaseDetailVC()
+        let detailVC = FoodDetailVC(viewModel: FoodDetailViewModel(productID: "CheeseCake"))
         detailVC.modalPresentationStyle = .overFullScreen
         AppManager.rootViewController()?.present(detailVC, animated: true, completion: {
             APIManager.shortSimulate {

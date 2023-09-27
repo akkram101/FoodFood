@@ -1,5 +1,5 @@
 //
-//  PopularItemsCollectionCell.swift
+//  PopularItemsCollection.swift
 //  FoodFood
 //
 //  Created by Akkram Bederi on 7/17/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PopularItemsCollectionCell: UITableViewCell {
+class PopularItemsCollection: UITableViewCell {
     
     var foodModels: [FoodModel] = [] {
         didSet {

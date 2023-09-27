@@ -99,7 +99,7 @@ class HomeFoodViewModel {
             popularMenu = requestedData
             //Add table height
             
-            homeTableCellHeights[tableSection] = CGFloat(popularMenu.count) * PopularItemsCollectionCell.rowHeight
+            homeTableCellHeights[tableSection] = CGFloat(popularMenu.count) * PopularItemsCollection.rowHeight
             
             completion(true,requestedData)
         } else {

@@ -11,7 +11,8 @@ class MainTabbarViewController: BaseViewController {
     
     private func setupControllers() {
         let vc1 = HomeFoodController()
-        let vc2 = PlaceHolderViewController()
+        let vc2 = UserProfileVC()
+        vc2.setBackGroundImg("")
         let vc3 = PlaceHolderViewController()
         let vc4 = ChatsViewController()
         

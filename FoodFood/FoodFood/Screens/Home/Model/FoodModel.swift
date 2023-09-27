@@ -9,6 +9,7 @@ import Foundation
 
 class FoodModel {
     var restaurantName = "Waroenk Kita"
+    var productID = "Green_Noodle123"
     var itemName = "Green Noodle"
     var itemPrice = 15.0
     var imageUrl = "green_noodle"

@@ -8,13 +8,15 @@
 import Foundation
 import UIKit
 
-extension PopularItemsCollectionCell: UITableViewDelegate {
+extension PopularItemsCollection: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Self.rowHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let food = foodModels[indexPath.row]
         
         let foodVM = FoodDetailViewModel(productID: "CheeseCake")
         let detailVC = UINavigationController(rootViewController: FoodDetailVC(viewModel: foodVM))

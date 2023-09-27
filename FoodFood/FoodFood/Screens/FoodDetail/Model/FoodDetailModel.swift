@@ -8,6 +8,7 @@
 import Foundation
 
 class FoodDetailModel {
+    let imageName: String = "green_noodle"
     let description: String
     let originCountry: String
     let rating: CGFloat

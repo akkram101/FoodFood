@@ -8,7 +8,7 @@
 import UIKit
 
 class FoodDetailViewModel {
-    
+
     let productID: String
     
     init(productID: String) {
@@ -20,7 +20,10 @@ class FoodDetailViewModel {
     
     
     func requestMoreDetails(completion: @escaping RequestDetailsClosure) {
-        
+        completion(true, FoodDetailModel(description: "Desction",
+                                         origin: "philippnes",
+                                         rating: 5,
+                                         orderCount: 100))
     }
     
     func requestReviews(completion: @escaping RequestReviewsClosure) {

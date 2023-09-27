@@ -26,7 +26,7 @@ class FoodDetailVC: BaseDetailVC {
         fatalError("Init with coder not implemented")
     }
     
-    //MARK: - Life Cycle
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
@@ -34,7 +34,9 @@ class FoodDetailVC: BaseDetailVC {
         requestData()
     }
     
-    //MARK: - UI
+    
+    
+    // MARK: - UI
     
     private func setupUI() {
 //        view.addSubview(tableView)
@@ -56,11 +58,13 @@ class FoodDetailVC: BaseDetailVC {
     private func requestData() {
         
         viewModel.requestMoreDetails { isSuccess, detail in
-            print("XD")
+            self.setBackGroundImg(detail.imageName)
+            self.tableView.reloadData()
         }
         
         viewModel.requestReviews { isSuccess, reviews in
             print("XD")
+            self.tableView.reloadData()
         }
     }
     

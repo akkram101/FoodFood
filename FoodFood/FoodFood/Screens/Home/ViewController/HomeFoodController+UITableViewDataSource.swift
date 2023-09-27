@@ -33,13 +33,13 @@ extension HomeFoodController: UITableViewDataSource {
                 return cell
             }
         case .nearRestSection:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NearRestoCollectionCell.reuseIdentifier, for: indexPath) as? NearRestoCollectionCell {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NearRestaurantCollection.reuseIdentifier, for: indexPath) as? NearRestaurantCollection {
                 
                 cell.restaurantModels = viewModel.nearestRestaurants
                 return cell
             }
         case .popularMenuSection:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: PopularItemsCollectionCell.reuseIdentifier, for: indexPath) as? PopularItemsCollectionCell {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: PopularItemsCollection.reuseIdentifier, for: indexPath) as? PopularItemsCollection {
                 
                 cell.foodModels = viewModel.popularMenu
                 return cell
