@@ -22,8 +22,8 @@ class FoodDetailViewModel {
     }
     
     func updateWithBaseModel(_ detailModel: FoodDetailModel) -> FoodDetailModel {
-        detailModel.foodName = baseModel.itemName
-        detailModel.imageName = baseModel.imageUrl
+        detailModel.baseModel = baseModel
+        detailModel.description = FoodDetailModel.getDescription(productID: baseModel.productID)
         
         return detailModel
     }

@@ -80,6 +80,7 @@ class BaseDetailVC: BaseViewController {
     // MARK: - UI Setup
     
     private func setupUI() {
+        view.backgroundColor = .white
         view.addSubview(mainImgV)
         mainImgV.snp.makeConstraints { make in
             make.top.centerX.equalToSuperview()
@@ -119,6 +120,7 @@ class BaseDetailVC: BaseViewController {
     private lazy var mainImgV: UIImageView = {
         let imgV = UIImageView()
         imgV.image = UIImage(named: "detailFoodImg")
+        imgV.contentMode = .scaleAspectFill
         
         return imgV
     }()
@@ -299,7 +301,7 @@ extension BaseDetailVC {
         }
         
         let offSetAmount = abs(self.normalOffset - offset)
-        let ratio: CGFloat = 0.7
+        let ratio: CGFloat = 0.85
         UIView.animate(withDuration: 0) {
             self.mainImgV.snp.updateConstraints { make in
                 make.width.equalTo(ABLength.kScreenWidth + offSetAmount * ratio)

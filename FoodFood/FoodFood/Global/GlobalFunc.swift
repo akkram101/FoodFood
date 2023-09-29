@@ -38,3 +38,19 @@ func kPostDefaultNotification(_ noti : String) {
 func kNotiName(_ notiName: String) -> Notification.Name {
     return Notification.Name(notiName)
 }
+
+func generateUniqueItems<T>(count: Int, generator: () -> T, condition: (T, [T]) -> Bool) -> [T] {
+    var uniqueItems: [T] = []
+    
+    while uniqueItems.count < count {
+        let newItem = generator()
+        
+        if !uniqueItems.contains(where: { existingItem in
+            return condition(newItem, [existingItem])
+        }) {
+            uniqueItems.append(newItem)
+        }
+    }
+    
+    return uniqueItems
+}

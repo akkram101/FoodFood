@@ -21,7 +21,9 @@ extension FoodDetailTableVC: UITableViewDataSource {
         if section == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTagDetailCell.reuseIdentifier, for: indexPath) as? HeaderTagDetailCell else { return UITableViewCell() }
             
-            cell.tagTitles = ["Popular", FoodFilterType(rawValue: 101)!.title]
+            let model = viewModel.foodDetailModel
+            
+            cell.tagTitles = model.baseModel.tags
             cell.delegate = self
             return cell
         }

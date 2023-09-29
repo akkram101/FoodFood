@@ -21,7 +21,7 @@ class HomeFoodViewModel {
     //MARK: - DataSource
     var filter: FilterModel?
     var topHomeAds: [HomeTopAdModel] = []
-    var nearestRestaurants: [RestaurantModel] = []
+    var nearestRestaurants: [BaseRestaurantModel] = []
     var popularMenu: [BaseFoodModel] = []
     var bottomHomeAds: [HomeTopAdModel] = []
     
@@ -37,7 +37,7 @@ class HomeFoodViewModel {
     }
     
     typealias RequestHomeTopAdClosure = (_ isSuccess: Bool, _ ads:[HomeTopAdModel]?) -> Void
-    typealias RequestRestaurantsClosure = (_ isSuccess: Bool, _ models: [RestaurantModel]?) -> Void
+    typealias RequestRestaurantsClosure = (_ isSuccess: Bool, _ models: [BaseRestaurantModel]?) -> Void
     typealias RequestMenuClosure = (_ isSuccess: Bool, _ models: [BaseFoodModel]?) -> Void
     
     func requestTopHomeAd(withCompletion completion: @escaping (RequestHomeTopAdClosure)) {
@@ -83,7 +83,16 @@ class HomeFoodViewModel {
         let success = true
         
         if success {
-            let requestedData = [RestaurantModel(), RestaurantModel(), RestaurantModel(), RestaurantModel(), RestaurantModel(), RestaurantModel(), RestaurantModel(), RestaurantModel()]
+            RestaurantFactory.createRestaurant()
+            guard !RestaurantFactory.restaurants.isEmpty else { return }
+        
+            var restaurantArray:[BaseRestaurantModel] = generateUniqueItems(count: 10, generator: {
+                return RestaurantFactory.randomRestaurant()
+            }, condition: { newItem, existingItems in
+                return existingItems.contains(where: { $0.restaurantID == newItem.restaurantID })
+            })
+
+            let requestedData = restaurantArray
             nearestRestaurants = requestedData
             
             //Add tableHeights
@@ -104,7 +113,15 @@ class HomeFoodViewModel {
         let success = true
         
         if success {
-            let requestedData = [BaseFoodModel(), BaseFoodModel(), BaseFoodModel(), BaseFoodModel(), BaseFoodModel()] // Only 5 will display in Home
+            BaseFoodFactory.setupFoods()
+            guard !BaseFoodFactory.foodArray.isEmpty else { return }
+            let foodArray: [BaseFoodModel] = generateUniqueItems(count: 5, generator: {
+                return BaseFoodFactory.randomFood()
+            }, condition: { newItem, existingItems in
+                return existingItems.contains(where: { $0.productID == newItem.productID })
+            })
+    
+            let requestedData = foodArray
             
             popularMenu = requestedData
             //Add table height

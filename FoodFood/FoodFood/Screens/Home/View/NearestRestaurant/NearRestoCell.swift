@@ -12,9 +12,9 @@ class NearRestoCell: UICollectionViewCell {
     static let reuseIdentifier = "NearRestoCellReuseIdentifier"
     static let cellHeight: CGFloat = 140
     
-    func configure(withModel model: RestaurantModel) {
+    func configure(withModel model: BaseRestaurantModel) {
         imageV.image = KImage(model.imageURL)
-        titleLabel.text = model.title
+        titleLabel.text = model.shortName
         distancetLabel.text = "\(model.distance) mins"
     }
     
@@ -54,7 +54,7 @@ class NearRestoCell: UICollectionViewCell {
     
     private lazy var imageV: UIImageView = {
        let imgV = UIImageView()
-        imgV.contentMode = .scaleAspectFit
+        imgV.contentMode = .scaleAspectFill
         
         return imgV
     }()

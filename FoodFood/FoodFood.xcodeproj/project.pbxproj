@@ -13,6 +13,7 @@
 		5A0E94582A612E7600C6F1EC /* HomeFoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E94572A612E7600C6F1EC /* HomeFoodViewModel.swift */; };
 		5A0E945B2A6130B900C6F1EC /* HomeTopAdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E945A2A6130B900C6F1EC /* HomeTopAdModel.swift */; };
 		5A0E945D2A6131CC00C6F1EC /* AdsPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */; };
+		5A24C7942AC6971A00056451 /* BaseFoodFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A24C7932AC6971A00056451 /* BaseFoodFactory.swift */; };
 		5A3647982AB057EB0056C2C7 /* ChatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3647972AB057EB0056C2C7 /* ChatDetailViewController.swift */; };
 		5A36479A2AB058300056C2C7 /* ChatDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3647992AB058300056C2C7 /* ChatDetailHeaderView.swift */; };
 		5A3F99262AAEB671006BE4D3 /* PopularItemsCollection+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F99252AAEB671006BE4D3 /* PopularItemsCollection+UICollectionViewDataSource.swift */; };
@@ -99,6 +100,7 @@
 		5A0E94572A612E7600C6F1EC /* HomeFoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFoodViewModel.swift; sourceTree = "<group>"; };
 		5A0E945A2A6130B900C6F1EC /* HomeTopAdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopAdModel.swift; sourceTree = "<group>"; };
 		5A0E945C2A6131CC00C6F1EC /* AdsPagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsPagerView.swift; sourceTree = "<group>"; };
+		5A24C7932AC6971A00056451 /* BaseFoodFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFoodFactory.swift; sourceTree = "<group>"; };
 		5A3647972AB057EB0056C2C7 /* ChatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailViewController.swift; sourceTree = "<group>"; };
 		5A3647992AB058300056C2C7 /* ChatDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailHeaderView.swift; sourceTree = "<group>"; };
 		5A3F99252AAEB671006BE4D3 /* PopularItemsCollection+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularItemsCollection+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				5A0E945A2A6130B900C6F1EC /* HomeTopAdModel.swift */,
 				5AF7132B2A61460D00EFBE3D /* RestaurantModel.swift */,
 				5A9FCFF12A64EEF600F03DD8 /* BaseFoodModel.swift */,
+				5A24C7932AC6971A00056451 /* BaseFoodFactory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -802,6 +805,7 @@
 				5A9EC25D2AC175300075756D /* BaseDetailVC.swift in Sources */,
 				5A9F281E2A4AB4D500E478F3 /* AppDelegate.swift in Sources */,
 				5A8B8E012AC56F0900C8E538 /* ReviewsDetailTable+UITableViewDataSource.swift in Sources */,
+				5A24C7942AC6971A00056451 /* BaseFoodFactory.swift in Sources */,
 				5AF7132C2A61460D00EFBE3D /* RestaurantModel.swift in Sources */,
 				5AA251A62A53B72C000090C5 /* GlobalFunc.swift in Sources */,
 				5A3F994A2AAEF238006BE4D3 /* FilterSearchVM.swift in Sources */,

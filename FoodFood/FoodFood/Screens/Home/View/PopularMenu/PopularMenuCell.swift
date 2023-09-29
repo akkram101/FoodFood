@@ -13,8 +13,8 @@ class PopularMenuCell: UITableViewCell {
     
     func configure(withModel model: BaseFoodModel) {
         imageV.image = KImage(model.imageUrl)
-        titleLabel.text = model.itemName
-        priceLabel.text = "$\(model.itemPrice)"
+        titleLabel.text = model.itemShortName
+        priceLabel.text = String.init(format: "$%.2f", model.itemPrice)
         restaurantLabel.text = model.restaurantName
     }
     
@@ -62,7 +62,7 @@ class PopularMenuCell: UITableViewCell {
     
     private lazy var imageV: UIImageView = {
        let imgV = UIImageView()
-        imgV.contentMode = .scaleToFill
+        imgV.contentMode = .scaleAspectFill
         imgV.layer.cornerRadius = adapt(20)
         imgV.clipsToBounds = true
         

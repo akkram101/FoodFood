@@ -13,7 +13,7 @@ class DetailInfoCell: UITableViewCell {
     static let reuseIdentifier = "DetailTitleCellReuseIdentifier"
     
     func update(detail: FoodDetailModel) {
-        titleLbl.text = detail.foodName
+        titleLbl.text = detail.baseModel.itemName
         locationLbl.text = "\(detail.distance) KM"
         ratingsLbl.text = String(format: "%.2f Rating", detail.rating)
         descriptionLbl.attributedText = attributedTextFromHTML(htmlString: detail.description)

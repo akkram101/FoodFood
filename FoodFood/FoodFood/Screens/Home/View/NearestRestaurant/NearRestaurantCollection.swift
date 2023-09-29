@@ -9,7 +9,7 @@ import UIKit
 
 class NearRestaurantCollection: UITableViewCell {
     
-    var restaurantModels: [RestaurantModel] = [] {
+    var restaurantModels: [BaseRestaurantModel] = [] {
         didSet {
             itemsCollectionView.reloadData()
         }
