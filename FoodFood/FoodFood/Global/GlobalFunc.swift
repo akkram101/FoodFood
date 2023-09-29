@@ -20,6 +20,17 @@ func KEmptyIfNil(_ str: String?) -> String {
     return str ?? ""
 }
 
+func randomColor() -> UIColor {
+    let red = CGFloat.random(in: 0...1)
+    let green = CGFloat.random(in: 0...1)
+    let blue = CGFloat.random(in: 0...1)
+    let alpha = CGFloat.random(in: 0.5...1.0)
+    
+    let randomColor = UIColor.init(red: red, green: green, blue: blue, alpha: alpha)
+    
+    return randomColor
+}
+
 func kPostDefaultNotification(_ noti : String) {
     NotificationCenter.default.post(name: Notification.Name(noti), object: nil)
 }

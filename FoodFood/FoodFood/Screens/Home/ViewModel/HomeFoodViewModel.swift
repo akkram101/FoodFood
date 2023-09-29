@@ -22,7 +22,7 @@ class HomeFoodViewModel {
     var filter: FilterModel?
     var topHomeAds: [HomeTopAdModel] = []
     var nearestRestaurants: [RestaurantModel] = []
-    var popularMenu: [FoodModel] = []
+    var popularMenu: [BaseFoodModel] = []
     var bottomHomeAds: [HomeTopAdModel] = []
     
     //MARK: - UI Releated
@@ -38,7 +38,7 @@ class HomeFoodViewModel {
     
     typealias RequestHomeTopAdClosure = (_ isSuccess: Bool, _ ads:[HomeTopAdModel]?) -> Void
     typealias RequestRestaurantsClosure = (_ isSuccess: Bool, _ models: [RestaurantModel]?) -> Void
-    typealias RequestMenuClosure = (_ isSuccess: Bool, _ models: [FoodModel]?) -> Void
+    typealias RequestMenuClosure = (_ isSuccess: Bool, _ models: [BaseFoodModel]?) -> Void
     
     func requestTopHomeAd(withCompletion completion: @escaping (RequestHomeTopAdClosure)) {
         let tableTopSection = HomeTableSections.topAdsSection.rawValue
@@ -48,9 +48,19 @@ class HomeFoodViewModel {
         let isSuccess = true
         
         if isSuccess {
-            let requestedData = [HomeTopAdModel(), HomeTopAdModel(), HomeTopAdModel()]
+            let voucher1 = HomeTopAdModel()
+            voucher1.adImageURL = "voucher_2"
+            
+            let voucher2 = HomeTopAdModel()
+            voucher2.adImageURL = "voucher_3"
+            
+            let voucher3 = HomeTopAdModel()
+            voucher3.adImageURL = "voucher_1"
+            
+            let requestedData = [voucher1, voucher2, voucher3]
             topHomeAds = requestedData
-            bottomHomeAds = requestedData
+            bottomHomeAds = requestedData.reversed()
+            
             homeTableCellHeights[tableTopSection] = HomeTopAdsCell.cellHeight
             homeTableCellHeights[tableBotSection] = HomeTopAdsCell.cellHeight
             
@@ -94,7 +104,7 @@ class HomeFoodViewModel {
         let success = true
         
         if success {
-            let requestedData = [FoodModel(), FoodModel(), FoodModel(), FoodModel(), FoodModel()] // Only 5 will display in Home
+            let requestedData = [BaseFoodModel(), BaseFoodModel(), BaseFoodModel(), BaseFoodModel(), BaseFoodModel()] // Only 5 will display in Home
             
             popularMenu = requestedData
             //Add table height

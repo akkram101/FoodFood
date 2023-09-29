@@ -10,11 +10,13 @@ import SnapKit
 
 class FoodDetailVC: BaseDetailVC {
     
-    let viewModel: FoodDetailViewModel
+    let model: BaseFoodModel
     
-    init(viewModel: FoodDetailViewModel) {
-        self.viewModel = viewModel
+    init(model: BaseFoodModel) {
+        self.model = model
         super.init(nibName: nil, bundle: nil)
+        
+        self.setBackGroundImg(model.imageUrl)
     }
     
     // MARK: - Button Action
@@ -31,19 +33,15 @@ class FoodDetailVC: BaseDetailVC {
         super.viewDidLoad()
         view.backgroundColor = .black
         setupUI()
-        requestData()
     }
     
-    
-    
     // MARK: - UI
-    
     private func setupUI() {
-//        view.addSubview(tableView)
-//        tableView.snp.makeConstraints { make in
-//            make.top.equalToSuperview().offset(adapt(100))
-//            make.left.right.bottom.equalToSuperview()
-//        }
+        detailContainer.addSubview(foodDetailTableVC.view)
+        foodDetailTableVC.view.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        foodDetailTableVC.didMove(toParent: self)
         
         view.addSubview(addToCartBtn)
         addToCartBtn.snp.makeConstraints { make in
@@ -53,31 +51,13 @@ class FoodDetailVC: BaseDetailVC {
         }
     }
     
-    //MARK: - ViewModel Functions
-    
-    private func requestData() {
+    private lazy var foodDetailTableVC: FoodDetailTableVC = {
+        let viewModel = FoodDetailViewModel(productID: model.productID)
+        viewModel.baseModel = model
         
-        viewModel.requestMoreDetails { isSuccess, detail in
-            self.setBackGroundImg(detail.imageName)
-            self.tableView.reloadData()
-        }
+        let vc = FoodDetailTableVC(viewModel: viewModel)
         
-        viewModel.requestReviews { isSuccess, reviews in
-            print("XD")
-            self.tableView.reloadData()
-        }
-    }
-    
-    //MARK: - Lazy Load
-    
-    lazy var tableView: UITableView = {
-       let tableView = UITableView()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.showsVerticalScrollIndicator = false
-        tableView.isScrollEnabled = false
-        
-        return tableView
+        return vc
     }()
     
     private lazy var addToCartBtn: UIButton = {

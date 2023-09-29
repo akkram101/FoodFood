@@ -20,15 +20,16 @@ class AdsPagerView: UIView {
         addSubview(pagerView)
         pagerView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+            make.width.equalToSuperview()
         }
         
-        addSubview(pageControl)
-        pageControl.snp.makeConstraints { make in
-            make.bottom.equalToSuperview()
-            make.centerX.equalToSuperview()
-            make.height.equalTo(adapt(20))
-            make.width.equalTo(adapt(100))
-        }
+//        addSubview(pageControl)
+//        pageControl.snp.makeConstraints { make in
+//            make.bottom.equalToSuperview()
+//            make.centerX.equalToSuperview()
+//            make.height.equalTo(adapt(20))
+//            make.width.equalTo(adapt(100))
+//        }
     }
     
     convenience init(ads: [HomeTopAdModel] ) {
@@ -50,7 +51,6 @@ class AdsPagerView: UIView {
         pagerView.dataSource = self
         pagerView.delegate = self
         pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: Self.reuseIdentifer)
-        pagerView.interitemSpacing = adapt(20)
         pagerView.backgroundColor = .clear
         
         return pagerView
@@ -82,8 +82,17 @@ extension AdsPagerView: FSPagerViewDataSource {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: Self.reuseIdentifer, at: index)
         
         let model = adModels[index]
-        cell.imageView?.image = KImage(model.adImageURL)
+        cell.contentView.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0,
+                                                             left: adapt(4),
+                                                             bottom: 0,
+                                                             right: adapt(4)))
+        }
+        cell.contentView.layer.shadowOpacity = 0
+        cell.layer.shadowOpacity = 0
         
+        cell.imageView?.image = KImage(model.adImageURL)
+    
         return cell
     }
     
@@ -93,7 +102,7 @@ extension AdsPagerView: FSPagerViewDelegate {
     
     func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
         pageControl.currentPage = index
+        print("Swiped ad to index:\(index)")
     }
-    
 }
 

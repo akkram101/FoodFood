@@ -11,7 +11,7 @@ class PopularMenuCell: UITableViewCell {
     
     static let reuseIdentifier = "PopularMenuCellReuseIdentifier"
     
-    func configure(withModel model: FoodModel) {
+    func configure(withModel model: BaseFoodModel) {
         imageV.image = KImage(model.imageUrl)
         titleLabel.text = model.itemName
         priceLabel.text = "$\(model.itemPrice)"
@@ -62,8 +62,9 @@ class PopularMenuCell: UITableViewCell {
     
     private lazy var imageV: UIImageView = {
        let imgV = UIImageView()
-        imgV.contentMode = .scaleAspectFit
+        imgV.contentMode = .scaleToFill
         imgV.layer.cornerRadius = adapt(20)
+        imgV.clipsToBounds = true
         
         return imgV
     }()

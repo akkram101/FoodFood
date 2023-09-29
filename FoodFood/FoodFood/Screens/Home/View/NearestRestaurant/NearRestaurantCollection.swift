@@ -94,7 +94,7 @@ extension NearRestaurantCollection: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Selected restaurant at index: \(indexPath.row)")
         
-        let detailVC = FoodDetailVC(viewModel: FoodDetailViewModel(productID: "CheeseCake"))
+        let detailVC = FoodDetailVC(model: BaseFoodModel())
         detailVC.modalPresentationStyle = .overFullScreen
         AppManager.rootViewController()?.present(detailVC, animated: true, completion: {
             APIManager.shortSimulate {

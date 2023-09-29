@@ -8,23 +8,19 @@
 import Foundation
 import UIKit
 
-extension FoodDetailVC: UITableViewDelegate {
+extension FoodDetailTableVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let section = indexPath.section
         if section == 0 {
-            return 50
+            return adapt(50)
         }
         
         if section == 1 {
-            return 100
+            return UITableView.automaticDimension
         }
         
         if section == 2 {
-            return 50
-        }
-        
-        if section == 3 {
-            return 700
+            return UserReviewCell.cellHeight * 9
         }
         
         

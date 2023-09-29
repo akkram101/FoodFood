@@ -9,7 +9,7 @@ import UIKit
 
 class PopularItemsCollection: UITableViewCell {
     
-    var foodModels: [FoodModel] = [] {
+    var foodModels: [BaseFoodModel] = [] {
         didSet {
             itemsTableView.reloadData()
         }

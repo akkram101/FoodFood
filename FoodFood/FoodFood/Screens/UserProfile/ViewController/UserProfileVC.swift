@@ -18,6 +18,7 @@ class UserProfileVC: BaseDetailVC {
     //Configure BaseDetailVC Properties
     private func configureBase() {
         setNormalOffset(offset: 300)
+        setAllowanceToPanUp(50)
         setBackGroundImg("user_photo")
         setBackGroundImg(contentMode: .scaleAspectFit)
     }

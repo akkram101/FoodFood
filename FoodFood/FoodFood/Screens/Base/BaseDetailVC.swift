@@ -19,17 +19,17 @@ class BaseDetailVC: BaseViewController {
     
     // MARK: = Properties
     
-    ///Initial Top Contstraint of BottomView
+    ///Initial Top Contstraint of Detail View
     private var normalOffset: CGFloat = 400
     
     ///Allowance for user to pan downwards
     private var allowanceToPanDown: CGFloat = 150
     
     ///Allowance for user to pan downwards
-    private var allowanceToPanUp: CGFloat = 100
+    private var allowanceToPanUp: CGFloat = 50
     
-    ///Top Constraint when user pans bottom view upwards
-    private static let ExpanedOffset: CGFloat = 200
+    ///Top Constraint when user pans Detail View upwards
+    private var expanedOffset: CGFloat = 100
     
     ///Bool Value to determine which direction user is panning to
     private var isPanningUp = false
@@ -67,7 +67,7 @@ class BaseDetailVC: BaseViewController {
     
     ///Set Allowable allowance to pan  Detail View upwards
     func setAllowanceToPanUp(_ allowance: CGFloat) {
-        allowanceToPanDown = allowance
+        allowanceToPanUp = allowance
     }
     
     // MARK: - View Lifecycle
@@ -166,7 +166,6 @@ extension BaseDetailVC {
     @objc private func handleUserPanGesture(_ gesture: UIPanGestureRecognizer) {
         let translationY = gesture.translation(in: view).y
         let velocity = gesture.velocity(in: view).y
-        print(velocity)
         
         switch gesture.state {
         case .began:
@@ -175,7 +174,7 @@ extension BaseDetailVC {
             let newTop = initialContainerViewY + translationY
             isPanningUp = newTop > initialContainerViewY ? false : true
             
-            let minY = BaseDetailVC.ExpanedOffset - allowanceToPanUp
+            let minY = expanedOffset - allowanceToPanUp
             let maxY = normalOffset + allowanceToPanDown
 
             //If current container position is beyond normalOffset + allowanceToPanUp return
@@ -214,7 +213,7 @@ extension BaseDetailVC {
     
     private func handleFastPanning(currentOffset: CGFloat ,isPanUp: Bool) {
         
-        let targetOffset = isPanUp ? BaseDetailVC.ExpanedOffset : self.normalOffset
+        let targetOffset = isPanUp ? self.expanedOffset : self.normalOffset
         let duration = getAnimationDuration(distance: currentOffset, from: targetOffset, isFastPan: true)
         
         if isPanUp {
@@ -226,7 +225,7 @@ extension BaseDetailVC {
     
     private func getAnimationDuration(distance: CGFloat, from: CGFloat, isFastPan: Bool) -> TimeInterval {
         let durationFactor: CGFloat = isFastPan ? 300 : 200
-        let minimumDuration: CGFloat = isFastPan ? 0.8 : 0.5
+        let minimumDuration: CGFloat = isFastPan ? 0.5 : 0.3
        
         let animationDistance = abs(from - distance)
         let duration = TimeInterval(animationDistance / durationFactor)
@@ -238,22 +237,31 @@ extension BaseDetailVC {
     }
     
     private func handleEndPanGesture(_ currentOffset: CGFloat) {
-        let diffFromMin = self.normalOffset - currentOffset
+        let diffFromMax = self.normalOffset - currentOffset
+        let diffFromMin = self.expanedOffset - currentOffset
         let threshold: CGFloat = 50
         
         //Will minimize if frame is within threshold of NormalOffset or beyond NormalOffset
-        let shouldMinimize = abs(diffFromMin) < threshold || currentOffset > self.normalOffset
+        let shouldMinimize = abs(diffFromMax) < threshold || currentOffset > self.normalOffset
+        if shouldMinimize {
+            let duration = getAnimationDuration(distance: currentOffset, from: normalOffset, isFastPan: false)
+            minimizeDetails(withDuration: duration)
+            return
+        }
         
+        //Check which is closer
+        let shouldMaximize = abs(diffFromMin) < abs(diffFromMax)
         //Target Offset
-        let targetOffset = shouldMinimize ? self.normalOffset : BaseDetailVC.ExpanedOffset
+        let targetOffset = shouldMaximize ? self.expanedOffset : self.normalOffset
         
         //Animation Duration
         let duration = getAnimationDuration(distance: currentOffset, from: targetOffset, isFastPan: false)
         
-        if shouldMinimize {
-            minimizeDetails(withDuration: duration)
-        } else {
+        print(duration)
+        if shouldMaximize {
             expandDetails(withDuration: duration)
+        } else {
+            minimizeDetails(withDuration: duration)
         }
     }
     
@@ -264,7 +272,7 @@ extension BaseDetailVC {
                        usingSpringWithDamping: 0.9,
                        initialSpringVelocity: 0.8) {
             self.containerView.snp.updateConstraints { make in
-                make.top.equalToSuperview().offset(BaseDetailVC.ExpanedOffset)
+                make.top.equalToSuperview().offset(self.expanedOffset)
             }
             self.view.setNeedsLayout()
             self.view.layoutIfNeeded()
@@ -291,10 +299,11 @@ extension BaseDetailVC {
         }
         
         let offSetAmount = abs(self.normalOffset - offset)
+        let ratio: CGFloat = 0.7
         UIView.animate(withDuration: 0) {
             self.mainImgV.snp.updateConstraints { make in
-                make.width.equalTo(ABLength.kScreenWidth + offSetAmount)
-                make.height.equalTo(ABLength.kScreenHeight / 2 + offSetAmount)
+                make.width.equalTo(ABLength.kScreenWidth + offSetAmount * ratio)
+                make.height.equalTo(ABLength.kScreenHeight / 2 + offSetAmount * ratio)
             }
             
             self.view.setNeedsLayout()

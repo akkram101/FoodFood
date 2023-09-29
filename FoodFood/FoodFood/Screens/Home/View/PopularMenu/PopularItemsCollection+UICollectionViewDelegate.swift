@@ -16,12 +16,14 @@ extension PopularItemsCollection: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let food = foodModels[indexPath.row]
+        //FoodModel
+        let model = foodModels[indexPath.row]
         
-        let foodVM = FoodDetailViewModel(productID: "CheeseCake")
-        let detailVC = UINavigationController(rootViewController: FoodDetailVC(viewModel: foodVM))
         
+        let detailVC = FoodDetailVC(model: model)
         detailVC.modalPresentationStyle = .overFullScreen
+                                              
+        //Simulate API
         AppManager.rootViewController()?.present(detailVC, animated: true, completion: {
             APIManager.shortSimulate {
                 print("XDXD")
