@@ -19,10 +19,11 @@ class SignUpVM {
         return email.contains("@") && email.hasSuffix(".com")
     }
     
-    func signUpUser(username: String, email: String, password: String, completion: @escaping SignUpClosure) {
+    func signUpUser(username: String, email: String, phoneNum: String? = nil, password: String, completion: @escaping SignUpClosure) {
         
         //API
-        SignUpManager.signUpUserWith(email: email, password: password, phoneNum: password) { isSuccess in
+        SignUpManager.signUpUserWith(email: email, password: password, phoneNum: phoneNum ?? "") { isSuccess in
+            UserManager.shared.userInfo = UserModel(userID: "", userName: "Yumiii", email: "anamwp66@gmail.com", firstName: "Ayumi", middleName: "Test", lastName: "Orochimaru", nickName: "TEsttt", phoneNum: phoneNum ?? "", address: "Address", avatar: "randomImg")
             completion(isSuccess)
         }
     }

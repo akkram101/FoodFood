@@ -32,6 +32,7 @@ class SessionManager {
         //API
         APIManager.simulateAPI {
             SessionManager.isLogin = true
+            UserManager.shared.userInfo = UserModel(userID: "", userName: "Yumiii", email: "anamwp66@gmail.com", firstName: "Ayumi", middleName: "Test", lastName: "Orochimaru", nickName: "TEsttt", phoneNum: "Test", address: "Address", avatar: "randomImg")
             completion(true)
         }
     }

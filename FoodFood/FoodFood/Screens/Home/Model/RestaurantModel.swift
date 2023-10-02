@@ -17,7 +17,7 @@ class BaseRestaurantModel: Equatable {
     var imageURL = ""
     var name = ""
     var shortName = ""
-    var distance = Int.random(in: 1...10)
+    var distance = Int.random(in: 2...10)
 }
 
 class BaseRestaurantDetailModel {

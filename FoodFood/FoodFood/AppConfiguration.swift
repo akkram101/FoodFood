@@ -46,7 +46,7 @@ class APIManager {
             let hud = MBProgressHUD.showAdded(to: viewController.view, animated: true)
             hud.label.text = "Loading..."
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
                 MBProgressHUD.hide(for: viewController.view, animated: true)
                 completion()
             })

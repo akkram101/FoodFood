@@ -10,6 +10,8 @@ target 'FoodFood' do
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'FSPagerView'
   pod 'LookinServer', :configurations => ['Debug']
+  pod 'MJRefresh','3.5.0'  # ,'3.5.0'  <- 3.4.3
+
   
 	
   # Pods for FoodFood

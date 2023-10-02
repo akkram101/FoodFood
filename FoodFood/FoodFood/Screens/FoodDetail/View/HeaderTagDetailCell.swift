@@ -22,6 +22,10 @@ class HeaderTagDetailCell: UITableViewCell {
         }
     }
     
+    func configureBtn(isFavorite: Bool) {
+        favoriteBtn.isSelected = isFavorite
+    }
+    
     private func addTags(_ tags:[String]) {
         var tagViews: [UIView] = []
         for tag in tags {
@@ -87,6 +91,7 @@ class HeaderTagDetailCell: UITableViewCell {
     }
     
     @objc private func favoriteBtnAction(_ btn: UIButton) {
+        btn.isSelected = !btn.isSelected
         delegate?.cellDidClickFavorite(self)
     }
 
@@ -126,7 +131,8 @@ class HeaderTagDetailCell: UITableViewCell {
     
     private lazy var favoriteBtn: UIButton = {
        let btn = UIButton()
-        btn.setImage(UIImage(named: "icon_favorite"), for: .normal)
+        btn.setImage(UIImage(named: "icon_favorite"), for: .selected)
+        btn.setImage(UIImage(named: "icon_unfavorite"), for: .normal)
         btn.addTarget(self, action: #selector(favoriteBtnAction(_:)), for: .touchUpInside)
         
         return btn

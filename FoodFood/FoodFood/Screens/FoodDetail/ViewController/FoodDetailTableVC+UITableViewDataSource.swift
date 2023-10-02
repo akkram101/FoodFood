@@ -22,9 +22,12 @@ extension FoodDetailTableVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTagDetailCell.reuseIdentifier, for: indexPath) as? HeaderTagDetailCell else { return UITableViewCell() }
             
             let model = viewModel.foodDetailModel
+            let isFavorite = UserProfileViewModel.favoriteItems.contains(where: {$0.productID == model.baseModel.productID})
             
             cell.tagTitles = model.baseModel.tags
+            cell.configureBtn(isFavorite: isFavorite)
             cell.delegate = self
+            
             return cell
         }
         

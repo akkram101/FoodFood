@@ -33,6 +33,8 @@ extension AppDelegate {
                 window.overrideUserInterfaceStyle = .light
             }
         }
+        
+        UserManager.shared.userInfo = UserModel(userID: "", userName: "Dexter", email: "Dexter.Ramos@gmail.com", firstName: "Dexter", middleName: "Test", lastName: "Ramos", nickName: "TEsttt", phoneNum: "", address: "Address", avatar: "randomImg")
     }
     
     func startNetworkMonitor() {

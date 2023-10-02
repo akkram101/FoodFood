@@ -15,5 +15,15 @@ extension FoodDetailTableVC: HeaderTagDetailCellDelegate {
     
     func cellDidClickFavorite(_ foodTagCell: HeaderTagDetailCell) {
         print("Favorited clicked")
+        
+        let model = viewModel.baseModel
+        
+        APIManager.shortSimulate {
+            if UserProfileViewModel.favoriteItems.contains(model) {
+                UserProfileViewModel.favoriteItems.removeAll { $0.productID == model.productID }
+            } else {
+                UserProfileViewModel.favoriteItems.append(model)
+            }
+        }
     }
 }

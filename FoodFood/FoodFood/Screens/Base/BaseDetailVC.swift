@@ -70,6 +70,10 @@ class BaseDetailVC: BaseViewController {
         allowanceToPanUp = allowance
     }
     
+    func setScrollableViewBackgroundColor(_ color: UIColor) {
+        scrollHandlerView.backgroundColor = color
+    }
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -162,6 +166,7 @@ class BaseDetailVC: BaseViewController {
     
 }
 
+//TODO: - REFACTOR TO SCROLL EVEN IN DETAIL CONTAINER
 //MARK: - Panning Behavior
 extension BaseDetailVC {
     

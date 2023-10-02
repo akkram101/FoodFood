@@ -17,8 +17,8 @@ class MainTabbarViewController: BaseViewController {
         let vc4 = ChatsViewController()
         
         let nav1 = createNavWith(vc: vc1, title: "Home", image: "tabbar_home")
-        let nav2 = createNavWith(vc: vc2, title: "UwU", image: "tabbar_profile")
-        let nav3 = createNavWith(vc: vc3, title: "UwU", image: "tabbar_cart")
+        let nav2 = createNavWith(vc: vc2, title: "Profile", image: "tabbar_profile")
+        let nav3 = createNavWith(vc: vc3, title: "Cart", image: "tabbar_cart")
         let nav4 = createNavWith(vc: vc4, title: "Chat", image: "tabbar_chat")
         
         mainTabBar.setViewControllers([nav1, nav2, nav3, nav4], animated: false)
@@ -27,7 +27,8 @@ class MainTabbarViewController: BaseViewController {
     private func createNavWith(vc: UIViewController, title: String?, image: String) -> UINavigationController {
         let nav = UINavigationController.init(rootViewController: vc)
         nav.tabBarItem.title = title ?? ""
-        let image = UIImage.init(named: image)
+        let selectedImg = UIImage.init(named: image)
+        let unselectedImage = UIImage.init(named: "\(image)_unselect")
         
         let selectedAttributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.systemGreen
@@ -39,7 +40,9 @@ class MainTabbarViewController: BaseViewController {
         
         nav.tabBarItem.setTitleTextAttributes(selectedAttributes, for: .selected)
         nav.tabBarItem.setTitleTextAttributes(unSelectedAttributes, for: .normal)
-        nav.tabBarItem.image = image?.withRenderingMode(.alwaysOriginal)
+        
+        nav.tabBarItem.image = unselectedImage?.withRenderingMode(.alwaysOriginal)
+        nav.tabBarItem.selectedImage = selectedImg?.withRenderingMode(.alwaysOriginal)
         
         return nav
     }

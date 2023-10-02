@@ -39,12 +39,17 @@ func kNotiName(_ notiName: String) -> Notification.Name {
     return Notification.Name(notiName)
 }
 
+func KUserFullName() -> String {
+    guard let userInfo = UserManager.shared.userInfo else { return ""}
+    return "\(userInfo.firstName) \(userInfo.lastName)"
+}
+
 func generateUniqueItems<T>(count: Int, generator: () -> T, condition: (T, [T]) -> Bool) -> [T] {
     var uniqueItems: [T] = []
     
     while uniqueItems.count < count {
         let newItem = generator()
-        
+         
         if !uniqueItems.contains(where: { existingItem in
             return condition(newItem, [existingItem])
         }) {

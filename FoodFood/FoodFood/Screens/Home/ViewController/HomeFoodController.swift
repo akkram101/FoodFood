@@ -26,6 +26,13 @@ class HomeFoodController: HomeBaseViewController {
         AppManager.rootViewController()?.present(vc, animated: true)
     }
     
+    @objc private func refreshData(_ sender:UIRefreshControl) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            self.requestData()
+            sender.endRefreshing()
+        })
+    }
+    
     private func requestData() {
         viewModel.requestTopHomeAd {[weak self] (isSuccess, ads) in
             guard let self = self else { return }
@@ -130,6 +137,12 @@ class HomeFoodController: HomeBaseViewController {
         tableView.register(NearRestaurantCollection.self, forCellReuseIdentifier: NearRestaurantCollection.reuseIdentifier)
         tableView.register(PopularItemsCollection.self, forCellReuseIdentifier: PopularItemsCollection.reuseIdentifier)
         tableView.register(FiltersCollection.self, forCellReuseIdentifier: FiltersCollection.reuseIdentiier)
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+        
+        tableView.addSubview(refreshControl)
+        
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
