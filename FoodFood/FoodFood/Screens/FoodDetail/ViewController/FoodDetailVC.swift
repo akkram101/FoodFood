@@ -22,7 +22,7 @@ class FoodDetailVC: BaseDetailVC {
     // MARK: - Button Action
     @objc private func addToCartBtnAction() {
         dismiss(animated: true) {
-            CartManager.itemAddedToCart()
+            CartManager.addToCart(self.model, quantity: 1)
         }
     }
     

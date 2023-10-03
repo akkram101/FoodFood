@@ -24,14 +24,13 @@ class ChatsViewController: BaseViewController {
             make.right.equalToSuperview().offset(adapt(-16))
             make.bottom.equalToSuperview().offset(-adapt(ABLength.kTabBarHeight + 16))
         }
-        
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
+    
     
     private lazy var chatLabel: UILabel = {
         let label = UILabel()

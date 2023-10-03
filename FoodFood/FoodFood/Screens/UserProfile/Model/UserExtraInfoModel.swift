@@ -24,21 +24,21 @@ class UserExtraInfoModel {
     }
 }
 
-class CartItem {
-    var productID: String
-    var itemName: String
-    var quantity: Int
-    var totalAmount: Int
-    var restaurantID: String
-    
-    init(productID: String, itemName: String, quantity: Int, totalAmount: Int, restaurantID: String) {
-        self.productID = productID
-        self.itemName = itemName
-        self.quantity = quantity
-        self.totalAmount = totalAmount
-        self.restaurantID = restaurantID
-    }
-}
+//class CartItem {
+//    var productID: String
+//    var itemName: String
+//    var quantity: Int
+//    var totalAmount: Int
+//    var restaurantID: String
+//
+//    init(productID: String, itemName: String, quantity: Int, totalAmount: Int, restaurantID: String) {
+//        self.productID = productID
+//        self.itemName = itemName
+//        self.quantity = quantity
+//        self.totalAmount = totalAmount
+//        self.restaurantID = restaurantID
+//    }
+//}
 
 class VoucherInfo {
     var voucherID: String

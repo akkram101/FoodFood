@@ -52,7 +52,7 @@ class SessionManager {
     class func logoutUser() {
         APIManager.simulateAPI() {
             SessionManager.isLogin = false
-            AppManager.resetRootVCToHomeVC()
+            AppManager.resetRootToSignUPVC()
         }
     }
     

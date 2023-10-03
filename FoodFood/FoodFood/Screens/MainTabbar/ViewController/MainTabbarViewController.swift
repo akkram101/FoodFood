@@ -20,7 +20,7 @@ class MainTabbarViewController: BaseViewController {
         
         let vc1 = HomeFoodController()
         vc1.delegate = self
-        let vc2 = PlaceHolderViewController()
+        let vc2 = CartViewController()
         let vc3 = ChatsViewController()
         let vc4 = UserProfileVC()
         
