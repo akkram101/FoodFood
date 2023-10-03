@@ -92,9 +92,11 @@ extension NearRestaurantCollection: UICollectionViewDataSource {
 
 extension NearRestaurantCollection: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Selected restaurant at index: \(indexPath.row)")
+        //Show tabbar
+        kPostDefaultNotification(Notifications.showTabBar)
         
         let detailVC = FoodDetailVC(model: BaseFoodModel())
+        detailVC.isShowDismissButton = true
         detailVC.modalPresentationStyle = .overFullScreen
         AppManager.rootViewController()?.present(detailVC, animated: true, completion: {
             APIManager.shortSimulate {

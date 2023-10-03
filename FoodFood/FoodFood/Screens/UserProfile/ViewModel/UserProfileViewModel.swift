@@ -20,19 +20,17 @@ class UserProfileViewModel: NSObject {
     typealias ExtraInfoCompletion = (_ memberLevel: MemberLevel,_ favoriteItems: [BaseFoodModel], _ voucherInfo: [VoucherInfo]) -> Void
     
     func requestUserExtraInfo(completion: @escaping (ExtraInfoCompletion)) {
-        APIManager.simulateAPI {
-            
-            let item = CartItem(productID: "tet", itemName: "test", quantity: 1, totalAmount: 1, restaurantID: "asd")
-            
-            let voucher = VoucherInfo(voucherID: "asdasd")
-            
-            
-            self.userExtraInfo = UserExtraInfoModel(userID: "")
-            self.memberLevel = .gold
-            self.cartInfo = [item]
-            self.vouhcerInfo = Array.init(repeating: voucher, count: 3)
-            
-            completion(self.memberLevel, UserProfileViewModel.favoriteItems ,self.vouhcerInfo)
-        }
+        //API
+        let item = CartItem(productID: "tet", itemName: "test", quantity: 1, totalAmount: 1, restaurantID: "asd")
+        
+        let voucher = VoucherInfo(voucherID: "asdasd")
+        
+        
+        self.userExtraInfo = UserExtraInfoModel(userID: "")
+        self.memberLevel = .gold
+        self.cartInfo = [item]
+        self.vouhcerInfo = Array.init(repeating: voucher, count: 3)
+        
+        completion(self.memberLevel, UserProfileViewModel.favoriteItems ,self.vouhcerInfo)
     }
 }

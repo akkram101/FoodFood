@@ -53,9 +53,14 @@
 		5A8DB63E2ACAA0F800050432 /* UserFavorites+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8DB63D2ACAA0F800050432 /* UserFavorites+UITableViewDataSource.swift */; };
 		5A8DB6402ACAA10E00050432 /* UserFavorites+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8DB63F2ACAA10E00050432 /* UserFavorites+UITableViewDelegate.swift */; };
 		5A8DB6422ACAA69200050432 /* FavoriteItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8DB6412ACAA69200050432 /* FavoriteItemCell.swift */; };
+		5A8DB6442ACAC53200050432 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8DB6432ACAC53200050432 /* CartManager.swift */; };
 		5A8E07B22AC2BB7800A20038 /* FoodDetailTableVC+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E07B12AC2BB7800A20038 /* FoodDetailTableVC+UITableViewDelegate.swift */; };
 		5A8E07B42AC2BB8600A20038 /* FoodDetailTableVC+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E07B32AC2BB8600A20038 /* FoodDetailTableVC+UITableViewDataSource.swift */; };
 		5A8E07B62AC2C9E900A20038 /* LaterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E07B52AC2C9E800A20038 /* LaterUser.swift */; };
+		5A90189E2ACBAF07003D4E1D /* RedBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90189D2ACBAF07003D4E1D /* RedBadgeView.swift */; };
+		5A9018A32ACBDBDF003D4E1D /* MainTabbarViewController+HomeFoodViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9018A22ACBDBDF003D4E1D /* MainTabbarViewController+HomeFoodViewControllerDelegate.swift */; };
+		5A9018A52ACBEE63003D4E1D /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9018A42ACBEE63003D4E1D /* CartViewController.swift */; };
+		5A9018A72ACBF1ED003D4E1D /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9018A62ACBF1ED003D4E1D /* Notification.swift */; };
 		5A96BA832A5E35FA00BEE3D9 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A96BA822A5E35FA00BEE3D9 /* UserManager.swift */; };
 		5A9A6E882A5E400E00E61CA5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E872A5E400E00E61CA5 /* SessionManager.swift */; };
 		5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */; };
@@ -153,9 +158,14 @@
 		5A8DB63D2ACAA0F800050432 /* UserFavorites+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserFavorites+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		5A8DB63F2ACAA10E00050432 /* UserFavorites+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserFavorites+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		5A8DB6412ACAA69200050432 /* FavoriteItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItemCell.swift; sourceTree = "<group>"; };
+		5A8DB6432ACAC53200050432 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		5A8E07B12AC2BB7800A20038 /* FoodDetailTableVC+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodDetailTableVC+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		5A8E07B32AC2BB8600A20038 /* FoodDetailTableVC+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodDetailTableVC+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		5A8E07B52AC2C9E800A20038 /* LaterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaterUser.swift; sourceTree = "<group>"; };
+		5A90189D2ACBAF07003D4E1D /* RedBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedBadgeView.swift; sourceTree = "<group>"; };
+		5A9018A22ACBDBDF003D4E1D /* MainTabbarViewController+HomeFoodViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainTabbarViewController+HomeFoodViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		5A9018A42ACBEE63003D4E1D /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		5A9018A62ACBF1ED003D4E1D /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		5A96BA822A5E35FA00BEE3D9 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		5A9A6E872A5E400E00E61CA5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpManager.swift; sourceTree = "<group>"; };
@@ -241,9 +251,8 @@
 		5A0E944B2A60F76700C6F1EC /* MainTabbar */ = {
 			isa = PBXGroup;
 			children = (
+				5A9018A12ACBDBC3003D4E1D /* ViewController */,
 				5A3F992F2AAED92E006BE4D3 /* View */,
-				5A0E944D2A60F7D900C6F1EC /* MainTabbarViewController.swift */,
-				5A3F992D2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift */,
 			);
 			path = MainTabbar;
 			sourceTree = "<group>";
@@ -293,6 +302,7 @@
 		5A3F992F2AAED92E006BE4D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5A90189D2ACBAF07003D4E1D /* RedBadgeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,6 +448,32 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5A90189F2ACBD9FE003D4E1D /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				5A9018A02ACBDA06003D4E1D /* ViewController */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		5A9018A02ACBDA06003D4E1D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A9018A42ACBEE63003D4E1D /* CartViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5A9018A12ACBDBC3003D4E1D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E944D2A60F7D900C6F1EC /* MainTabbarViewController.swift */,
+				5A3F992D2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift */,
+				5A9018A22ACBDBDF003D4E1D /* MainTabbarViewController+HomeFoodViewControllerDelegate.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		5A9EC2502AC1723C0075756D /* FoodDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -548,6 +584,7 @@
 		5AA2519A2A53B72C000090C5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5A90189F2ACBD9FE003D4E1D /* Cart */,
 				5AA2FD8B2AC4213800997DD1 /* Base */,
 				5AA2FD852AC3F0F800997DD1 /* UserProfile */,
 				5A9EC2502AC1723C0075756D /* FoodDetail */,
@@ -569,6 +606,7 @@
 				5AA2519E2A53B72C000090C5 /* GlobalImports.swift */,
 				5AA251A02A53B72C000090C5 /* ABLength.swift */,
 				5A8E07B52AC2C9E800A20038 /* LaterUser.swift */,
+				5A9018A62ACBF1ED003D4E1D /* Notification.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -610,6 +648,7 @@
 				5A96BA822A5E35FA00BEE3D9 /* UserManager.swift */,
 				5A9A6E872A5E400E00E61CA5 /* SessionManager.swift */,
 				5A9A6E892A5E416F00E61CA5 /* SignUpManager.swift */,
+				5A8DB6432ACAC53200050432 /* CartManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -827,6 +866,7 @@
 			files = (
 				5A8E07B22AC2BB7800A20038 /* FoodDetailTableVC+UITableViewDelegate.swift in Sources */,
 				5A8DB6422ACAA69200050432 /* FavoriteItemCell.swift in Sources */,
+				5A9018A52ACBEE63003D4E1D /* CartViewController.swift in Sources */,
 				5AF713262A613BF100EFBE3D /* HomeTopAdsCell.swift in Sources */,
 				5A3F992E2AAEBA19006BE4D3 /* PlaceHolderVIewController.swift in Sources */,
 				5A9A6E882A5E400E00E61CA5 /* SessionManager.swift in Sources */,
@@ -840,6 +880,7 @@
 				5A0E94582A612E7600C6F1EC /* HomeFoodViewModel.swift in Sources */,
 				5AA251AA2A53B72C000090C5 /* String+Utility.swift in Sources */,
 				5A58249E2A5E617A008C8068 /* LoginVM.swift in Sources */,
+				5A8DB6442ACAC53200050432 /* CartManager.swift in Sources */,
 				5AA251992A53B6EB000090C5 /* BaseViewController.swift in Sources */,
 				5A96BA832A5E35FA00BEE3D9 /* UserManager.swift in Sources */,
 				5A8DB63A2ACA6A5F00050432 /* UserProfileTableVC+UITableViewDataSource.swift in Sources */,
@@ -858,6 +899,7 @@
 				5AA2FD882AC3F11900997DD1 /* UserProfileVC.swift in Sources */,
 				5AF4AF732AB0403100ABC5B9 /* ChatsViewController+UITableViewDelegate.swift in Sources */,
 				5A9EC2562AC1729C0075756D /* FoodDetailViewModel.swift in Sources */,
+				5A9018A32ACBDBDF003D4E1D /* MainTabbarViewController+HomeFoodViewControllerDelegate.swift in Sources */,
 				5A8DB6362ACA659500050432 /* UserVouchersCell.swift in Sources */,
 				5A8DB6382ACA6A3D00050432 /* UserProfileTableVC+UITableViewDelegate.swift in Sources */,
 				5A8DB62E2ACA55B500050432 /* UserModel.swift in Sources */,
@@ -870,6 +912,7 @@
 				5A8DB63C2ACA6D9B00050432 /* UserProfileTableVC.swift in Sources */,
 				5A3F99362AAEDE4E006BE4D3 /* SearchFoodField.swift in Sources */,
 				5A3F99432AAEEB0F006BE4D3 /* FilterCollectionCell.swift in Sources */,
+				5A90189E2ACBAF07003D4E1D /* RedBadgeView.swift in Sources */,
 				5A9A6E8A2A5E416F00E61CA5 /* SignUpManager.swift in Sources */,
 				5A9EC24F2AC15E8E0075756D /* AppDelegate+Services.swift in Sources */,
 				5A3F992C2AAEB73D006BE4D3 /* HomeFoodController+UITableViewDataSource.swift in Sources */,
@@ -895,6 +938,7 @@
 				5A3F993D2AAEE1CE006BE4D3 /* FilterModel.swift in Sources */,
 				5A9A6E8C2A5E44E800E61CA5 /* BaseTextField.swift in Sources */,
 				5A5824A32A5E7690008C8068 /* SignUpViewController.swift in Sources */,
+				5A9018A72ACBF1ED003D4E1D /* Notification.swift in Sources */,
 				5A8E07B62AC2C9E900A20038 /* LaterUser.swift in Sources */,
 				5A89308D2A60DABC00BB5AB3 /* AppConfiguration.swift in Sources */,
 				5A8DB62B2ACA546200050432 /* UserProfileViewModel.swift in Sources */,

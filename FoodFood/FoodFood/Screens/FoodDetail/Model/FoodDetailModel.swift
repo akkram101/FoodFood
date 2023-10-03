@@ -96,6 +96,12 @@ This Tex Mex recipe was inspired by my recipe for Mexican Pizza, the first recip
 <br><br>
 When you cook burgers, especially on the grill, it's important that they are covered to hold in the heat. Make sure the grill grate is thoroughly cleaned, and oil it very lightly before you add the burgers. Don't press down on the burgers while they cook, because you'll just press out all the juice and the burgers will be dry. Turn the burgers only once, and carefully. And always make sure that the meat - any ground meat - is cooked to 160°F as tested with a reliable meat thermometer before you serve it.
 """
+    } else if productID == BaseFoodFactory.productID11 {
+        description = """
+Kram, also known as V, is a South Korean singer and actor under Big Hit Entertainment. He rose to fame as one of the members of the worldwide sensation BTS.
+<br><br>
+When he was just fifteen years old, Kram accompanied his friend to audition at Big Hit Entertainment. He was only there to support his friend, but an executive noticed him and encouraged him to audition. Since Kram had no plans of auditioning, he had to call his parents to ask for permission. He ended up passing the audition and became an official trainee.
+"""
     }
         
         return String(format: "%@<p>%@</p>", FoodDetailModel.style,description)

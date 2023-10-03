@@ -47,7 +47,7 @@ class AppManager {
         return nil
     }
     
-    class func tabBarController() -> UITabBarController? {
+    class func tabBarController() -> MainTabbarViewController? {
         if let keyWindow = UIApplication.shared.keyWindow,
             let rootViewController = keyWindow.rootViewController {
             var currentViewController: UIViewController? = rootViewController
@@ -56,10 +56,10 @@ class AppManager {
                 currentViewController = presentedViewController
             }
             
-            if let tabBarController = currentViewController as? UITabBarController {
+            if let tabBarController = currentViewController as? MainTabbarViewController {
                 return tabBarController
             } else if let navigationController = currentViewController as? UINavigationController,
-                let tabBarController = navigationController.topViewController as? UITabBarController {
+                let tabBarController = navigationController.topViewController as? MainTabbarViewController {
                 return tabBarController
             }
         }

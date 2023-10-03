@@ -15,12 +15,15 @@ extension PopularItemsCollection: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Show tabbar
+        kPostDefaultNotification(Notifications.showTabBar)
         
         //FoodModel
         let model = foodModels[indexPath.row]
         
         
         let detailVC = FoodDetailVC(model: model)
+        detailVC.isShowDismissButton = true
         detailVC.modalPresentationStyle = .overFullScreen
                                               
         //Simulate API

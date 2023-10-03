@@ -51,4 +51,23 @@ extension HomeFoodController: UITableViewDelegate {
             return 0
         }
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentY = scrollView.contentOffset.y
+//        print("xx--current: \(currentY)")
+//        print("last: \(lastScrollYPosition)")
+//        print("TableHeight: \(homeTableHeight)")
+        
+        //Return when bouncing up
+        guard currentY >= 0 else { return }
+        
+        let isScrollDown = scrollView.contentOffset.y > lastScrollYPosition ? true : false
+        self.delegate?.homeFoodVC(self, didScrollDown: isScrollDown)
+        lastScrollYPosition = currentY
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Call to show tabbar
+        self.delegate?.homeFoodVC(self, didScrollDown: false)
+    }
 }

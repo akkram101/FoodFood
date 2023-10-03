@@ -19,6 +19,8 @@ class BaseFoodFactory {
     static let productID8 = "productID8"
     static let productID9 = "productID9"
     static let productID10 = "productID10"
+    static let productID11 = "productID11"
+    
     
     static var foodArray: [BaseFoodModel] = []
     
@@ -108,8 +110,6 @@ class BaseFoodFactory {
         food10.imageUrl = "food10Img"
         food10.restaurantName = "Random Burger Joint"
         
-       
-        
         BaseFoodFactory.foodArray.append(food1)
         BaseFoodFactory.foodArray.append(food2)
         BaseFoodFactory.foodArray.append(food3)
@@ -120,6 +120,16 @@ class BaseFoodFactory {
         BaseFoodFactory.foodArray.append(food8)
         BaseFoodFactory.foodArray.append(food9)
         BaseFoodFactory.foodArray.append(food10)
+        
+//        let food11 = BaseFoodModel()
+//        food11.itemName = "Kram Pogi"
+//        food11.itemShortName = "Kram"
+//        food11.tags = ["Popular", "Masarap"]
+//        food11.productID = BaseFoodFactory.productID11
+//        food11.imageUrl = "Kram"
+//        food11.restaurantName = "Backstreet Boys"
+//        BaseFoodFactory.foodArray.append(food11)
+       
     }
     
 }

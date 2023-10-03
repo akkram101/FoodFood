@@ -21,7 +21,9 @@ class FoodDetailVC: BaseDetailVC {
     
     // MARK: - Button Action
     @objc private func addToCartBtnAction() {
-        dismiss(animated: true)
+        dismiss(animated: true) {
+            CartManager.itemAddedToCart()
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -36,7 +38,7 @@ class FoodDetailVC: BaseDetailVC {
     }
     
     // MARK: - UI
-    private func setupUI() {
+    private func setupUI() { 
         detailContainer.addSubview(foodDetailTableVC.view)
         foodDetailTableVC.view.snp.makeConstraints { make in
             make.edges.equalToSuperview()

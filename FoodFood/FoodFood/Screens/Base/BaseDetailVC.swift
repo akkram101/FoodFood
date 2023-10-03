@@ -40,6 +40,9 @@ class BaseDetailVC: BaseViewController {
     ///State of BaseDetailVC
     private lazy var state: DetailState = .normal
     
+    ///IsShowDismissButton
+    var isShowDismissButton: Bool = false
+    
     // MARK: - Public func to update VC
     
     ///Set Background Image
@@ -69,9 +72,9 @@ class BaseDetailVC: BaseViewController {
     func setAllowanceToPanUp(_ allowance: CGFloat) {
         allowanceToPanUp = allowance
     }
-    
-    func setScrollableViewBackgroundColor(_ color: UIColor) {
-        scrollHandlerView.backgroundColor = color
+
+    @objc private func dismissBtn(_ btn: UIButton) {
+        AppManager.rootViewController()?.dismiss(animated: true)
     }
     
     // MARK: - View Lifecycle
@@ -117,6 +120,15 @@ class BaseDetailVC: BaseViewController {
         detailContainer.snp.makeConstraints { make in
             make.bottom.left.right.equalToSuperview()
             make.top.equalTo(scrollHandlerView.snp.bottom)
+        }
+        
+        if isShowDismissButton {
+            view.addSubview(dismissBtn)
+            dismissBtn.snp.makeConstraints { make in
+                make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(adapt(20))
+                make.right.equalToSuperview().offset(adapt(-30))
+                make.width.height.equalTo(adapt(30))
+            }
         }
     }
     
@@ -164,6 +176,21 @@ class BaseDetailVC: BaseViewController {
         return view
     }()
     
+    private lazy var dismissBtn: UIButton = {
+        let btn = UIButton()
+        btn.backgroundColor = UIColor.init(hex: "#fef5ec")
+        let attribuets: [NSAttributedString.Key : Any] = [
+            .foregroundColor: UIColor(hex: "#e85b00"),
+            .font: UIFont.scaleBold(size: 15)
+        ]
+        
+        let attribuedString = NSAttributedString.init(string: "X",attributes: attribuets)
+        btn.setAttributedTitle(attribuedString, for: .normal)
+        btn.addTarget(self, action: #selector(dismissBtn(_:)), for: .touchUpInside)
+        btn.layer.cornerRadius = adapt(15)
+        
+        return btn
+    }()
 }
 
 //TODO: - REFACTOR TO SCROLL EVEN IN DETAIL CONTAINER

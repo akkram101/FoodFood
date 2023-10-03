@@ -20,8 +20,7 @@ class UserProfileVC: BaseDetailVC {
     private func configureBase() {
         setNormalOffset(offset: 300)
         setAllowanceToPanUp(50)
-        setBackGroundImg("user_photo")
-        setBackGroundImg(contentMode: .scaleAspectFit)
+        setBackGroundImg("faith")
     }
     
     override func viewWillAppear(_ animated: Bool) {

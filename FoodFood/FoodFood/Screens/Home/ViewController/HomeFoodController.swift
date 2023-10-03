@@ -7,9 +7,17 @@
 
 import UIKit
 
+protocol HomeFoodControllerDelegate: AnyObject {
+    func homeFoodVC(_ viewController: HomeFoodController, didScrollDown isScrollDown: Bool)
+}
+
 class HomeFoodController: HomeBaseViewController {
     
+    weak var delegate: HomeFoodControllerDelegate?
+    
     let viewModel = HomeFoodViewModel()
+    
+    var lastScrollYPosition: CGFloat = 0
     
     @objc private func filterBtnAction(_ btn: UIButton) {
         let vc = FilterSearchVC()
@@ -23,7 +31,7 @@ class HomeFoodController: HomeBaseViewController {
         let vc = HomeBaseViewController()
         vc.modalPresentationStyle = .popover
         
-        AppManager.rootViewController()?.present(vc, animated: true)
+        self.navigationController?.present(vc, animated: true)
     }
     
     @objc private func refreshData(_ sender:UIRefreshControl) {
@@ -82,7 +90,7 @@ class HomeFoodController: HomeBaseViewController {
             make.top.equalTo(searchField.snp.bottom).offset(adapt(16))
             make.left.equalToSuperview().offset(adapt(20))
             make.right.equalToSuperview().offset(adapt(-20))
-            make.height.equalTo(adapt(500))
+            make.bottom.equalToSuperview()
         }
     }
     
@@ -149,6 +157,8 @@ class HomeFoodController: HomeBaseViewController {
         
         return tableView
     }()
+    
+    lazy var homeTableHeight: CGFloat = self.homeTableView.frame.size.height
     
     lazy var searchField: SearchFoodField = {
         let searchF = SearchFoodField()

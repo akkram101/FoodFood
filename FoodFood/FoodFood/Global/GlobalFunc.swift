@@ -31,8 +31,8 @@ func randomColor() -> UIColor {
     return randomColor
 }
 
-func kPostDefaultNotification(_ noti : String) {
-    NotificationCenter.default.post(name: Notification.Name(noti), object: nil)
+func kPostDefaultNotification(_ noti : Notification.Name) {
+    NotificationCenter.default.post(name: noti, object: nil)
 }
 
 func kNotiName(_ notiName: String) -> Notification.Name {

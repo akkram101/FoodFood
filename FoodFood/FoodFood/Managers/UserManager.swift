@@ -7,8 +7,19 @@
 
 import UIKit
 
+protocol UserManagerDelegate: AnyObject {
+    func testDelegate()
+}
+
 class UserManager: NSObject {
     static let shared = UserManager()
+    
+    
+    weak var delegate: UserManagerDelegate?
+    
+    func triggerDelegate() {
+        delegate?.testDelegate()
+    }
     
     var userInfo: UserModel? {
         get { return _userInfo }
