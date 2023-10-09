@@ -34,7 +34,7 @@ extension AppDelegate {
             }
         }
         
-        UserManager.shared.userInfo = UserModel(userID: "", userName: "AnneKoi", email: "Aneozeki@gmail.com", firstName: "Faith", middleName: "Test", lastName: "Garcia", nickName: "TEsttt", phoneNum: "", address: "Muntinlupa", avatar: "randomImg")
+        UserManager.shared.userInfo = UserModel(userID: "", userName: "JohnDoe", email: "test@gmail.com", firstName: "John", middleName: "Test", lastName: "Doe", nickName: "TEsttt", phoneNum: "", address: "Muntinlupa", avatar: "randomImg")
     }
     
     func startNetworkMonitor() {

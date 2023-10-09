@@ -120,15 +120,6 @@ class BaseFoodFactory {
         BaseFoodFactory.foodArray.append(food8)
         BaseFoodFactory.foodArray.append(food9)
         BaseFoodFactory.foodArray.append(food10)
-        
-//        let food11 = BaseFoodModel()
-//        food11.itemName = "Kram Pogi"
-//        food11.itemShortName = "Kram"
-//        food11.tags = ["Popular", "Masarap"]
-//        food11.productID = BaseFoodFactory.productID11
-//        food11.imageUrl = "Kram"
-//        food11.restaurantName = "Backstreet Boys"
-//        BaseFoodFactory.foodArray.append(food11)
        
     }
     
