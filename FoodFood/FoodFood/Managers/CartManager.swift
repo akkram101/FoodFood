@@ -25,7 +25,6 @@ class CartManager {
         if shared.cartItems.contains(where: {$0.item.productID == item.productID}),
            let model = shared.cartItems.first(where: {$0.item.productID == item.productID}){
             model.quantity += quantity
-            shared.delegate?.addedToCart()
             return
         }
         

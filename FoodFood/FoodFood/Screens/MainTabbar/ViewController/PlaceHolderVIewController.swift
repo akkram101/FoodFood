@@ -70,8 +70,7 @@ class PlaceHolderViewController: BaseViewController {
     }
     
     private func updateEmoticon() {
-        let randomEmote = Int.random(in: 0...emoticonArray.count - 1)
-        emoticonLabel.text = emoticonArray[randomEmote]
+        emoticonLabel.text = emoticonArray.randomElement()
     }
     
     private func setupUI() {

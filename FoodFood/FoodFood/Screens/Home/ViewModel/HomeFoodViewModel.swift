@@ -85,7 +85,8 @@ class HomeFoodViewModel {
         if success {
             RestaurantFactory.createRestaurant()
             guard !RestaurantFactory.restaurants.isEmpty else { return }
-        
+            
+            ///Test
             var restaurantArray:[BaseRestaurantModel] = generateUniqueItems(count: 10, generator: {
                 return RestaurantFactory.randomRestaurant()
             }, condition: { newItem, existingItems in
@@ -115,6 +116,8 @@ class HomeFoodViewModel {
         if success {
             BaseFoodFactory.setupFoods()
             guard !BaseFoodFactory.foodArray.isEmpty else { return }
+            
+            ///Test
             let foodArray: [BaseFoodModel] = generateUniqueItems(count: 5, generator: {
                 return BaseFoodFactory.randomFood()
             }, condition: { newItem, existingItems in

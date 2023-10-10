@@ -62,17 +62,13 @@ class MainTabbarViewController: BaseViewController {
             chatBadge.frame = CGRect(x: xOffset, y: yOffset, width: adapt(14), height: adapt(14))
         }
         
+        ///test
         chatBadge.counter = 6
     }
     
     private func createNavWith(vc: UIViewController, title: String?, image: String) -> UINavigationController {
         let nav = UINavigationController.init(rootViewController: vc)
-
         nav.tabBarItem = createTabBarItem(title: title, image: image)
-        
-        if title == "Cart" {
-            nav.tabBarItem = cartTabBarItem
-        }
         
         return nav
     }
@@ -134,7 +130,7 @@ class MainTabbarViewController: BaseViewController {
     private lazy var maxTabbarY: CGFloat = self.view.frame.height + self.mainTabBar.tabBar.frame.size.height
 
     func animateTabBar(to targetY: CGFloat,withDuration duration: TimeInterval) {
-        guard targetY >= minTabbarY, targetY <= maxTabbarY else { return }
+        guard targetY > minTabbarY, targetY < maxTabbarY else { return }
         
         UIView.animate(withDuration: duration) {
             self.mainTabBar.tabBar.frame.origin.y = targetY
@@ -170,12 +166,6 @@ class MainTabbarViewController: BaseViewController {
         tabbarVC.tabBar.backgroundColor = .white
         
         return tabbarVC
-    }()
-    
-    lazy var cartTabBarItem: UITabBarItem = {
-        let item = createTabBarItem(title: "Cart", image: "tabbar_cart")
-    
-        return item
     }()
     
     private lazy var cartBadge: RedBadgeView = RedBadgeView()

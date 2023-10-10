@@ -22,7 +22,7 @@ class SessionManager {
             return isLogin
         }
         
-        set {UserDefaults.standard.set(newValue, forKey: Self.isLoginKey) }
+        set { UserDefaults.standard.set(newValue, forKey: Self.isLoginKey) }
     }
     
     class func loginUserWith(email: String,
